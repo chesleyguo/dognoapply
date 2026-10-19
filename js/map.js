@@ -1,17 +1,17 @@
 (() => {
-  const { t, costTotal, money, CLUSTERS, COLLEGES, byId, YEARS, STATE_NAMES, esc, tag, subj, library, openDetail } = window.App;
+  const { t, costTotal, money, HUBS, COLLEGES, byId, YEARS, STATE_NAMES, esc, tag, subj, library, openDetail } = window.App;
   const year = YEARS[0];
   const $ = (id) => document.getElementById(id);
   const el = {
     q: $("mapQ"), control: $("mapControl"), rank: $("mapRank"), subj: $("mapSubj"), lib: $("mapLib"),
-    list: $("mapList"), summary: $("mapSummary"), setting: $("mapSetting"), cluster: $("mapCluster"),
+    list: $("mapList"), summary: $("mapSummary"), setting: $("mapSetting"), hub: $("mapHub"),
   };
   const rankOf = (c) => c.ranks[year] ?? null;
   let control = "";
   let setting = "";
 
-  el.cluster.innerHTML = `<option value="">${t("geo.anyCluster")}</option>` +
-    CLUSTERS.map((cl) => `<option value="${cl.id}">${esc(cl.name)}</option>`).join("");
+  el.hub.innerHTML = `<option value="">${t("geo.anyHub")}</option>` +
+    HUBS.map((h) => `<option value="${h.id}">${esc(h.name)}</option>`).join("");
 
   el.rank.innerHTML = [25, 50, 100].map((n) => `<option value="${n}">${t("map.top", { year, n })}</option>`).join("") +
     `<option value="ranked" selected>${t("map.ranked", { year })}</option><option value="all">${t("map.all")}</option>`;
@@ -91,7 +91,7 @@
       if (/^\d+$/.test(rf) && r > +rf) return false;
       if (control && c.control !== control) return false;
       if (setting && c.setting !== setting) return false;
-      if (el.cluster.value && !c.clusters.includes(el.cluster.value)) return false;
+      if (el.hub.value && c.hub !== el.hub.value) return false;
       if (el.subj.value && !c[el.subj.value]) return false;
       if (el.lib.checked && !library.has(c.ipeds)) return false;
       if (q && !`${c.name} ${c.city} ${STATE_NAMES[c.state] || ""}`.toLowerCase().includes(q)) return false;
@@ -144,11 +144,11 @@
     el.setting.querySelectorAll("button").forEach((x) => x.setAttribute("aria-pressed", x === b));
     render();
   });
-  // Picking a cluster zooms to its schools; clearing it goes back to the whole country.
-  el.cluster.addEventListener("change", () => {
+  // Picking a city zooms to its schools; clearing it goes back to the whole country.
+  el.hub.addEventListener("change", () => {
     render();
     const pts = [...markers.values()].map((m) => m.getLatLng());
-    if (el.cluster.value && pts.length) map.flyToBounds(L.latLngBounds(pts), { padding: [60, 60], maxZoom: 10, duration: 0.8 });
+    if (el.hub.value && pts.length) map.flyToBounds(L.latLngBounds(pts), { padding: [60, 60], maxZoom: 10, duration: 0.8 });
     else map.flyToBounds(US_BOUNDS, { duration: 0.8 });
   });
   el.q.addEventListener("input", render);

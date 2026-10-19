@@ -18,9 +18,9 @@
 
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const tag = (control) => `<span class="tag ${control}">${CONTROL_LABEL[control] || control}</span>`;
-  // ---- location: metro setting + industry clusters (see scripts/build_data.py) ----
-  const CLUSTERS = (window.CLUSTERS || []).map((c) => ({ id: c.id, ...c[lang] }));
-  const clusterById = new Map(CLUSTERS.map((c) => [c.id, c]));
+  // ---- location: metro setting + popular cities ("hubs", see scripts/build_data.py) ----
+  const HUBS = (window.HUBS || []).map((h) => ({ id: h.id, name: h[lang] }));
+  const hubById = new Map(HUBS.map((h) => [h.id, h]));
   const fmtPop = (n) => lang === "zh"
     ? (n >= 1e8 ? `${(n / 1e8).toFixed(1)} 亿` : `${Math.round(n / 1e4)} 万`)
     : (n >= 1e6 ? `${(n / 1e6).toFixed(1)}M` : `${Math.round(n / 1e3)}K`);
@@ -262,11 +262,8 @@
       </div>
       <div class="d-geo">
         <p><span class="muted">${t("geo.metroArea")}:</span> ${esc(c.metro)} <span class="muted">· ${t("geo.pop", { pop: fmtPop(c.metroPop) })}</span> ${settingTag(c.setting)}</p>
-        <p class="muted">${t("geo.clusters")}:</p>
-        ${c.clusters.length
-          ? `<div class="chips">${c.clusters.map((id) => clusterById.get(id)).map((cl) =>
-              `<a class="chip" href="rankings.html?cluster=${cl.id}">${esc(cl.name)} <span>${esc(cl.industries)}</span></a>`).join("")}</div>`
-          : `<p class="muted">${t("geo.noCluster")}</p>`}
+        ${c.hub ? `<p><span class="muted">${t("geo.hubIn")}:</span>
+          <a class="chip" href="rankings.html?hub=${c.hub}">${esc(hubById.get(c.hub).name)}</a></p>` : ""}
       </div>
       ${costSection(c)}
       ${csrSection(c)}
@@ -288,5 +285,5 @@
     dialog.showModal();
   }
 
-  window.App = { t, lang, COST_YEAR, residency, tuitionOf, costTotal, money, moneyFull, local, useCny, fxRate, CSR_META, CSR_CATS, csrRank, csrLabel, csrOptions, CLUSTERS, clusterById, fmtPop, settingTag, COLLEGES, byId, YEARS, RECENT_YEARS, STATE_NAMES, CONTROL_LABEL, esc, tag, subj, library, openDetail };
+  window.App = { t, lang, COST_YEAR, residency, tuitionOf, costTotal, money, moneyFull, local, useCny, fxRate, CSR_META, CSR_CATS, csrRank, csrLabel, csrOptions, HUBS, hubById, fmtPop, settingTag, COLLEGES, byId, YEARS, RECENT_YEARS, STATE_NAMES, CONTROL_LABEL, esc, tag, subj, library, openDetail };
 })();

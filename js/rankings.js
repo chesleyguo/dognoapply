@@ -1,11 +1,11 @@
 (() => {
-  const { t, COST_YEAR, residency, costTotal, tuitionOf, money, moneyFull, local, useCny, fxRate, csrRank, csrLabel, csrOptions, COLLEGES, YEARS, RECENT_YEARS, STATE_NAMES, CLUSTERS, esc, tag, subj, library, openDetail } = window.App;
+  const { t, COST_YEAR, residency, costTotal, tuitionOf, money, moneyFull, local, useCny, fxRate, csrRank, csrLabel, csrOptions, COLLEGES, YEARS, RECENT_YEARS, STATE_NAMES, HUBS, esc, tag, subj, library, openDetail } = window.App;
 
   const $ = (id) => document.getElementById(id);
   const el = {
     q: $("q"), year: $("year"), state: $("state"), control: $("control"), rmin: $("rmin"), rmax: $("rmax"),
     unranked: $("unranked"), onlyFav: $("onlyFav"), favCount: $("favCount"), summary: $("summary"),
-    rows: $("rows"), empty: $("empty"), city: $("city"), setting: $("setting"), cluster: $("cluster"),
+    rows: $("rows"), empty: $("empty"), city: $("city"), setting: $("setting"), hub: $("hub"),
     csrDir: $("csrDir"), csrHead: $("csrHead"), res: $("res"), costHead: $("costHead"),
     maxTuition: $("maxTuition"), maxLiving: $("maxLiving"), fx: $("fx"), fxField: $("fxField"),
     selAll: $("selAll"), selBar: $("selBar"), selCount: $("selCount"), toast: $("toast"),
@@ -93,9 +93,9 @@
     render();
   });
 
-  el.cluster.innerHTML = `<option value="">${t("geo.anyCluster")}</option>` + CLUSTERS.map((cl) => {
-    const n = COLLEGES.filter((c) => c.clusters.includes(cl.id)).length;
-    return `<option value="${cl.id}">${esc(cl.name)} — ${esc(cl.industries)} (${n})</option>`;
+  el.hub.innerHTML = `<option value="">${t("geo.anyHub")}</option>` + HUBS.map((h) => {
+    const n = COLLEGES.filter((c) => c.hub === h.id).length;
+    return `<option value="${h.id}">${esc(h.name)} (${n})</option>`;
   }).join("");
 
   // Segmented buttons: type (public/private) and setting (metro/town).
@@ -112,7 +112,7 @@
   }));
   el.state.addEventListener("change", fillCities); // before the generic render listener below
   [el.q, el.rmin, el.rmax, el.maxTuition, el.maxLiving].forEach((i) => i.addEventListener("input", render));
-  [el.year, el.state, el.unranked, el.onlyFav, el.city, el.cluster, el.csrDir].forEach((i) => i.addEventListener("change", render));
+  [el.year, el.state, el.unranked, el.onlyFav, el.city, el.hub, el.csrDir].forEach((i) => i.addEventListener("change", render));
 
   document.querySelectorAll("th.sortable").forEach((th) => th.addEventListener("click", () => {
     const k = th.dataset.sort;
@@ -127,7 +127,7 @@
   if (states.includes(params.get("state"))) el.state.value = params.get("state");
   if (["public", "private"].includes(params.get("control"))) setControl(params.get("control"));
   if (["metro", "town"].includes(params.get("setting"))) setSeg("setting", el.setting, params.get("setting"));
-  if (CLUSTERS.some((cl) => cl.id === params.get("cluster"))) el.cluster.value = params.get("cluster");
+  if (HUBS.some((h) => h.id === params.get("hub"))) el.hub.value = params.get("hub");
   if ([...el.csrDir.options].some((o) => o.value && o.value === params.get("csr"))) {
     el.csrDir.value = params.get("csr");
     state.sort = "csr";
@@ -154,7 +154,7 @@
       if (state.control && c.control !== state.control) return false;
       if (el.city.value && `${c.city}|${c.state}` !== el.city.value) return false;
       if (state.setting && c.setting !== state.setting) return false;
-      if (el.cluster.value && !c.clusters.includes(el.cluster.value)) return false;
+      if (el.hub.value && c.hub !== el.hub.value) return false;
       if (el.csrDir.value && csrRank(c, el.csrDir.value) == null) return false;
       // Caps are typed in the display currency (CNY in Chinese, USD in English).
       if (el.maxTuition.value && !(local(tuitionOf(c)) <= +el.maxTuition.value)) return false;

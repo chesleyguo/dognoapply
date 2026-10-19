@@ -1,0 +1,22 @@
+[
+  { "id": "nyc", "cbsa": ["35620"], "en": "New York", "zh": "纽约" },
+  { "id": "bay-area", "cbsa": ["41860", "41940"], "en": "San Francisco Bay Area", "zh": "旧金山湾区" },
+  { "id": "boston", "cbsa": ["14460"], "en": "Boston", "zh": "波士顿" },
+  { "id": "los-angeles", "cbsa": ["31080"], "en": "Los Angeles", "zh": "洛杉矶" },
+  { "id": "seattle", "cbsa": ["42660"], "en": "Seattle", "zh": "西雅图" },
+  { "id": "chicago", "cbsa": ["16980"], "en": "Chicago", "zh": "芝加哥" },
+  { "id": "dc", "cbsa": ["47900"], "en": "Washington, D.C.", "zh": "华盛顿特区" },
+  { "id": "san-diego", "cbsa": ["41740"], "en": "San Diego", "zh": "圣地亚哥" },
+  { "id": "philadelphia", "cbsa": ["37980"], "en": "Philadelphia", "zh": "费城" },
+  { "id": "pittsburgh", "cbsa": ["38300"], "en": "Pittsburgh", "zh": "匹兹堡" },
+  { "id": "austin", "cbsa": ["12420"], "en": "Austin", "zh": "奥斯汀" },
+  { "id": "atlanta", "cbsa": ["12060"], "en": "Atlanta", "zh": "亚特兰大" },
+  { "id": "houston", "cbsa": ["26420"], "en": "Houston", "zh": "休斯顿" },
+  { "id": "dallas", "cbsa": ["19100"], "en": "Dallas–Fort Worth", "zh": "达拉斯–沃斯堡" },
+  { "id": "raleigh-durham", "cbsa": ["39580", "20500"], "en": "Raleigh–Durham", "zh": "罗利–达勒姆" },
+  { "id": "baltimore", "cbsa": ["12580"], "en": "Baltimore", "zh": "巴尔的摩" },
+  { "id": "denver", "cbsa": ["19740", "14500"], "en": "Denver–Boulder", "zh": "丹佛–博尔德" },
+  { "id": "miami", "cbsa": ["33100"], "en": "Miami", "zh": "迈阿密" },
+  { "id": "minneapolis", "cbsa": ["33460"], "en": "Minneapolis–St. Paul", "zh": "明尼阿波利斯" },
+  { "id": "phoenix", "cbsa": ["38060"], "en": "Phoenix", "zh": "凤凰城" }
+]

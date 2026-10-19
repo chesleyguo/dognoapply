@@ -1,6 +1,6 @@
 (() => {
   const App = window.App;
-  const { t, COLLEGES, YEARS, STATE_NAMES, CLUSTERS, esc, tag, openDetail } = App;
+  const { t, COLLEGES, YEARS, STATE_NAMES, HUBS, esc, tag, openDetail } = App;
   const year = YEARS[0];
   const ranked = COLLEGES.filter((c) => c.ranks[year] != null).sort((a, b) => a.ranks[year] - b.ranks[year]);
   const recent = YEARS.slice(0, App.RECENT_YEARS);
@@ -8,7 +8,7 @@
   document.getElementById("heroStats").innerHTML = [
     [ranked.length, t("home.stat.ranked", { year })],
     [new Set(ranked.map((c) => c.state)).size, t("home.stat.states")],
-    [CLUSTERS.length, t("home.stat.clusters")],
+    [HUBS.length, t("home.stat.hubs")],
     [`${recent[recent.length - 1]}–${recent[0]}`, t("home.stat.years")],
   ].map(([v, l]) => `<li><b>${v}</b><span>${l}</span></li>`).join("");
 
@@ -50,9 +50,9 @@
   top.addEventListener("click", open);
   top.addEventListener("keydown", (e) => { if (e.key === "Enter") open(e); });
 
-  document.getElementById("clusterChips").innerHTML = CLUSTERS.map((cl) => {
-    const n = COLLEGES.filter((c) => c.clusters.includes(cl.id) && c.ranks[year] != null).length;
-    return `<a class="chip" href="rankings.html?cluster=${cl.id}" title="${esc(cl.industries)}">${esc(cl.name)} <span>${n}</span></a>`;
+  document.getElementById("hubChips").innerHTML = HUBS.map((h) => {
+    const n = COLLEGES.filter((c) => c.hub === h.id && c.ranks[year] != null).length;
+    return `<a class="chip" href="rankings.html?hub=${h.id}">${esc(h.name)} <span>${n}</span></a>`;
   }).join("");
 
   const counts = {};
