@@ -1,0 +1,206 @@
+name,city,state,rank,tied,usnews_id
+Carnegie Mellon University,Pittsburgh,PA,1,True,43082
+Massachusetts Institute of Technology,Cambridge,MA,1,True,43047
+Stanford University,Stanford,CA,1,True,43007
+University of California--Berkeley,Berkeley,CA,4,False,43008
+University of Illinois--Urbana-Champaign,Urbana,IL,5,False,43032
+Princeton University,,NJ,6,False,43057
+Cornell University,Ithaca,NY,7,True,43062
+Georgia Institute of Technology,,GA,7,True,43027
+University of Washington,Seattle,WA,7,True,43104
+University of Texas--Austin,Austin,TX,10,False,43098
+University of Michigan--Ann Arbor,Ann Arbor,MI,11,False,43050
+California Institute of Technology,Pasadena,CA,12,True,43005
+University of California--San Diego,La Jolla,CA,12,True,43012
+University of Maryland--College Park,College Park,MD,12,True,43043
+Columbia University,,NY,15,True,43061
+Purdue University--West Lafayette,West Lafayette,IN,15,True,43033
+University of California--Los Angeles,,CA,15,True,43011
+University of Wisconsin--Madison,Madison,WI,15,True,43106
+Harvard University,,MA,19,True,43046
+University of Pennsylvania,Philadelphia,PA,19,True,43086
+Johns Hopkins University,Baltimore,MD,21,True,43042
+University of Chicago,,IL,21,True,43109
+University of Southern California,,CA,21,True,43016
+Yale University,New Haven,CT,21,True,43020
+Duke University,,NC,25,True,43072
+University of Massachusetts--Amherst,Amherst,MA,25,True,43048
+Brown University,Providence,RI,27,True,43088
+New York University,,NY,27,True,43064
+Northwestern University,,IL,27,True,43030
+Rice University,Houston,TX,27,True,43092
+University of California--Irvine,Irvine,CA,27,True,43010
+University of California--Santa Barbara,Santa Barbara,CA,27,True,43014
+University of North Carolina--Chapel Hill,Chapel Hill,NC,27,True,43073
+Northeastern University,Boston,MA,34,True,43132
+University of Colorado--Boulder,Boulder,CO,34,True,43018
+University of Virginia,,VA,34,True,43102
+Virginia Tech,Blacksburg,VA,34,True,43103
+Ohio State University,Columbus,OH,38,True,43075
+Pennsylvania State University--University Park,University Park,PA,38,True,43084
+Texas A&M University--College Station,College Station,TX,38,True,43094
+University of California--Davis,Davis,CA,38,True,43009
+University of Minnesota--Twin Cities,Minneapolis,MN,38,True,43052
+Arizona State University,Tempe,AZ,43,True,43003
+Rutgers University--New Brunswick,Piscataway,NJ,43,True,43058
+Stony Brook University--SUNY,Stony Brook,NY,43,True,43069
+Boston University,,MA,46,True,43045
+North Carolina State University,,NC,46,True,43116
+University of Utah,,UT,46,True,43100
+Vanderbilt University,Nashville,TN,46,True,43091
+Washington University in St. Louis,St. Louis,MO,46,True,43055
+Dartmouth College,,NH,51,True,43113
+Indiana University--Bloomington,,IN,51,True,43034
+University of California--Santa Cruz,Santa Cruz,CA,51,True,43015
+University of Florida,Gainesville,FL,51,True,43026
+University of Pittsburgh,Pittsburgh,PA,51,True,43087
+Michigan State University,East Lansing,MI,56,True,43049
+Tufts University,Medford,MA,56,True,43147
+University of Notre Dame,,IN,56,True,43152
+Iowa State University,Ames,IA,59,True,43035
+University of Arizona,Tucson,AZ,59,True,43004
+University of California--Riverside,,CA,59,True,43138
+University of Illinois Chicago,,IL,59,True,43031
+University of Rochester,Rochester,NY,59,True,43071
+University of Texas--Dallas,Richardson,TX,59,True,43099
+George Mason University,Fairfax,VA,65,True,43101
+Toyota Technological Institute at Chicago,,IL,65,True,43204
+University at Buffalo--SUNY,Buffalo,NY,65,True,43068
+University of Central Florida,,FL,65,True,43025
+Emory University,Atlanta,GA,69,True,43187
+George Washington University,Washington ,DC,69,True,43022
+Oregon State University,Corvallis,OR,69,True,43080
+Rensselaer Polytechnic Institute,,NY,69,True,43066
+University of Delaware,Newark,DE,69,True,43021
+University of Iowa,Iowa City,IA,69,True,43036
+William & Mary,Williamsburg,VA,69,True,43124
+Case Western Reserve University,,OH,76,True,43074
+Georgetown University,,DC,76,True,43200
+Rochester Institute of Technology,,NY,76,True,43184
+Syracuse University,Syracuse,NY,76,True,43070
+University of Georgia,Athens,GA,76,True,43140
+University of Nebraska--Lincoln,,NE,76,True,43056
+University of Tennessee--Knoxville,Knoxville,TN,76,True,43121
+Clemson University,Clemson,SC,83,True,43089
+Colorado School of Mines,Golden,CO,83,True,43139
+"University of Maryland, Baltimore County",Baltimore,MD,83,True,43044
+University of Oregon,Eugene,OR,83,True,43081
+University of South Florida,Tampa,FL,83,True,43108
+Auburn University,Auburn,AL,88,True,43126
+Florida State University,Tallahassee,FL,88,True,43023
+Lehigh University,,PA,88,True,43083
+New Jersey Institute of Technology,Newark,NJ,88,True,43133
+Stevens Institute of Technology,Hoboken,NJ,88,True,43059
+University of Connecticut,,CT,88,True,43019
+University of Texas--Arlington,,TX,88,True,43097
+Worcester Polytechnic Institute,Worcester,MA,88,True,43154
+Binghamton University--SUNY,Binghamton,NY,96,True,43067
+Colorado State University,,CO,96,True,43017
+Drexel University,Philadelphia,PA,96,True,43120
+Illinois Institute of Technology,Chicago,IL,96,True,43029
+Temple University,Philadelphia,PA,96,True,43085
+University of Kansas,,KS,96,True,43038
+University of Kentucky,,KY,96,True,43110
+University of North Carolina--Charlotte,Charlotte,NC,96,True,43158
+University of South Carolina,,SC,96,True,43090
+Washington State University,,WA,96,True,43105
+Brandeis University,Waltham,MA,106,True,43111
+Brigham Young University,Provo,UT,106,True,43123
+Florida International University,Miami,FL,106,True,43146
+Kansas State University,Manhattan,KS,106,True,43157
+Rutgers University--Newark,,NJ,106,True,43210
+Tulane University,New Orleans,LA,106,True,43040
+University of California--Merced,,CA,106,True,43190
+University of Houston,Houston,TX,106,True,43095
+University of New Mexico,Albuquerque,NM,106,True,43114
+Georgia State University,Atlanta,GA,115,True,43028
+Howard University,Washington,DC,115,True,43201
+Naval Postgraduate School,,CA,115,True,43006
+The University of Oklahoma,Norman,OK,115,True,43078
+The University of Texas--San Antonio,San Antonio,TX,115,True,43180
+University at Albany--SUNY,Albany,NY,115,True,43115
+University of Alabama,Tuscaloosa,AL,115,True,43136
+University of Cincinnati,Cincinnati,OH,115,True,43076
+University of Hawaii--Manoa,,HI,115,True,43129
+University of Missouri,,MO,115,True,43151
+Wayne State University,Detroit,MI,115,True,43051
+Louisiana State University--Baton Rouge,Baton Rouge,LA,126,True,43039
+Missouri University of Science & Technology,Rolla,MO,126,True,43054
+Southern Methodist University,,TX,126,True,43093
+University of Massachusetts--Boston,,MA,126,True,43169
+University of Massachusetts--Lowell,Lowell,MA,126,True,43112
+University of Miami,Coral Gables,FL,126,True,43203
+University of Vermont,Burlington,VT,126,True,43188
+CUNY Graduate School and University Center,New York,NY,133,True,43063
+Florida Atlantic University,Boca Raton,FL,133,True,43127
+Indiana University Indianapolis,,IN,133,True,43205
+Michigan Technological University,Houghton,MI,133,True,43160
+Mississippi State University,Mississippi State,MS,133,True,43053
+Oklahoma State University,,OK,133,True,43077
+Texas Tech University,Lubbock,TX,133,True,43122
+University of Arkansas--Fayetteville,,AR,133,True,43137
+University of Louisiana--Lafayette,,LA,133,True,43041
+University of Nevada--Las Vegas,Las Vegas,NV,133,True,43211
+University of New Hampshire,,NH,133,True,43192
+University of North Texas,,TX,133,True,43096
+University of Rhode Island,Kingston,RI,133,True,43193
+University of Texas--El Paso,El Paso,TX,133,True,43179
+University of Wisconsin--Milwaukee,,WI,133,True,43145
+Utah State University,,UT,133,True,43181
+Virginia Commonwealth University,Richmond,VA,133,True,43182
+West Virginia University,Morgantown,WV,133,True,43144
+Air Force Institute of Technology,,OH,151,True,43176
+Boise State University,Boise,ID,151,True,43413
+DePaul University,,IL,151,True,43141
+Florida Institute of Technology,Melbourne,FL,151,True,43128
+New Mexico State University,,NM,151,True,43060
+Old Dominion University,Norfolk,VA,151,True,43125
+Portland State University,Portland,OR,151,True,43177
+Towson University,,MD,151,True,43168
+University of Alabama at Birmingham,,AL,151,True,43001
+University of Colorado--Colorado Springs,Colorado Springs,CO,151,True,43163
+University of Idaho,,ID,151,True,43148
+University of Louisville,Louisville,KY,151,True,43131
+University of Maine,Orono,ME,151,True,43149
+University of Memphis,Memphis,TN,151,True,43150
+University of Michigan--Dearborn,Dearborn,MI,151,True,43208
+University of Mississippi,,MS,151,True,43143
+University of Nebraska--Omaha,,NE,151,True,43173
+University of Wyoming,Laramie,WY,151,True,43183
+Embry-Riddle Aeronautical University -- Daytona Beach,Daytona Beach,FL,169,True,43615
+Kent State University,Kent,OH,169,True,43118
+Marquette University,,WI,169,True,43196
+Montana State University,,MT,169,True,43172
+Texas State University,San Marcos,TX,169,True,43301
+University of Alabama--Huntsville,Huntsville,AL,169,True,43002
+University of Missouri--Kansas City,Kansas City,MO,169,True,43130
+University of Nevada--Reno,,NV,169,True,43174
+University of Tulsa,Tulsa,OK,169,True,43159
+Wichita State University,Wichita,KS,169,True,43206
+Wright State University,,OH,169,True,43119
+Claremont Graduate University,,CA,180,True,43107
+Dakota State University,Madison,SD,180,True,43185
+New Mexico Institute of Mining and Technology,Socorro,NM,180,True,43134
+North Carolina A&T State University,,NC,180,True,43209
+North Dakota State University,Fargo,ND,180,True,43117
+Southern Illinois University--Carbondale,"Carbondale, IL",IL,180,True,43189
+University of Arkansas--Little Rock,,AR,180,True,43162
+University of Colorado--Denver,Denver,CO,180,True,43164
+University of Denver,Denver,CO,180,True,43165
+University of Puerto Rico--Mayaguez,,PR,180,True,43191
+Clarkson University,,NY,190,True,43965
+Northern Arizona University,Flagstaff,AZ,190,True,43931
+Oakland University,Rochester,MI,190,True,43161
+Tennessee Technological University,Cookeville,TN,190,True,43216
+University of New Orleans,New Orleans,LA,190,True,43167
+Nova Southeastern University,Fort Lauderdale,FL,195,True,43024
+Pace University,New York,NY,195,True,43213
+University of Southern Mississippi,,MS,195,True,43153
+Bowie State University,Bowie,MD,198,True,43198
+Chapman University,,CA,198,True,43199
+The Catholic University of America,Washington,DC,198,True,43202
+University of South Alabama,,AL,198,True,43950
+LIU Post,,NY,202,True,43175
+University of Bridgeport,,CT,202,True,43186
+Walden University,,MN,202,True,43171
+Capitol Technology University,,MD,205,False,43300

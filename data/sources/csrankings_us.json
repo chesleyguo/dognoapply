@@ -1,0 +1,5744 @@
+{
+ "source": "https://csrankings.org/#/index?all&us",
+ "license": "CC BY-NC-ND 4.0",
+ "years": [
+  2016,
+  2026
+ ],
+ "generated": "2026-10-19",
+ "institutions": [
+  {
+   "institution": "Carnegie Mellon University",
+   "homepage": "https://www.csd.cs.cmu.edu/",
+   "rank": 1,
+   "score": 21.0,
+   "faculty": 184,
+   "categories": {
+    "ai": 1,
+    "systems": 2,
+    "theory": 1,
+    "interdisciplinary": 1
+   },
+   "areas": {
+    "ai": 1,
+    "vision": 1,
+    "mlmining": 1,
+    "nlp": 1,
+    "inforet": 2,
+    "arch": 5,
+    "comm": 3,
+    "sec": 4,
+    "mod": 5,
+    "hpc": 41,
+    "mobile": 6,
+    "metrics": 2,
+    "ops": 3,
+    "plan": 1,
+    "soft": 1,
+    "act": 1,
+    "crypt": 7,
+    "log": 3,
+    "graph": 1,
+    "chi": 1,
+    "robotics": 1,
+    "bio": 1,
+    "da": 80,
+    "bed": 13,
+    "visualization": 32,
+    "ecom": 5,
+    "csed": 41
+   }
+  },
+  {
+   "institution": "Univ. of Illinois at Urbana-Champaign",
+   "homepage": "https://siebelschool.illinois.edu/",
+   "rank": 2,
+   "score": 17.2,
+   "faculty": 128,
+   "categories": {
+    "ai": 2,
+    "systems": 1,
+    "theory": 3,
+    "interdisciplinary": 7
+   },
+   "areas": {
+    "ai": 6,
+    "vision": 3,
+    "mlmining": 5,
+    "nlp": 4,
+    "inforet": 1,
+    "arch": 1,
+    "comm": 4,
+    "sec": 3,
+    "mod": 14,
+    "hpc": 12,
+    "mobile": 3,
+    "metrics": 24,
+    "ops": 7,
+    "plan": 7,
+    "soft": 3,
+    "act": 9,
+    "crypt": 7,
+    "log": 2,
+    "graph": 14,
+    "chi": 7,
+    "robotics": 13,
+    "bio": 5,
+    "da": 17,
+    "bed": 15,
+    "visualization": 38,
+    "ecom": 29,
+    "csed": 2
+   }
+  },
+  {
+   "institution": "Univ. of California - San Diego",
+   "homepage": "https://cse.ucsd.edu/",
+   "rank": 3,
+   "score": 15.0,
+   "faculty": 129,
+   "categories": {
+    "ai": 5,
+    "systems": 3,
+    "theory": 7,
+    "interdisciplinary": 5
+   },
+   "areas": {
+    "ai": 22,
+    "vision": 2,
+    "mlmining": 6,
+    "nlp": 8,
+    "inforet": 13,
+    "arch": 6,
+    "comm": 12,
+    "sec": 7,
+    "mod": 10,
+    "hpc": 32,
+    "mobile": 1,
+    "metrics": 4,
+    "ops": 11,
+    "plan": 6,
+    "soft": 30,
+    "act": 10,
+    "crypt": 5,
+    "log": 6,
+    "graph": 3,
+    "chi": 5,
+    "robotics": 9,
+    "bio": 4,
+    "da": 1,
+    "bed": 62,
+    "visualization": 63,
+    "ecom": 41,
+    "csed": 1
+   }
+  },
+  {
+   "institution": "Georgia Institute of Technology",
+   "homepage": "https://www.cc.gatech.edu/",
+   "rank": 4,
+   "score": 14.2,
+   "faculty": 150,
+   "categories": {
+    "ai": 7,
+    "systems": 4,
+    "theory": 4,
+    "interdisciplinary": 4
+   },
+   "areas": {
+    "ai": 3,
+    "vision": 18,
+    "mlmining": 12,
+    "nlp": 16,
+    "inforet": 7,
+    "arch": 3,
+    "comm": 21,
+    "sec": 1,
+    "mod": 19,
+    "hpc": 3,
+    "mobile": 19,
+    "metrics": 3,
+    "ops": 15,
+    "plan": 21,
+    "soft": 34,
+    "act": 11,
+    "crypt": 9,
+    "log": 1,
+    "graph": 11,
+    "chi": 3,
+    "robotics": 4,
+    "bio": 14,
+    "da": 7,
+    "bed": 51,
+    "visualization": 5,
+    "ecom": 19,
+    "csed": 25
+   }
+  },
+  {
+   "institution": "Massachusetts Inst. of Technology",
+   "homepage": "https://www.eecs.mit.edu/",
+   "rank": 5,
+   "score": 11.4,
+   "faculty": 104,
+   "categories": {
+    "ai": 8,
+    "systems": 7,
+    "theory": 8,
+    "interdisciplinary": 9
+   },
+   "areas": {
+    "ai": 10,
+    "vision": 7,
+    "mlmining": 2,
+    "nlp": 18,
+    "inforet": 53,
+    "arch": 4,
+    "comm": 2,
+    "sec": 43,
+    "mod": 1,
+    "hpc": 90,
+    "mobile": 22,
+    "metrics": 15,
+    "ops": 2,
+    "plan": 2,
+    "soft": 26,
+    "act": 2,
+    "crypt": 11,
+    "log": 24,
+    "graph": 4,
+    "chi": 17,
+    "robotics": 2,
+    "bio": 9,
+    "da": 27,
+    "visualization": 74,
+    "ecom": 21,
+    "csed": 77
+   }
+  },
+  {
+   "institution": "University of Washington",
+   "homepage": "https://www.cs.washington.edu/",
+   "rank": 6,
+   "score": 10.8,
+   "faculty": 79,
+   "categories": {
+    "ai": 16,
+    "systems": 13,
+    "theory": 9,
+    "interdisciplinary": 6
+   },
+   "areas": {
+    "ai": 62,
+    "vision": 26,
+    "mlmining": 15,
+    "nlp": 2,
+    "inforet": 19,
+    "arch": 23,
+    "comm": 6,
+    "sec": 22,
+    "mod": 11,
+    "hpc": 58,
+    "mobile": 17,
+    "metrics": 26,
+    "ops": 7,
+    "plan": 19,
+    "soft": 36,
+    "act": 13,
+    "crypt": 1,
+    "log": 18,
+    "graph": 12,
+    "chi": 2,
+    "robotics": 21,
+    "bio": 12,
+    "da": 40,
+    "bed": 51,
+    "visualization": 14,
+    "ecom": 21,
+    "csed": 16
+   }
+  },
+  {
+   "institution": "Cornell University",
+   "homepage": "https://www.cs.cornell.edu/",
+   "rank": 7,
+   "score": 10.7,
+   "faculty": 106,
+   "categories": {
+    "ai": 3,
+    "systems": 11,
+    "theory": 14,
+    "interdisciplinary": 9
+   },
+   "areas": {
+    "ai": 10,
+    "vision": 11,
+    "mlmining": 9,
+    "nlp": 12,
+    "inforet": 3,
+    "arch": 16,
+    "comm": 9,
+    "sec": 25,
+    "mod": 4,
+    "hpc": 64,
+    "mobile": 55,
+    "metrics": 6,
+    "ops": 13,
+    "plan": 8,
+    "soft": 41,
+    "act": 14,
+    "crypt": 21,
+    "log": 10,
+    "graph": 7,
+    "chi": 10,
+    "robotics": 11,
+    "bio": 51,
+    "da": 14,
+    "bed": 62,
+    "visualization": 59,
+    "ecom": 1,
+    "csed": 70
+   }
+  },
+  {
+   "institution": "Univ. of California - Berkeley",
+   "homepage": "https://eecs.berkeley.edu/",
+   "rank": 7,
+   "score": 10.7,
+   "faculty": 85,
+   "categories": {
+    "ai": 10,
+    "systems": 10,
+    "theory": 6,
+    "interdisciplinary": 11
+   },
+   "areas": {
+    "ai": 43,
+    "vision": 5,
+    "mlmining": 3,
+    "nlp": 14,
+    "inforet": 60,
+    "arch": 15,
+    "comm": 5,
+    "sec": 8,
+    "mod": 3,
+    "hpc": 46,
+    "mobile": 31,
+    "metrics": 52,
+    "ops": 1,
+    "plan": 18,
+    "soft": 30,
+    "act": 8,
+    "crypt": 10,
+    "log": 7,
+    "graph": 22,
+    "chi": 13,
+    "robotics": 5,
+    "bio": 14,
+    "da": 26,
+    "bed": 31,
+    "visualization": 43,
+    "ecom": 39,
+    "csed": 34
+   }
+  },
+  {
+   "institution": "Univ. of Maryland - College Park",
+   "homepage": "https://www.cs.umd.edu/",
+   "rank": 9,
+   "score": 10.6,
+   "faculty": 98,
+   "categories": {
+    "ai": 4,
+    "systems": 15,
+    "theory": 26,
+    "interdisciplinary": 2
+   },
+   "areas": {
+    "ai": 5,
+    "vision": 6,
+    "mlmining": 11,
+    "nlp": 6,
+    "inforet": 19,
+    "arch": 40,
+    "comm": 16,
+    "sec": 9,
+    "mod": 25,
+    "hpc": 15,
+    "mobile": 14,
+    "metrics": 22,
+    "ops": 29,
+    "plan": 13,
+    "soft": 54,
+    "act": 23,
+    "crypt": 20,
+    "graph": 13,
+    "chi": 12,
+    "robotics": 8,
+    "bio": 3,
+    "da": 12,
+    "bed": 77,
+    "visualization": 6,
+    "ecom": 13,
+    "csed": 10
+   }
+  },
+  {
+   "institution": "University of Michigan",
+   "homepage": "https://cse.engin.umich.edu/",
+   "rank": 10,
+   "score": 10.2,
+   "faculty": 101,
+   "categories": {
+    "ai": 9,
+    "systems": 6,
+    "theory": 13,
+    "interdisciplinary": 14
+   },
+   "areas": {
+    "ai": 17,
+    "vision": 27,
+    "mlmining": 23,
+    "nlp": 11,
+    "inforet": 6,
+    "arch": 2,
+    "comm": 10,
+    "sec": 14,
+    "mod": 13,
+    "hpc": 61,
+    "mobile": 11,
+    "metrics": 7,
+    "ops": 4,
+    "plan": 20,
+    "soft": 36,
+    "act": 4,
+    "crypt": 19,
+    "log": 41,
+    "graph": 64,
+    "chi": 4,
+    "robotics": 29,
+    "da": 18,
+    "bed": 41,
+    "visualization": 27,
+    "ecom": 2,
+    "csed": 30
+   }
+  },
+  {
+   "institution": "Northeastern University",
+   "homepage": "https://www.khoury.northeastern.edu/",
+   "rank": 11,
+   "score": 9.9,
+   "faculty": 115,
+   "categories": {
+    "ai": 15,
+    "systems": 12,
+    "theory": 11,
+    "interdisciplinary": 8
+   },
+   "areas": {
+    "ai": 9,
+    "vision": 15,
+    "mlmining": 26,
+    "nlp": 21,
+    "inforet": 15,
+    "arch": 32,
+    "comm": 40,
+    "sec": 5,
+    "mod": 20,
+    "hpc": 8,
+    "mobile": 49,
+    "metrics": 1,
+    "ops": 26,
+    "plan": 12,
+    "soft": 27,
+    "act": 12,
+    "crypt": 6,
+    "log": 20,
+    "graph": 44,
+    "chi": 6,
+    "robotics": 15,
+    "bio": 11,
+    "da": 15,
+    "bed": 41,
+    "visualization": 9,
+    "ecom": 18,
+    "csed": 30
+   }
+  },
+  {
+   "institution": "Stanford University",
+   "homepage": "https://www.cs.stanford.edu/",
+   "rank": 12,
+   "score": 9.7,
+   "faculty": 61,
+   "categories": {
+    "ai": 6,
+    "systems": 32,
+    "theory": 10,
+    "interdisciplinary": 3
+   },
+   "areas": {
+    "ai": 28,
+    "vision": 4,
+    "mlmining": 4,
+    "nlp": 3,
+    "inforet": 43,
+    "arch": 21,
+    "comm": 18,
+    "sec": 43,
+    "mod": 35,
+    "hpc": 29,
+    "mobile": 78,
+    "metrics": 32,
+    "ops": 17,
+    "plan": 16,
+    "soft": 104,
+    "act": 5,
+    "crypt": 18,
+    "log": 5,
+    "graph": 2,
+    "chi": 11,
+    "robotics": 7,
+    "bio": 20,
+    "da": 43,
+    "visualization": 30,
+    "ecom": 7,
+    "csed": 7
+   }
+  },
+  {
+   "institution": "Purdue University",
+   "homepage": "https://www.cs.purdue.edu/",
+   "rank": 13,
+   "score": 9.0,
+   "faculty": 82,
+   "categories": {
+    "ai": 23,
+    "systems": 5,
+    "theory": 17,
+    "interdisciplinary": 21
+   },
+   "areas": {
+    "ai": 25,
+    "vision": 40,
+    "mlmining": 25,
+    "nlp": 37,
+    "inforet": 17,
+    "arch": 12,
+    "comm": 17,
+    "sec": 2,
+    "mod": 15,
+    "hpc": 9,
+    "mobile": 9,
+    "metrics": 13,
+    "ops": 14,
+    "plan": 9,
+    "soft": 4,
+    "act": 19,
+    "crypt": 13,
+    "log": 29,
+    "graph": 28,
+    "chi": 32,
+    "robotics": 26,
+    "bio": 23,
+    "da": 51,
+    "bed": 21,
+    "visualization": 19,
+    "ecom": 25
+   }
+  },
+  {
+   "institution": "New York University",
+   "homepage": "https://cs.nyu.edu/",
+   "rank": 14,
+   "score": 8.6,
+   "faculty": 96,
+   "categories": {
+    "ai": 13,
+    "systems": 19,
+    "theory": 2,
+    "interdisciplinary": 15
+   },
+   "areas": {
+    "ai": 41,
+    "vision": 23,
+    "mlmining": 7,
+    "nlp": 7,
+    "inforet": 22,
+    "arch": 11,
+    "comm": 19,
+    "sec": 31,
+    "mod": 21,
+    "hpc": 38,
+    "mobile": 87,
+    "metrics": 29,
+    "ops": 12,
+    "plan": 5,
+    "soft": 91,
+    "act": 3,
+    "crypt": 3,
+    "log": 13,
+    "graph": 5,
+    "chi": 30,
+    "robotics": 41,
+    "bio": 31,
+    "da": 20,
+    "visualization": 16,
+    "ecom": 31,
+    "csed": 91
+   }
+  },
+  {
+   "institution": "University of Wisconsin - Madison",
+   "homepage": "https://www.cs.wisc.edu/",
+   "rank": 15,
+   "score": 7.9,
+   "faculty": 86,
+   "categories": {
+    "ai": 27,
+    "systems": 8,
+    "theory": 16,
+    "interdisciplinary": 29
+   },
+   "areas": {
+    "ai": 36,
+    "vision": 14,
+    "mlmining": 8,
+    "nlp": 51,
+    "inforet": 70,
+    "arch": 8,
+    "comm": 11,
+    "sec": 20,
+    "mod": 8,
+    "hpc": 23,
+    "mobile": 12,
+    "metrics": 14,
+    "ops": 6,
+    "plan": 4,
+    "soft": 48,
+    "act": 25,
+    "crypt": 23,
+    "log": 8,
+    "graph": 26,
+    "chi": 25,
+    "robotics": 46,
+    "bio": 35,
+    "da": 23,
+    "visualization": 24,
+    "csed": 63
+   }
+  },
+  {
+   "institution": "University of Texas at Austin",
+   "homepage": "https://www.cs.utexas.edu/",
+   "rank": 16,
+   "score": 7.8,
+   "faculty": 60,
+   "categories": {
+    "ai": 18,
+    "systems": 15,
+    "theory": 5,
+    "interdisciplinary": 33
+   },
+   "areas": {
+    "ai": 16,
+    "vision": 10,
+    "mlmining": 16,
+    "nlp": 31,
+    "inforet": 63,
+    "arch": 24,
+    "comm": 7,
+    "sec": 61,
+    "mod": 42,
+    "hpc": 77,
+    "mobile": 16,
+    "metrics": 32,
+    "ops": 9,
+    "plan": 10,
+    "soft": 44,
+    "act": 16,
+    "crypt": 2,
+    "log": 4,
+    "graph": 23,
+    "chi": 52,
+    "robotics": 6,
+    "da": 8,
+    "bed": 48,
+    "visualization": 86,
+    "ecom": 36,
+    "csed": 91
+   }
+  },
+  {
+   "institution": "Princeton University",
+   "homepage": "https://www.cs.princeton.edu/",
+   "rank": 17,
+   "score": 7.3,
+   "faculty": 67,
+   "categories": {
+    "ai": 29,
+    "systems": 18,
+    "theory": 12,
+    "interdisciplinary": 16
+   },
+   "areas": {
+    "ai": 80,
+    "vision": 19,
+    "mlmining": 13,
+    "nlp": 34,
+    "inforet": 43,
+    "arch": 7,
+    "comm": 1,
+    "sec": 34,
+    "mod": 59,
+    "hpc": 61,
+    "mobile": 10,
+    "metrics": 24,
+    "ops": 15,
+    "plan": 11,
+    "soft": 104,
+    "act": 6,
+    "crypt": 34,
+    "log": 9,
+    "graph": 9,
+    "chi": 41,
+    "robotics": 35,
+    "bio": 6,
+    "da": 46,
+    "visualization": 86,
+    "ecom": 3,
+    "csed": 100
+   }
+  },
+  {
+   "institution": "University of Pennsylvania",
+   "homepage": "https://www.cis.upenn.edu/",
+   "rank": 18,
+   "score": 7.1,
+   "faculty": 70,
+   "categories": {
+    "ai": 19,
+    "systems": 17,
+    "theory": 21,
+    "interdisciplinary": 25
+   },
+   "areas": {
+    "ai": 40,
+    "vision": 16,
+    "mlmining": 14,
+    "nlp": 13,
+    "inforet": 88,
+    "arch": 22,
+    "comm": 15,
+    "sec": 46,
+    "mod": 8,
+    "hpc": 117,
+    "mobile": 46,
+    "metrics": 37,
+    "ops": 10,
+    "plan": 3,
+    "soft": 50,
+    "act": 19,
+    "crypt": 39,
+    "log": 11,
+    "graph": 30,
+    "chi": 56,
+    "robotics": 3,
+    "bio": 35,
+    "da": 53,
+    "bed": 4,
+    "ecom": 16,
+    "csed": 91
+   }
+  },
+  {
+   "institution": "Columbia University",
+   "homepage": "https://www.cs.columbia.edu/",
+   "rank": 19,
+   "score": 6.8,
+   "faculty": 58,
+   "categories": {
+    "ai": 21,
+    "systems": 22,
+    "theory": 17,
+    "interdisciplinary": 22
+   },
+   "areas": {
+    "ai": 38,
+    "vision": 25,
+    "mlmining": 18,
+    "nlp": 17,
+    "inforet": 40,
+    "arch": 27,
+    "comm": 29,
+    "sec": 25,
+    "mod": 29,
+    "hpc": 102,
+    "mobile": 27,
+    "metrics": 12,
+    "ops": 5,
+    "plan": 33,
+    "soft": 21,
+    "act": 7,
+    "crypt": 27,
+    "log": 39,
+    "graph": 21,
+    "chi": 18,
+    "robotics": 75,
+    "bio": 45,
+    "da": 35,
+    "bed": 62,
+    "visualization": 48,
+    "ecom": 8,
+    "csed": 77
+   }
+  },
+  {
+   "institution": "Univ. of California - Los Angeles",
+   "homepage": "https://www.cs.ucla.edu/",
+   "rank": 20,
+   "score": 6.7,
+   "faculty": 50,
+   "categories": {
+    "ai": 11,
+    "systems": 23,
+    "theory": 15,
+    "interdisciplinary": 38
+   },
+   "areas": {
+    "ai": 19,
+    "vision": 30,
+    "mlmining": 10,
+    "nlp": 8,
+    "inforet": 15,
+    "arch": 26,
+    "comm": 13,
+    "sec": 56,
+    "mod": 66,
+    "hpc": 95,
+    "mobile": 15,
+    "metrics": 70,
+    "ops": 19,
+    "plan": 14,
+    "soft": 13,
+    "act": 30,
+    "crypt": 4,
+    "log": 25,
+    "graph": 9,
+    "chi": 29,
+    "robotics": 73,
+    "bio": 7,
+    "da": 11,
+    "bed": 60,
+    "visualization": 106,
+    "csed": 100
+   }
+  },
+  {
+   "institution": "University of Southern California",
+   "homepage": "https://www.cs.usc.edu/",
+   "rank": 21,
+   "score": 6.3,
+   "faculty": 64,
+   "categories": {
+    "ai": 17,
+    "systems": 20,
+    "theory": 34,
+    "interdisciplinary": 32
+   },
+   "areas": {
+    "ai": 19,
+    "vision": 36,
+    "mlmining": 22,
+    "nlp": 15,
+    "inforet": 12,
+    "arch": 40,
+    "comm": 8,
+    "sec": 73,
+    "mod": 17,
+    "hpc": 54,
+    "mobile": 19,
+    "metrics": 8,
+    "ops": 33,
+    "plan": 40,
+    "soft": 7,
+    "act": 37,
+    "crypt": 55,
+    "log": 20,
+    "graph": 18,
+    "chi": 74,
+    "robotics": 18,
+    "da": 62,
+    "bed": 25,
+    "visualization": 98,
+    "ecom": 11,
+    "csed": 87
+   }
+  },
+  {
+   "institution": "Univ. of California - Irvine",
+   "homepage": "https://cs.ics.uci.edu/",
+   "rank": 22,
+   "score": 6.0,
+   "faculty": 77,
+   "categories": {
+    "ai": 34,
+    "systems": 14,
+    "theory": 36,
+    "interdisciplinary": 33
+   },
+   "areas": {
+    "ai": 23,
+    "vision": 32,
+    "mlmining": 36,
+    "nlp": 41,
+    "inforet": 62,
+    "arch": 37,
+    "comm": 34,
+    "sec": 16,
+    "mod": 12,
+    "hpc": 23,
+    "mobile": 25,
+    "metrics": 19,
+    "ops": 40,
+    "plan": 80,
+    "soft": 2,
+    "act": 47,
+    "crypt": 36,
+    "log": 46,
+    "graph": 71,
+    "chi": 15,
+    "robotics": 64,
+    "bio": 25,
+    "da": 2,
+    "bed": 25,
+    "visualization": 63,
+    "ecom": 26,
+    "csed": 28
+   }
+  },
+  {
+   "institution": "Univ. of Massachusetts Amherst",
+   "homepage": "https://www.cics.umass.edu/",
+   "rank": 23,
+   "score": 5.8,
+   "faculty": 64,
+   "categories": {
+    "ai": 12,
+    "systems": 28,
+    "theory": 42,
+    "interdisciplinary": 33
+   },
+   "areas": {
+    "ai": 18,
+    "vision": 22,
+    "mlmining": 21,
+    "nlp": 23,
+    "inforet": 4,
+    "arch": 51,
+    "comm": 23,
+    "sec": 33,
+    "mod": 25,
+    "hpc": 22,
+    "mobile": 2,
+    "metrics": 5,
+    "plan": 48,
+    "soft": 8,
+    "act": 27,
+    "crypt": 57,
+    "graph": 38,
+    "chi": 34,
+    "robotics": 22,
+    "bio": 62,
+    "visualization": 71,
+    "ecom": 23,
+    "csed": 60
+   }
+  },
+  {
+   "institution": "Stony Brook University",
+   "homepage": "https://www.cs.stonybrook.edu/",
+   "rank": 24,
+   "score": 5.6,
+   "faculty": 64,
+   "categories": {
+    "ai": 32,
+    "systems": 31,
+    "theory": 22,
+    "interdisciplinary": 31
+   },
+   "areas": {
+    "ai": 52,
+    "vision": 24,
+    "mlmining": 54,
+    "nlp": 26,
+    "inforet": 14,
+    "arch": 38,
+    "comm": 24,
+    "sec": 12,
+    "mod": 38,
+    "hpc": 51,
+    "mobile": 23,
+    "metrics": 17,
+    "ops": 18,
+    "plan": 46,
+    "soft": 59,
+    "act": 29,
+    "crypt": 32,
+    "log": 15,
+    "graph": 38,
+    "chi": 23,
+    "robotics": 44,
+    "bio": 45,
+    "bed": 25,
+    "visualization": 15,
+    "csed": 79
+   }
+  },
+  {
+   "institution": "University of Chicago",
+   "homepage": "https://computerscience.uchicago.edu/",
+   "rank": 24,
+   "score": 5.6,
+   "faculty": 50,
+   "categories": {
+    "ai": 47,
+    "systems": 20,
+    "theory": 34,
+    "interdisciplinary": 23
+   },
+   "areas": {
+    "ai": 74,
+    "vision": 59,
+    "mlmining": 31,
+    "nlp": 49,
+    "inforet": 30,
+    "arch": 17,
+    "comm": 31,
+    "sec": 17,
+    "mod": 6,
+    "hpc": 10,
+    "mobile": 49,
+    "metrics": 21,
+    "ops": 29,
+    "plan": 32,
+    "soft": 41,
+    "act": 18,
+    "crypt": 46,
+    "graph": 36,
+    "chi": 14,
+    "robotics": 96,
+    "bio": 62,
+    "da": 89,
+    "bed": 36,
+    "visualization": 27,
+    "ecom": 26,
+    "csed": 9
+   }
+  },
+  {
+   "institution": "Northwestern University",
+   "homepage": "https://www.mccormick.northwestern.edu/computer-science/",
+   "rank": 26,
+   "score": 5.4,
+   "faculty": 77,
+   "categories": {
+    "ai": 39,
+    "systems": 33,
+    "theory": 27,
+    "interdisciplinary": 17
+   },
+   "areas": {
+    "ai": 19,
+    "vision": 50,
+    "mlmining": 32,
+    "nlp": 66,
+    "inforet": 41,
+    "arch": 33,
+    "comm": 47,
+    "sec": 24,
+    "mod": 57,
+    "hpc": 30,
+    "mobile": 42,
+    "metrics": 15,
+    "ops": 54,
+    "plan": 30,
+    "soft": 88,
+    "act": 31,
+    "crypt": 34,
+    "log": 54,
+    "chi": 9,
+    "robotics": 30,
+    "da": 13,
+    "bed": 34,
+    "visualization": 2,
+    "ecom": 20,
+    "csed": 48
+   }
+  },
+  {
+   "institution": "Univ. of California - Riverside",
+   "homepage": "https://www.cs.ucr.edu",
+   "rank": 27,
+   "score": 5.3,
+   "faculty": 65,
+   "categories": {
+    "ai": 58,
+    "systems": 9,
+    "theory": 47,
+    "interdisciplinary": 56
+   },
+   "areas": {
+    "ai": 92,
+    "vision": 33,
+    "mlmining": 52,
+    "nlp": 71,
+    "inforet": 57,
+    "arch": 10,
+    "comm": 36,
+    "sec": 11,
+    "mod": 22,
+    "hpc": 6,
+    "mobile": 26,
+    "metrics": 10,
+    "ops": 49,
+    "plan": 38,
+    "soft": 19,
+    "act": 41,
+    "crypt": 51,
+    "log": 60,
+    "graph": 29,
+    "chi": 135,
+    "robotics": 38,
+    "bio": 8,
+    "da": 9,
+    "bed": 3,
+    "csed": 25
+   }
+  },
+  {
+   "institution": "University of Virginia",
+   "homepage": "https://engineering.virginia.edu/department/computer-science",
+   "rank": 27,
+   "score": 5.3,
+   "faculty": 67,
+   "categories": {
+    "ai": 24,
+    "systems": 26,
+    "theory": 29,
+    "interdisciplinary": 53
+   },
+   "areas": {
+    "ai": 2,
+    "vision": 48,
+    "mlmining": 28,
+    "nlp": 38,
+    "inforet": 25,
+    "arch": 19,
+    "comm": 20,
+    "sec": 30,
+    "mod": 52,
+    "hpc": 38,
+    "mobile": 13,
+    "metrics": 29,
+    "ops": 23,
+    "plan": 80,
+    "soft": 9,
+    "act": 54,
+    "crypt": 22,
+    "log": 29,
+    "chi": 52,
+    "robotics": 36,
+    "da": 62,
+    "bed": 51,
+    "visualization": 86,
+    "ecom": 32,
+    "csed": 30
+   }
+  },
+  {
+   "institution": "University of Utah",
+   "homepage": "https://www.cs.utah.edu/",
+   "rank": 29,
+   "score": 5.2,
+   "faculty": 71,
+   "categories": {
+    "ai": 59,
+    "systems": 30,
+    "theory": 38,
+    "interdisciplinary": 12
+   },
+   "areas": {
+    "ai": 82,
+    "vision": 46,
+    "mlmining": 50,
+    "nlp": 48,
+    "inforet": 98,
+    "arch": 25,
+    "comm": 52,
+    "sec": 39,
+    "mod": 34,
+    "hpc": 7,
+    "mobile": 36,
+    "metrics": 44,
+    "ops": 31,
+    "plan": 14,
+    "soft": 29,
+    "act": 39,
+    "crypt": 38,
+    "log": 60,
+    "graph": 6,
+    "chi": 22,
+    "robotics": 40,
+    "da": 62,
+    "bed": 62,
+    "visualization": 1,
+    "csed": 34
+   }
+  },
+  {
+   "institution": "Duke University",
+   "homepage": "https://cs.duke.edu/",
+   "rank": 30,
+   "score": 5.1,
+   "faculty": 57,
+   "categories": {
+    "ai": 36,
+    "systems": 23,
+    "theory": 27,
+    "interdisciplinary": 56
+   },
+   "areas": {
+    "ai": 35,
+    "vision": 49,
+    "mlmining": 24,
+    "nlp": 44,
+    "inforet": 38,
+    "arch": 28,
+    "comm": 22,
+    "sec": 10,
+    "mod": 2,
+    "hpc": 68,
+    "mobile": 32,
+    "metrics": 35,
+    "ops": 45,
+    "plan": 55,
+    "soft": 116,
+    "act": 17,
+    "crypt": 42,
+    "log": 54,
+    "chi": 88,
+    "robotics": 52,
+    "bio": 9,
+    "da": 5,
+    "bed": 39,
+    "visualization": 86,
+    "ecom": 10
+   }
+  },
+  {
+   "institution": "Rutgers University",
+   "homepage": "https://www.cs.rutgers.edu/",
+   "rank": 30,
+   "score": 5.1,
+   "faculty": 58,
+   "categories": {
+    "ai": 30,
+    "systems": 42,
+    "theory": 25,
+    "interdisciplinary": 23
+   },
+   "areas": {
+    "ai": 8,
+    "vision": 29,
+    "mlmining": 38,
+    "nlp": 68,
+    "inforet": 11,
+    "arch": 35,
+    "comm": 32,
+    "sec": 85,
+    "mod": 33,
+    "hpc": 72,
+    "mobile": 45,
+    "metrics": 64,
+    "ops": 35,
+    "plan": 21,
+    "soft": 40,
+    "act": 21,
+    "crypt": 31,
+    "log": 39,
+    "graph": 38,
+    "chi": 35,
+    "robotics": 12,
+    "bio": 62,
+    "da": 67,
+    "bed": 62,
+    "visualization": 63,
+    "ecom": 9,
+    "csed": 70
+   }
+  },
+  {
+   "institution": "George Mason University",
+   "homepage": "https://cs.gmu.edu/",
+   "rank": 32,
+   "score": 4.8,
+   "faculty": 54,
+   "categories": {
+    "ai": 54,
+    "systems": 35,
+    "theory": 65,
+    "interdisciplinary": 13
+   },
+   "areas": {
+    "ai": 66,
+    "vision": 69,
+    "mlmining": 63,
+    "nlp": 27,
+    "inforet": 27,
+    "arch": 50,
+    "comm": 44,
+    "sec": 13,
+    "mod": 70,
+    "hpc": 51,
+    "mobile": 3,
+    "metrics": 28,
+    "ops": 54,
+    "plan": 75,
+    "soft": 15,
+    "act": 72,
+    "crypt": 43,
+    "log": 54,
+    "graph": 20,
+    "chi": 19,
+    "robotics": 25,
+    "da": 24,
+    "bed": 44,
+    "visualization": 22,
+    "ecom": 14,
+    "csed": 46
+   }
+  },
+  {
+   "institution": "Pennsylvania State University",
+   "homepage": "https://www.eecs.psu.edu/",
+   "rank": 32,
+   "score": 4.8,
+   "faculty": 63,
+   "categories": {
+    "ai": 24,
+    "systems": 26,
+    "theory": 56,
+    "interdisciplinary": 59
+   },
+   "areas": {
+    "ai": 12,
+    "vision": 53,
+    "mlmining": 42,
+    "nlp": 22,
+    "inforet": 8,
+    "arch": 9,
+    "comm": 49,
+    "sec": 15,
+    "mod": 32,
+    "hpc": 54,
+    "mobile": 46,
+    "metrics": 11,
+    "ops": 35,
+    "plan": 24,
+    "soft": 66,
+    "act": 45,
+    "crypt": 66,
+    "graph": 64,
+    "chi": 50,
+    "robotics": 114,
+    "bio": 2,
+    "da": 16,
+    "visualization": 74,
+    "ecom": 47,
+    "csed": 39
+   }
+  },
+  {
+   "institution": "Texas A&M University",
+   "homepage": "https://engineering.tamu.edu/cse/",
+   "rank": 34,
+   "score": 4.7,
+   "faculty": 62,
+   "categories": {
+    "ai": 26,
+    "systems": 44,
+    "theory": 41,
+    "interdisciplinary": 25
+   },
+   "areas": {
+    "ai": 42,
+    "vision": 38,
+    "mlmining": 27,
+    "nlp": 34,
+    "inforet": 10,
+    "arch": 30,
+    "comm": 65,
+    "sec": 36,
+    "mod": 51,
+    "hpc": 46,
+    "mobile": 64,
+    "metrics": 47,
+    "ops": 45,
+    "plan": 53,
+    "soft": 22,
+    "act": 51,
+    "crypt": 28,
+    "log": 60,
+    "graph": 8,
+    "chi": 37,
+    "robotics": 13,
+    "bio": 41,
+    "da": 50,
+    "bed": 71,
+    "visualization": 59
+   }
+  },
+  {
+   "institution": "Univ. of California - Santa Barbara",
+   "homepage": "https://cs.ucsb.edu/",
+   "rank": 34,
+   "score": 4.7,
+   "faculty": 41,
+   "categories": {
+    "ai": 33,
+    "systems": 36,
+    "theory": 23,
+    "interdisciplinary": 63
+   },
+   "areas": {
+    "ai": 60,
+    "vision": 43,
+    "mlmining": 46,
+    "nlp": 19,
+    "inforet": 18,
+    "arch": 31,
+    "comm": 29,
+    "sec": 19,
+    "mod": 17,
+    "hpc": 102,
+    "mobile": 95,
+    "metrics": 52,
+    "ops": 26,
+    "plan": 25,
+    "soft": 45,
+    "act": 26,
+    "crypt": 14,
+    "log": 52,
+    "graph": 45,
+    "chi": 43,
+    "robotics": 84,
+    "bio": 62,
+    "da": 20,
+    "visualization": 26
+   }
+  },
+  {
+   "institution": "Boston University",
+   "homepage": "https://www.bu.edu/cs/",
+   "rank": 36,
+   "score": 4.6,
+   "faculty": 58,
+   "categories": {
+    "ai": 31,
+    "systems": 40,
+    "theory": 19,
+    "interdisciplinary": 61
+   },
+   "areas": {
+    "ai": 79,
+    "vision": 12,
+    "mlmining": 20,
+    "nlp": 40,
+    "inforet": 42,
+    "arch": 66,
+    "comm": 38,
+    "sec": 18,
+    "mod": 23,
+    "hpc": 85,
+    "mobile": 101,
+    "metrics": 36,
+    "ops": 31,
+    "plan": 26,
+    "act": 24,
+    "crypt": 16,
+    "log": 25,
+    "graph": 24,
+    "chi": 59,
+    "robotics": 70,
+    "da": 46,
+    "bed": 5,
+    "visualization": 98,
+    "ecom": 33
+   }
+  },
+  {
+   "institution": "Univ. of California - Santa Cruz",
+   "homepage": "https://engineering.ucsc.edu/departments/computer-science-and-engineering/",
+   "rank": 37,
+   "score": 4.5,
+   "faculty": 68,
+   "categories": {
+    "ai": 42,
+    "systems": 39,
+    "theory": 31,
+    "interdisciplinary": 47
+   },
+   "areas": {
+    "ai": 39,
+    "vision": 51,
+    "mlmining": 39,
+    "nlp": 57,
+    "inforet": 28,
+    "arch": 20,
+    "comm": 46,
+    "sec": 52,
+    "mod": 30,
+    "hpc": 46,
+    "mobile": 84,
+    "metrics": 31,
+    "ops": 25,
+    "plan": 28,
+    "soft": 78,
+    "act": 33,
+    "crypt": 57,
+    "log": 17,
+    "graph": 60,
+    "chi": 16,
+    "robotics": 82,
+    "bio": 75,
+    "da": 31,
+    "bed": 39,
+    "visualization": 42,
+    "ecom": 29,
+    "csed": 43
+   }
+  },
+  {
+   "institution": "Virginia Tech",
+   "homepage": "https://cs.vt.edu/",
+   "rank": 37,
+   "score": 4.5,
+   "faculty": 76,
+   "categories": {
+    "ai": 42,
+    "systems": 36,
+    "theory": 83,
+    "interdisciplinary": 20
+   },
+   "areas": {
+    "ai": 27,
+    "vision": 58,
+    "mlmining": 55,
+    "nlp": 46,
+    "inforet": 22,
+    "arch": 17,
+    "comm": 39,
+    "sec": 28,
+    "mod": 82,
+    "hpc": 16,
+    "mobile": 69,
+    "metrics": 22,
+    "ops": 33,
+    "plan": 50,
+    "soft": 12,
+    "act": 67,
+    "graph": 71,
+    "chi": 26,
+    "robotics": 62,
+    "bio": 18,
+    "da": 46,
+    "visualization": 11,
+    "ecom": 43,
+    "csed": 4
+   }
+  },
+  {
+   "institution": "Arizona State University",
+   "homepage": "https://scai.engineering.asu.edu/",
+   "rank": 39,
+   "score": 4.4,
+   "faculty": 70,
+   "categories": {
+    "ai": 28,
+    "systems": 40,
+    "theory": 56,
+    "interdisciplinary": 37
+   },
+   "areas": {
+    "ai": 4,
+    "vision": 45,
+    "mlmining": 44,
+    "nlp": 30,
+    "inforet": 21,
+    "arch": 40,
+    "comm": 75,
+    "sec": 6,
+    "mod": 41,
+    "hpc": 44,
+    "mobile": 64,
+    "metrics": 54,
+    "ops": 42,
+    "plan": 80,
+    "soft": 69,
+    "act": 81,
+    "crypt": 33,
+    "log": 65,
+    "chi": 36,
+    "robotics": 20,
+    "da": 3,
+    "bed": 24,
+    "visualization": 23,
+    "csed": 29
+   }
+  },
+  {
+   "institution": "Harvard University",
+   "homepage": "https://seas.harvard.edu/computer-science",
+   "rank": 39,
+   "score": 4.4,
+   "faculty": 38,
+   "categories": {
+    "ai": 38,
+    "systems": 48,
+    "theory": 32,
+    "interdisciplinary": 25
+   },
+   "areas": {
+    "ai": 7,
+    "vision": 62,
+    "mlmining": 19,
+    "nlp": 69,
+    "inforet": 51,
+    "arch": 44,
+    "comm": 14,
+    "sec": 80,
+    "mod": 24,
+    "hpc": 75,
+    "mobile": 87,
+    "metrics": 64,
+    "ops": 21,
+    "plan": 29,
+    "soft": 98,
+    "act": 15,
+    "crypt": 43,
+    "graph": 60,
+    "chi": 31,
+    "robotics": 60,
+    "bio": 51,
+    "da": 68,
+    "visualization": 13,
+    "ecom": 4,
+    "csed": 91
+   }
+  },
+  {
+   "institution": "Johns Hopkins University",
+   "homepage": "https://www.cs.jhu.edu/",
+   "rank": 41,
+   "score": 4.3,
+   "faculty": 76,
+   "categories": {
+    "ai": 14,
+    "systems": 60,
+    "theory": 24,
+    "interdisciplinary": 50
+   },
+   "areas": {
+    "ai": 32,
+    "vision": 8,
+    "mlmining": 17,
+    "nlp": 5,
+    "inforet": 53,
+    "arch": 83,
+    "comm": 24,
+    "sec": 21,
+    "mod": 122,
+    "hpc": 70,
+    "mobile": 41,
+    "metrics": 17,
+    "ops": 45,
+    "plan": 75,
+    "soft": 98,
+    "act": 31,
+    "crypt": 12,
+    "graph": 46,
+    "chi": 55,
+    "robotics": 17,
+    "bio": 19,
+    "da": 98
+   }
+  },
+  {
+   "institution": "North Carolina State University",
+   "homepage": "https://csc.ncsu.edu/",
+   "rank": 41,
+   "score": 4.3,
+   "faculty": 61,
+   "categories": {
+    "ai": 65,
+    "systems": 23,
+    "theory": 49,
+    "interdisciplinary": 43
+   },
+   "areas": {
+    "ai": 31,
+    "vision": 99,
+    "mlmining": 64,
+    "nlp": 87,
+    "inforet": 34,
+    "arch": 13,
+    "comm": 61,
+    "sec": 29,
+    "mod": 82,
+    "hpc": 4,
+    "mobile": 29,
+    "metrics": 41,
+    "plan": 73,
+    "soft": 5,
+    "act": 39,
+    "crypt": 51,
+    "graph": 60,
+    "chi": 42,
+    "robotics": 68,
+    "bio": 31,
+    "da": 22,
+    "bed": 6,
+    "visualization": 54,
+    "csed": 5
+   }
+  },
+  {
+   "institution": "University of Illinois at Chicago",
+   "homepage": "https://www.cs.uic.edu",
+   "rank": 41,
+   "score": 4.3,
+   "faculty": 56,
+   "categories": {
+    "ai": 19,
+    "systems": 52,
+    "theory": 29,
+    "interdisciplinary": 47
+   },
+   "areas": {
+    "ai": 13,
+    "vision": 36,
+    "mlmining": 45,
+    "nlp": 20,
+    "inforet": 5,
+    "arch": 70,
+    "comm": 75,
+    "sec": 38,
+    "mod": 7,
+    "hpc": 25,
+    "mobile": 73,
+    "metrics": 50,
+    "ops": 49,
+    "plan": 50,
+    "soft": 73,
+    "act": 34,
+    "crypt": 45,
+    "log": 22,
+    "chi": 60,
+    "robotics": 65,
+    "bio": 75,
+    "da": 76,
+    "visualization": 17,
+    "ecom": 33,
+    "csed": 42
+   }
+  },
+  {
+   "institution": "Yale University",
+   "homepage": "https://cpsc.yale.edu/",
+   "rank": 41,
+   "score": 4.3,
+   "faculty": 41,
+   "categories": {
+    "ai": 55,
+    "systems": 43,
+    "theory": 19,
+    "interdisciplinary": 43
+   },
+   "areas": {
+    "ai": 88,
+    "vision": 73,
+    "mlmining": 33,
+    "nlp": 44,
+    "inforet": 53,
+    "arch": 39,
+    "comm": 24,
+    "sec": 32,
+    "mod": 43,
+    "hpc": 117,
+    "mobile": 39,
+    "metrics": 64,
+    "ops": 20,
+    "plan": 17,
+    "act": 28,
+    "crypt": 17,
+    "log": 22,
+    "graph": 19,
+    "chi": 114,
+    "robotics": 28,
+    "bio": 75,
+    "da": 59,
+    "ecom": 6,
+    "csed": 79
+   }
+  },
+  {
+   "institution": "Rice University",
+   "homepage": "https://cs.rice.edu/",
+   "rank": 45,
+   "score": 4.2,
+   "faculty": 39,
+   "categories": {
+    "ai": 48,
+    "systems": 33,
+    "theory": 43,
+    "interdisciplinary": 59
+   },
+   "areas": {
+    "ai": 24,
+    "vision": 40,
+    "mlmining": 40,
+    "nlp": 76,
+    "inforet": 48,
+    "arch": 33,
+    "comm": 28,
+    "sec": 76,
+    "mod": 38,
+    "hpc": 2,
+    "mobile": 28,
+    "metrics": 38,
+    "ops": 21,
+    "plan": 39,
+    "soft": 78,
+    "act": 65,
+    "crypt": 46,
+    "log": 12,
+    "graph": 64,
+    "chi": 93,
+    "robotics": 33,
+    "bio": 21,
+    "da": 30,
+    "bed": 51,
+    "ecom": 44,
+    "csed": 51
+   }
+  },
+  {
+   "institution": "University of North Carolina",
+   "homepage": "https://cs.unc.edu/",
+   "rank": 45,
+   "score": 4.2,
+   "faculty": 46,
+   "categories": {
+    "ai": 22,
+    "systems": 50,
+    "theory": 47,
+    "interdisciplinary": 38
+   },
+   "areas": {
+    "ai": 30,
+    "vision": 13,
+    "mlmining": 29,
+    "nlp": 10,
+    "inforet": 94,
+    "arch": 44,
+    "comm": 47,
+    "sec": 49,
+    "mod": 82,
+    "hpc": 102,
+    "mobile": 29,
+    "metrics": 58,
+    "ops": 26,
+    "act": 53,
+    "crypt": 51,
+    "log": 34,
+    "graph": 33,
+    "chi": 63,
+    "robotics": 39,
+    "da": 36,
+    "bed": 2,
+    "visualization": 10,
+    "csed": 70
+   }
+  },
+  {
+   "institution": "Ohio State University",
+   "homepage": "https://cse.osu.edu/",
+   "rank": 47,
+   "score": 4.1,
+   "faculty": 47,
+   "categories": {
+    "ai": 39,
+    "systems": 28,
+    "theory": 58,
+    "interdisciplinary": 72
+   },
+   "areas": {
+    "ai": 49,
+    "vision": 76,
+    "mlmining": 30,
+    "nlp": 29,
+    "inforet": 31,
+    "arch": 58,
+    "comm": 36,
+    "sec": 22,
+    "mod": 16,
+    "hpc": 1,
+    "mobile": 7,
+    "metrics": 9,
+    "ops": 38,
+    "plan": 36,
+    "soft": 47,
+    "act": 42,
+    "chi": 70,
+    "bio": 62,
+    "bed": 31,
+    "visualization": 12,
+    "ecom": 54,
+    "csed": 60
+   }
+  },
+  {
+   "institution": "University at Buffalo",
+   "homepage": "https://cse.buffalo.edu",
+   "rank": 47,
+   "score": 4.1,
+   "faculty": 45,
+   "categories": {
+    "ai": 41,
+    "systems": 36,
+    "theory": 65,
+    "interdisciplinary": 50
+   },
+   "areas": {
+    "ai": 33,
+    "vision": 20,
+    "mlmining": 47,
+    "nlp": 57,
+    "inforet": 57,
+    "arch": 59,
+    "comm": 27,
+    "sec": 50,
+    "mod": 27,
+    "hpc": 70,
+    "mobile": 5,
+    "metrics": 50,
+    "ops": 38,
+    "plan": 36,
+    "soft": 28,
+    "act": 57,
+    "log": 54,
+    "graph": 64,
+    "chi": 37,
+    "robotics": 43,
+    "bio": 42,
+    "da": 39,
+    "bed": 51,
+    "visualization": 98,
+    "csed": 20
+   }
+  },
+  {
+   "institution": "University of Colorado Boulder",
+   "homepage": "https://www.colorado.edu/cs/",
+   "rank": 47,
+   "score": 4.1,
+   "faculty": 75,
+   "categories": {
+    "ai": 57,
+    "systems": 50,
+    "theory": 38,
+    "interdisciplinary": 19
+   },
+   "areas": {
+    "ai": 46,
+    "vision": 65,
+    "mlmining": 58,
+    "nlp": 32,
+    "inforet": 74,
+    "arch": 44,
+    "comm": 33,
+    "sec": 67,
+    "mod": 98,
+    "hpc": 85,
+    "mobile": 33,
+    "metrics": 41,
+    "ops": 49,
+    "plan": 48,
+    "soft": 30,
+    "act": 50,
+    "crypt": 55,
+    "log": 14,
+    "graph": 53,
+    "chi": 8,
+    "robotics": 19,
+    "da": 89,
+    "bed": 20,
+    "visualization": 56,
+    "ecom": 15,
+    "csed": 15
+   }
+  },
+  {
+   "institution": "Univ. of California - Davis",
+   "homepage": "https://cs.ucdavis.edu/",
+   "rank": 50,
+   "score": 4.0,
+   "faculty": 54,
+   "categories": {
+    "ai": 46,
+    "systems": 44,
+    "theory": 46,
+    "interdisciplinary": 38
+   },
+   "areas": {
+    "ai": 54,
+    "vision": 57,
+    "mlmining": 47,
+    "nlp": 28,
+    "inforet": 39,
+    "arch": 53,
+    "comm": 41,
+    "sec": 62,
+    "mod": 59,
+    "hpc": 66,
+    "mobile": 76,
+    "metrics": 26,
+    "ops": 41,
+    "plan": 40,
+    "soft": 24,
+    "act": 42,
+    "crypt": 46,
+    "log": 50,
+    "graph": 17,
+    "chi": 62,
+    "robotics": 123,
+    "bio": 45,
+    "da": 24,
+    "visualization": 8,
+    "ecom": 47,
+    "csed": 36
+   }
+  },
+  {
+   "institution": "University of Minnesota",
+   "homepage": "https://cse.umn.edu/cs",
+   "rank": 50,
+   "score": 4.0,
+   "faculty": 51,
+   "categories": {
+    "ai": 49,
+    "systems": 46,
+    "theory": 52,
+    "interdisciplinary": 25
+   },
+   "areas": {
+    "ai": 51,
+    "vision": 42,
+    "mlmining": 51,
+    "nlp": 47,
+    "inforet": 49,
+    "arch": 51,
+    "comm": 44,
+    "sec": 39,
+    "mod": 46,
+    "hpc": 14,
+    "mobile": 33,
+    "metrics": 76,
+    "plan": 63,
+    "soft": 54,
+    "act": 45,
+    "log": 42,
+    "graph": 53,
+    "chi": 27,
+    "robotics": 16,
+    "bio": 51,
+    "da": 33,
+    "bed": 51,
+    "visualization": 7,
+    "ecom": 44
+   }
+  },
+  {
+   "institution": "Brown University",
+   "homepage": "https://cs.brown.edu/",
+   "rank": 52,
+   "score": 3.9,
+   "faculty": 41,
+   "categories": {
+    "ai": 52,
+    "systems": 60,
+    "theory": 36,
+    "interdisciplinary": 17
+   },
+   "areas": {
+    "ai": 56,
+    "vision": 34,
+    "mlmining": 37,
+    "nlp": 52,
+    "inforet": 107,
+    "arch": 83,
+    "comm": 35,
+    "sec": 56,
+    "mod": 44,
+    "hpc": 117,
+    "metrics": 91,
+    "ops": 23,
+    "plan": 31,
+    "soft": 74,
+    "act": 42,
+    "crypt": 28,
+    "graph": 15,
+    "chi": 47,
+    "robotics": 24,
+    "bio": 35,
+    "da": 46,
+    "visualization": 41,
+    "ecom": 23,
+    "csed": 21
+   }
+  },
+  {
+   "institution": "University of Central Florida",
+   "homepage": "https://www.cs.ucf.edu",
+   "rank": 53,
+   "score": 3.7,
+   "faculty": 70,
+   "categories": {
+    "ai": 34,
+    "systems": 48,
+    "interdisciplinary": 38
+   },
+   "areas": {
+    "ai": 34,
+    "vision": 9,
+    "mlmining": 34,
+    "nlp": 60,
+    "inforet": 88,
+    "arch": 14,
+    "sec": 41,
+    "mod": 98,
+    "hpc": 35,
+    "plan": 80,
+    "soft": 14,
+    "graph": 51,
+    "chi": 40,
+    "robotics": 54,
+    "bio": 21,
+    "da": 4,
+    "bed": 28,
+    "visualization": 4
+   }
+  },
+  {
+   "institution": "Oregon State University",
+   "homepage": "https://eecs.oregonstate.edu/",
+   "rank": 54,
+   "score": 3.6,
+   "faculty": 42,
+   "categories": {
+    "ai": 45,
+    "systems": 64,
+    "theory": 38,
+    "interdisciplinary": 33
+   },
+   "areas": {
+    "ai": 45,
+    "vision": 30,
+    "mlmining": 49,
+    "nlp": 41,
+    "inforet": 69,
+    "arch": 66,
+    "sec": 66,
+    "mod": 49,
+    "hpc": 13,
+    "metrics": 64,
+    "ops": 58,
+    "plan": 60,
+    "soft": 23,
+    "act": 60,
+    "crypt": 15,
+    "graph": 30,
+    "chi": 81,
+    "robotics": 47,
+    "bio": 29,
+    "bed": 48,
+    "visualization": 18,
+    "csed": 23
+   }
+  },
+  {
+   "institution": "Indiana University",
+   "homepage": "https://cs.indiana.edu/",
+   "rank": 55,
+   "score": 3.2,
+   "faculty": 66,
+   "categories": {
+    "ai": 61,
+    "systems": 53,
+    "theory": 58,
+    "interdisciplinary": 38
+   },
+   "areas": {
+    "ai": 68,
+    "vision": 79,
+    "mlmining": 53,
+    "nlp": 61,
+    "inforet": 60,
+    "arch": 61,
+    "sec": 37,
+    "mod": 37,
+    "hpc": 46,
+    "mobile": 71,
+    "plan": 21,
+    "soft": 98,
+    "act": 67,
+    "log": 25,
+    "chi": 21,
+    "robotics": 31,
+    "bio": 16,
+    "da": 33,
+    "visualization": 86,
+    "csed": 33
+   }
+  },
+  {
+   "institution": "University of Texas at Dallas",
+   "homepage": "https://cs.utdallas.edu/",
+   "rank": 55,
+   "score": 3.2,
+   "faculty": 44,
+   "categories": {
+    "ai": 37,
+    "systems": 59,
+    "theory": 75,
+    "interdisciplinary": 61
+   },
+   "areas": {
+    "ai": 14,
+    "vision": 44,
+    "mlmining": 62,
+    "nlp": 25,
+    "inforet": 43,
+    "arch": 60,
+    "comm": 65,
+    "sec": 43,
+    "mod": 98,
+    "hpc": 90,
+    "mobile": 61,
+    "plan": 80,
+    "soft": 6,
+    "act": 57,
+    "graph": 30,
+    "chi": 45,
+    "robotics": 56,
+    "da": 62,
+    "bed": 19,
+    "visualization": 44
+   }
+  },
+  {
+   "institution": "Rochester Inst. of Technology",
+   "homepage": "https://www.rit.edu/computing/department-computer-science",
+   "rank": 57,
+   "score": 3.1,
+   "faculty": 64,
+   "categories": {
+    "ai": 50,
+    "systems": 71,
+    "theory": 69,
+    "interdisciplinary": 43
+   },
+   "areas": {
+    "ai": 26,
+    "vision": 55,
+    "mlmining": 56,
+    "nlp": 56,
+    "inforet": 28,
+    "arch": 92,
+    "comm": 75,
+    "sec": 56,
+    "mod": 68,
+    "hpc": 58,
+    "mobile": 42,
+    "plan": 46,
+    "soft": 39,
+    "act": 72,
+    "log": 31,
+    "graph": 47,
+    "chi": 20,
+    "robotics": 60,
+    "da": 103,
+    "visualization": 63,
+    "csed": 8
+   }
+  },
+  {
+   "institution": "Washington University in St. Louis",
+   "homepage": "https://cse.washu.edu/",
+   "rank": 58,
+   "score": 2.9,
+   "faculty": 30,
+   "categories": {
+    "ai": 56,
+    "systems": 64,
+    "theory": 58,
+    "interdisciplinary": 63
+   },
+   "areas": {
+    "ai": 15,
+    "vision": 67,
+    "mlmining": 43,
+    "nlp": 83,
+    "inforet": 63,
+    "arch": 77,
+    "sec": 51,
+    "mod": 85,
+    "mobile": 87,
+    "metrics": 44,
+    "ops": 37,
+    "plan": 69,
+    "act": 60,
+    "log": 46,
+    "graph": 25,
+    "chi": 66,
+    "robotics": 87,
+    "da": 55,
+    "bed": 1,
+    "visualization": 48,
+    "ecom": 41
+   }
+  },
+  {
+   "institution": "University of Florida",
+   "homepage": "https://cise.ufl.edu/",
+   "rank": 59,
+   "score": 2.8,
+   "faculty": 36,
+   "categories": {
+    "ai": 78,
+    "systems": 53,
+    "theory": 58,
+    "interdisciplinary": 53
+   },
+   "areas": {
+    "ai": 85,
+    "vision": 93,
+    "mlmining": 75,
+    "nlp": 74,
+    "inforet": 97,
+    "sec": 27,
+    "mod": 48,
+    "hpc": 5,
+    "mobile": 64,
+    "metrics": 38,
+    "crypt": 40,
+    "log": 36,
+    "graph": 53,
+    "chi": 77,
+    "bio": 35,
+    "da": 28,
+    "bed": 44,
+    "visualization": 19,
+    "csed": 3
+   }
+  },
+  {
+   "institution": "University of Texas at Arlington",
+   "homepage": "https://www.uta.edu/academics/schools-colleges/engineering/academics/departments/cse",
+   "rank": 59,
+   "score": 2.8,
+   "faculty": 39,
+   "categories": {
+    "ai": 61,
+    "systems": 46,
+    "interdisciplinary": 80
+   },
+   "areas": {
+    "ai": 64,
+    "vision": 78,
+    "mlmining": 72,
+    "nlp": 55,
+    "inforet": 37,
+    "arch": 55,
+    "comm": 65,
+    "sec": 71,
+    "mod": 31,
+    "hpc": 11,
+    "mobile": 19,
+    "metrics": 34,
+    "ops": 45,
+    "plan": 80,
+    "soft": 66,
+    "chi": 68,
+    "robotics": 52,
+    "bio": 62,
+    "da": 38,
+    "bed": 71
+   }
+  },
+  {
+   "institution": "University of Notre Dame",
+   "homepage": "https://cse.nd.edu/",
+   "rank": 61,
+   "score": 2.7,
+   "faculty": 34,
+   "categories": {
+    "ai": 52,
+    "systems": 67,
+    "theory": 89,
+    "interdisciplinary": 66
+   },
+   "areas": {
+    "ai": 29,
+    "vision": 83,
+    "mlmining": 65,
+    "nlp": 33,
+    "inforet": 26,
+    "arch": 77,
+    "sec": 138,
+    "mod": 98,
+    "hpc": 72,
+    "mobile": 71,
+    "metrics": 87,
+    "soft": 35,
+    "act": 72,
+    "graph": 53,
+    "chi": 23,
+    "robotics": 123,
+    "bio": 51,
+    "da": 6,
+    "bed": 10,
+    "visualization": 25,
+    "csed": 79
+   }
+  },
+  {
+   "institution": "University of Rochester",
+   "homepage": "https://www.cs.rochester.edu/",
+   "rank": 61,
+   "score": 2.7,
+   "faculty": 28,
+   "categories": {
+    "ai": 51,
+    "systems": 73,
+    "theory": 69,
+    "interdisciplinary": 68
+   },
+   "areas": {
+    "ai": 37,
+    "vision": 21,
+    "mlmining": 60,
+    "nlp": 49,
+    "inforet": 70,
+    "arch": 29,
+    "sec": 114,
+    "mod": 38,
+    "hpc": 95,
+    "metrics": 76,
+    "plan": 58,
+    "act": 55,
+    "graph": 47,
+    "chi": 46,
+    "robotics": 75,
+    "da": 40,
+    "visualization": 63,
+    "ecom": 39
+   }
+  },
+  {
+   "institution": "Dartmouth College",
+   "homepage": "https://web.cs.dartmouth.edu/",
+   "rank": 63,
+   "score": 2.6,
+   "faculty": 31,
+   "categories": {
+    "ai": 64,
+    "systems": 88,
+    "theory": 50,
+    "interdisciplinary": 47
+   },
+   "areas": {
+    "ai": 123,
+    "vision": 39,
+    "mlmining": 66,
+    "nlp": 53,
+    "inforet": 84,
+    "arch": 74,
+    "comm": 75,
+    "sec": 80,
+    "mobile": 38,
+    "metrics": 70,
+    "plan": 63,
+    "soft": 104,
+    "act": 36,
+    "crypt": 57,
+    "graph": 16,
+    "chi": 49,
+    "robotics": 34,
+    "bio": 62,
+    "da": 98,
+    "csed": 70
+   }
+  },
+  {
+   "institution": "NJIT",
+   "homepage": "https://cs.njit.edu/",
+   "rank": 63,
+   "score": 2.6,
+   "faculty": 40,
+   "categories": {
+    "ai": 71,
+    "systems": 60,
+    "theory": 83,
+    "interdisciplinary": 63
+   },
+   "areas": {
+    "ai": 53,
+    "vision": 105,
+    "mlmining": 59,
+    "nlp": 86,
+    "inforet": 53,
+    "arch": 61,
+    "comm": 85,
+    "sec": 56,
+    "mod": 44,
+    "hpc": 95,
+    "mobile": 35,
+    "soft": 16,
+    "act": 67,
+    "graph": 33,
+    "chi": 69,
+    "robotics": 80,
+    "bio": 45,
+    "da": 62,
+    "bed": 34,
+    "visualization": 106,
+    "ecom": 36,
+    "csed": 63
+   }
+  },
+  {
+   "institution": "Michigan State University",
+   "homepage": "https://www.cse.msu.edu/",
+   "rank": 65,
+   "score": 2.5,
+   "faculty": 33,
+   "categories": {
+    "ai": 44,
+    "systems": 75,
+    "theory": 89,
+    "interdisciplinary": 68
+   },
+   "areas": {
+    "ai": 50,
+    "vision": 28,
+    "mlmining": 56,
+    "nlp": 54,
+    "inforet": 32,
+    "arch": 88,
+    "comm": 65,
+    "sec": 97,
+    "mod": 85,
+    "hpc": 90,
+    "mobile": 8,
+    "ops": 42,
+    "soft": 104,
+    "log": 42,
+    "graph": 36,
+    "chi": 63,
+    "robotics": 101,
+    "bio": 31,
+    "da": 103,
+    "bed": 36,
+    "visualization": 83,
+    "csed": 48
+   }
+  },
+  {
+   "institution": "University of Connecticut",
+   "homepage": "https://computing.engineering.uconn.edu/",
+   "rank": 65,
+   "score": 2.5,
+   "faculty": 31,
+   "categories": {
+    "ai": 73,
+    "systems": 60,
+    "theory": 54,
+    "interdisciplinary": 75
+   },
+   "areas": {
+    "ai": 64,
+    "vision": 84,
+    "mlmining": 73,
+    "nlp": 95,
+    "inforet": 34,
+    "arch": 88,
+    "comm": 41,
+    "sec": 48,
+    "mod": 68,
+    "hpc": 81,
+    "mobile": 101,
+    "plan": 33,
+    "soft": 52,
+    "act": 85,
+    "crypt": 24,
+    "chi": 60,
+    "robotics": 71,
+    "bio": 28,
+    "da": 57,
+    "bed": 14,
+    "csed": 79
+   }
+  },
+  {
+   "institution": "Vanderbilt University",
+   "homepage": "https://engineering.vanderbilt.edu/departments/computer-science/",
+   "rank": 65,
+   "score": 2.5,
+   "faculty": 47,
+   "categories": {
+    "ai": 67,
+    "systems": 88,
+    "theory": 83,
+    "interdisciplinary": 29
+   },
+   "areas": {
+    "ai": 63,
+    "vision": 81,
+    "mlmining": 69,
+    "nlp": 62,
+    "inforet": 66,
+    "arch": 83,
+    "sec": 123,
+    "mod": 98,
+    "hpc": 117,
+    "mobile": 95,
+    "soft": 30,
+    "log": 34,
+    "graph": 60,
+    "chi": 33,
+    "robotics": 26,
+    "bio": 16,
+    "bed": 11,
+    "visualization": 21,
+    "csed": 48
+   }
+  },
+  {
+   "institution": "College of William and Mary",
+   "homepage": "https://www.wm.edu/as/computerscience/",
+   "rank": 68,
+   "score": 2.4,
+   "faculty": 27,
+   "categories": {
+    "ai": 71,
+    "systems": 53,
+    "interdisciplinary": 75
+   },
+   "areas": {
+    "ai": 75,
+    "vision": 76,
+    "mlmining": 70,
+    "nlp": 79,
+    "inforet": 78,
+    "arch": 40,
+    "comm": 85,
+    "sec": 55,
+    "mod": 85,
+    "hpc": 16,
+    "mobile": 73,
+    "metrics": 61,
+    "ops": 58,
+    "plan": 80,
+    "soft": 10,
+    "graph": 27,
+    "chi": 72,
+    "robotics": 99,
+    "da": 74,
+    "visualization": 54
+   }
+  },
+  {
+   "institution": "Stevens Institute of Technology",
+   "homepage": "https://www.cs.stevens.edu",
+   "rank": 68,
+   "score": 2.4,
+   "faculty": 30,
+   "categories": {
+    "ai": 66,
+    "systems": 67,
+    "theory": 78,
+    "interdisciplinary": 80
+   },
+   "areas": {
+    "ai": 87,
+    "vision": 61,
+    "mlmining": 67,
+    "nlp": 64,
+    "inforet": 78,
+    "arch": 56,
+    "comm": 75,
+    "sec": 79,
+    "mod": 85,
+    "hpc": 38,
+    "mobile": 101,
+    "metrics": 47,
+    "ops": 49,
+    "plan": 27,
+    "soft": 64,
+    "crypt": 57,
+    "log": 36,
+    "chi": 81,
+    "robotics": 45,
+    "da": 76,
+    "visualization": 83
+   }
+  },
+  {
+   "institution": "University of Pittsburgh",
+   "homepage": "https://www.cs.pitt.edu/",
+   "rank": 68,
+   "score": 2.4,
+   "faculty": 32,
+   "categories": {
+    "ai": 70,
+    "systems": 53,
+    "interdisciplinary": 75
+   },
+   "areas": {
+    "ai": 57,
+    "vision": 73,
+    "mlmining": 93,
+    "nlp": 57,
+    "inforet": 72,
+    "arch": 36,
+    "comm": 41,
+    "sec": 121,
+    "mod": 66,
+    "hpc": 54,
+    "mobile": 36,
+    "metrics": 47,
+    "plan": 63,
+    "graph": 71,
+    "chi": 51,
+    "robotics": 111,
+    "da": 19,
+    "bed": 44,
+    "visualization": 48,
+    "ecom": 47,
+    "csed": 56
+   }
+  },
+  {
+   "institution": "Binghamton University",
+   "homepage": "https://www.binghamton.edu/computer-science/",
+   "rank": 71,
+   "score": 2.3,
+   "faculty": 26,
+   "categories": {
+    "ai": 77,
+    "systems": 53,
+    "interdisciplinary": 102
+   },
+   "areas": {
+    "ai": 59,
+    "vision": 66,
+    "mlmining": 107,
+    "nlp": 93,
+    "inforet": 43,
+    "arch": 47,
+    "comm": 75,
+    "sec": 54,
+    "mod": 76,
+    "hpc": 58,
+    "mobile": 61,
+    "metrics": 58,
+    "plan": 43,
+    "soft": 61,
+    "chi": 98,
+    "robotics": 62,
+    "bio": 62,
+    "da": 36,
+    "bed": 28
+   }
+  },
+  {
+   "institution": "Florida State University",
+   "homepage": "https://www.cs.fsu.edu/",
+   "rank": 71,
+   "score": 2.3,
+   "faculty": 23,
+   "categories": {
+    "ai": 90,
+    "systems": 64,
+    "theory": 50,
+    "interdisciplinary": 90
+   },
+   "areas": {
+    "ai": 70,
+    "vision": 80,
+    "mlmining": 83,
+    "nlp": 114,
+    "inforet": 84,
+    "arch": 70,
+    "comm": 52,
+    "sec": 64,
+    "mod": 53,
+    "hpc": 19,
+    "mobile": 44,
+    "plan": 50,
+    "soft": 78,
+    "crypt": 28,
+    "log": 25,
+    "chi": 39,
+    "robotics": 114,
+    "da": 103,
+    "bed": 62,
+    "visualization": 71,
+    "csed": 67
+   }
+  },
+  {
+   "institution": "Tufts University",
+   "homepage": "https://engineering.tufts.edu/cs/",
+   "rank": 71,
+   "score": 2.3,
+   "faculty": 36,
+   "categories": {
+    "ai": 93,
+    "systems": 67,
+    "theory": 69,
+    "interdisciplinary": 66
+   },
+   "areas": {
+    "ai": 55,
+    "vision": 104,
+    "mlmining": 77,
+    "nlp": 110,
+    "inforet": 116,
+    "arch": 77,
+    "comm": 49,
+    "sec": 56,
+    "mod": 54,
+    "hpc": 46,
+    "ops": 49,
+    "plan": 35,
+    "soft": 91,
+    "act": 63,
+    "log": 54,
+    "chi": 79,
+    "robotics": 51,
+    "bio": 23,
+    "da": 43,
+    "visualization": 34
+   }
+  },
+  {
+   "institution": "Clemson University",
+   "homepage": "https://www.clemson.edu/cecas/departments/computing/",
+   "rank": 74,
+   "score": 2.2,
+   "faculty": 35,
+   "categories": {
+    "ai": 92,
+    "systems": 82,
+    "interdisciplinary": 43
+   },
+   "areas": {
+    "ai": 82,
+    "vision": 72,
+    "mlmining": 104,
+    "nlp": 105,
+    "inforet": 88,
+    "arch": 77,
+    "sec": 70,
+    "mod": 122,
+    "hpc": 41,
+    "mobile": 46,
+    "soft": 85,
+    "graph": 41,
+    "chi": 28,
+    "robotics": 101,
+    "bio": 62,
+    "da": 80,
+    "bed": 51,
+    "visualization": 3,
+    "csed": 37
+   }
+  },
+  {
+   "institution": "UNC - Charlotte",
+   "homepage": "https://cci.charlotte.edu",
+   "rank": 74,
+   "score": 2.2,
+   "faculty": 50,
+   "categories": {
+    "ai": 74,
+    "systems": 88,
+    "interdisciplinary": 50
+   },
+   "areas": {
+    "ai": 90,
+    "vision": 47,
+    "mlmining": 81,
+    "nlp": 88,
+    "inforet": 88,
+    "arch": 56,
+    "comm": 57,
+    "sec": 93,
+    "mod": 98,
+    "hpc": 110,
+    "mobile": 58,
+    "soft": 98,
+    "graph": 71,
+    "chi": 58,
+    "robotics": 68,
+    "bio": 51,
+    "da": 43,
+    "visualization": 33,
+    "csed": 6
+   }
+  },
+  {
+   "institution": "Univ. of California - Merced",
+   "homepage": "https://engineering.ucmerced.edu/departments/computer-science-engineering-cse",
+   "rank": 74,
+   "score": 2.2,
+   "faculty": 18,
+   "categories": {
+    "ai": 63,
+    "systems": 73,
+    "interdisciplinary": 75
+   },
+   "areas": {
+    "ai": 110,
+    "vision": 17,
+    "mlmining": 61,
+    "nlp": 79,
+    "inforet": 98,
+    "arch": 48,
+    "comm": 85,
+    "sec": 145,
+    "mod": 61,
+    "hpc": 18,
+    "mobile": 17,
+    "soft": 88,
+    "graph": 70,
+    "chi": 67,
+    "robotics": 48,
+    "da": 103
+   }
+  },
+  {
+   "institution": "University of Delaware",
+   "homepage": "https://www.cis.udel.edu/",
+   "rank": 74,
+   "score": 2.2,
+   "faculty": 29,
+   "categories": {
+    "ai": 102,
+    "systems": 82,
+    "theory": 43,
+    "interdisciplinary": 53
+   },
+   "areas": {
+    "ai": 112,
+    "vision": 115,
+    "mlmining": 82,
+    "inforet": 34,
+    "sec": 68,
+    "hpc": 26,
+    "mobile": 95,
+    "soft": 78,
+    "crypt": 26,
+    "log": 15,
+    "graph": 53,
+    "chi": 85,
+    "robotics": 23,
+    "bio": 75,
+    "da": 31,
+    "bed": 62,
+    "ecom": 54,
+    "csed": 11
+   }
+  },
+  {
+   "institution": "University of Georgia",
+   "homepage": "https://cobweb.cs.uga.edu",
+   "rank": 74,
+   "score": 2.2,
+   "faculty": 26,
+   "categories": {
+    "ai": 93,
+    "systems": 53,
+    "interdisciplinary": 98
+   },
+   "areas": {
+    "ai": 88,
+    "vision": 99,
+    "mlmining": 80,
+    "nlp": 110,
+    "inforet": 84,
+    "arch": 48,
+    "comm": 61,
+    "sec": 42,
+    "hpc": 41,
+    "mobile": 24,
+    "metrics": 41,
+    "ops": 58,
+    "plan": 73,
+    "soft": 41,
+    "chi": 80,
+    "robotics": 59,
+    "da": 71,
+    "bed": 71
+   }
+  },
+  {
+   "institution": "University of South Florida",
+   "homepage": "https://www.cse.usf.edu",
+   "rank": 74,
+   "score": 2.2,
+   "faculty": 36,
+   "categories": {
+    "ai": 84,
+    "systems": 67,
+    "theory": 98,
+    "interdisciplinary": 71
+   },
+   "areas": {
+    "ai": 106,
+    "vision": 60,
+    "mlmining": 85,
+    "nlp": 78,
+    "inforet": 116,
+    "arch": 92,
+    "comm": 75,
+    "sec": 68,
+    "mod": 64,
+    "hpc": 30,
+    "mobile": 49,
+    "metrics": 64,
+    "log": 60,
+    "chi": 72,
+    "robotics": 55,
+    "bio": 35,
+    "da": 51,
+    "bed": 16,
+    "visualization": 74,
+    "csed": 87
+   }
+  },
+  {
+   "institution": "Worcester Polytechnic Institute",
+   "homepage": "https://www.wpi.edu/academics/departments/computer-science",
+   "rank": 74,
+   "score": 2.2,
+   "faculty": 27,
+   "categories": {
+    "ai": 83,
+    "systems": 75,
+    "interdisciplinary": 56
+   },
+   "areas": {
+    "ai": 85,
+    "vision": 124,
+    "mlmining": 112,
+    "nlp": 70,
+    "inforet": 24,
+    "sec": 100,
+    "mod": 28,
+    "mobile": 55,
+    "metrics": 61,
+    "plan": 69,
+    "soft": 104,
+    "chi": 54,
+    "robotics": 32,
+    "bed": 31,
+    "visualization": 34,
+    "csed": 56
+   }
+  },
+  {
+   "institution": "California Inst. of Technology",
+   "homepage": "https://www.cms.caltech.edu/",
+   "rank": 81,
+   "score": 2.1,
+   "faculty": 27,
+   "categories": {
+    "ai": 68,
+    "systems": 123,
+    "theory": 53,
+    "interdisciplinary": 68
+   },
+   "areas": {
+    "ai": 98,
+    "vision": 35,
+    "mlmining": 35,
+    "nlp": 121,
+    "inforet": 116,
+    "comm": 85,
+    "sec": 132,
+    "hpc": 117,
+    "metrics": 20,
+    "act": 35,
+    "graph": 35,
+    "robotics": 10,
+    "bio": 62,
+    "da": 116,
+    "ecom": 47
+   }
+  },
+  {
+   "institution": "Iowa State University",
+   "homepage": "https://www.cs.iastate.edu/",
+   "rank": 81,
+   "score": 2.1,
+   "faculty": 30,
+   "categories": {
+    "ai": 80,
+    "systems": 75,
+    "theory": 78,
+    "interdisciplinary": 80
+   },
+   "areas": {
+    "ai": 72,
+    "vision": 120,
+    "mlmining": 76,
+    "nlp": 81,
+    "inforet": 63,
+    "arch": 92,
+    "sec": 83,
+    "mod": 98,
+    "hpc": 35,
+    "mobile": 54,
+    "plan": 75,
+    "soft": 18,
+    "act": 87,
+    "log": 31,
+    "chi": 135,
+    "robotics": 42,
+    "bio": 51,
+    "da": 80,
+    "visualization": 44
+   }
+  },
+  {
+   "institution": "Emory University",
+   "homepage": "https://computerscience.emory.edu/",
+   "rank": 83,
+   "score": 2.0,
+   "faculty": 22,
+   "categories": {
+    "ai": 60,
+    "systems": 107,
+    "interdisciplinary": 90
+   },
+   "areas": {
+    "ai": 69,
+    "vision": 120,
+    "mlmining": 71,
+    "nlp": 36,
+    "inforet": 9,
+    "arch": 92,
+    "comm": 61,
+    "sec": 104,
+    "mod": 54,
+    "hpc": 95,
+    "metrics": 76,
+    "ops": 58,
+    "chi": 84,
+    "bio": 51,
+    "visualization": 44,
+    "csed": 24
+   }
+  },
+  {
+   "institution": "University of Arizona",
+   "homepage": "https://www.cs.arizona.edu/",
+   "rank": 83,
+   "score": 2.0,
+   "faculty": 22,
+   "categories": {
+    "ai": 80,
+    "systems": 75,
+    "theory": 89,
+    "interdisciplinary": 90
+   },
+   "areas": {
+    "ai": 116,
+    "vision": 124,
+    "mlmining": 68,
+    "nlp": 24,
+    "sec": 89,
+    "mod": 36,
+    "hpc": 85,
+    "mobile": 78,
+    "metrics": 64,
+    "plan": 43,
+    "soft": 78,
+    "log": 42,
+    "chi": 86,
+    "robotics": 131,
+    "bio": 13,
+    "visualization": 37
+   }
+  },
+  {
+   "institution": "Tulane University",
+   "homepage": "https://www.cs.tulane.edu",
+   "rank": 85,
+   "score": 1.9,
+   "faculty": 15,
+   "categories": {
+    "ai": 86,
+    "systems": 75,
+    "theory": 89,
+    "interdisciplinary": 98
+   },
+   "areas": {
+    "ai": 47,
+    "vision": 63,
+    "mlmining": 91,
+    "nlp": 121,
+    "inforet": 98,
+    "arch": 66,
+    "comm": 65,
+    "sec": 76,
+    "hpc": 110,
+    "mobile": 87,
+    "metrics": 76,
+    "plan": 71,
+    "soft": 11,
+    "log": 49,
+    "chi": 106,
+    "robotics": 81,
+    "da": 76,
+    "visualization": 39,
+    "csed": 100
+   }
+  },
+  {
+   "institution": "Washington State University",
+   "homepage": "https://www.eecs.wsu.edu",
+   "rank": 85,
+   "score": 1.9,
+   "faculty": 25,
+   "categories": {
+    "ai": 96,
+    "systems": 71,
+    "theory": 75,
+    "interdisciplinary": 118
+   },
+   "areas": {
+    "ai": 43,
+    "vision": 108,
+    "mlmining": 77,
+    "nlp": 153,
+    "inforet": 114,
+    "arch": 70,
+    "sec": 89,
+    "mod": 70,
+    "hpc": 32,
+    "metrics": 76,
+    "plan": 63,
+    "soft": 104,
+    "crypt": 37,
+    "robotics": 131,
+    "da": 10,
+    "bed": 48,
+    "csed": 21
+   }
+  },
+  {
+   "institution": "Drexel University",
+   "homepage": "https://drexel.edu/cci/academics/computer-science-department/",
+   "rank": 87,
+   "score": 1.8,
+   "faculty": 20,
+   "categories": {
+    "ai": 86,
+    "systems": 142,
+    "theory": 58,
+    "interdisciplinary": 75
+   },
+   "areas": {
+    "ai": 93,
+    "vision": 69,
+    "mlmining": 95,
+    "nlp": 75,
+    "inforet": 116,
+    "sec": 123,
+    "soft": 54,
+    "act": 62,
+    "crypt": 46,
+    "chi": 44,
+    "robotics": 131,
+    "visualization": 86,
+    "ecom": 12
+   }
+  },
+  {
+   "institution": "Florida International University",
+   "homepage": "https://www.cis.fiu.edu/",
+   "rank": 87,
+   "score": 1.8,
+   "faculty": 31,
+   "categories": {
+    "ai": 104,
+    "systems": 82,
+    "interdisciplinary": 80
+   },
+   "areas": {
+    "ai": 101,
+    "vision": 115,
+    "mlmining": 119,
+    "nlp": 88,
+    "inforet": 67,
+    "comm": 65,
+    "sec": 53,
+    "mobile": 58,
+    "metrics": 76,
+    "soft": 91,
+    "chi": 98,
+    "robotics": 95,
+    "bio": 42,
+    "da": 71,
+    "bed": 21,
+    "visualization": 74,
+    "csed": 19
+   }
+  },
+  {
+   "institution": "Georgetown University",
+   "homepage": "https://cs.georgetown.edu/",
+   "rank": 87,
+   "score": 1.8,
+   "faculty": 15,
+   "categories": {
+    "ai": 104,
+    "systems": 95,
+    "theory": 33,
+    "interdisciplinary": 118
+   },
+   "areas": {
+    "ai": 138,
+    "vision": 124,
+    "mlmining": 115,
+    "nlp": 66,
+    "inforet": 57,
+    "arch": 77,
+    "sec": 35,
+    "mod": 76,
+    "metrics": 70,
+    "act": 38,
+    "crypt": 25,
+    "chi": 81,
+    "bed": 62,
+    "ecom": 47
+   }
+  },
+  {
+   "institution": "TTI Chicago",
+   "homepage": "https://ttic.uchicago.edu",
+   "rank": 87,
+   "score": 1.8,
+   "faculty": 15,
+   "categories": {
+    "ai": 69,
+    "theory": 43,
+    "interdisciplinary": 102
+   },
+   "areas": {
+    "ai": 121,
+    "vision": 54,
+    "mlmining": 41,
+    "nlp": 64,
+    "act": 22,
+    "graph": 53,
+    "robotics": 75,
+    "bio": 51,
+    "ecom": 33
+   }
+  },
+  {
+   "institution": "Temple University",
+   "homepage": "https://cis.temple.edu/",
+   "rank": 87,
+   "score": 1.8,
+   "faculty": 17,
+   "categories": {
+    "ai": 76,
+    "systems": 95,
+    "interdisciplinary": 111
+   },
+   "areas": {
+    "ai": 48,
+    "vision": 93,
+    "mlmining": 79,
+    "nlp": 93,
+    "inforet": 49,
+    "arch": 88,
+    "sec": 100,
+    "mod": 85,
+    "hpc": 44,
+    "mobile": 52,
+    "chi": 91,
+    "robotics": 111,
+    "da": 84,
+    "visualization": 86,
+    "csed": 70
+   }
+  },
+  {
+   "institution": "Univ. of Maryland - Baltimore County",
+   "homepage": "https://www.csee.umbc.edu",
+   "rank": 87,
+   "score": 1.8,
+   "faculty": 34,
+   "categories": {
+    "ai": 80,
+    "systems": 123,
+    "interdisciplinary": 72
+   },
+   "areas": {
+    "ai": 67,
+    "vision": 99,
+    "mlmining": 106,
+    "nlp": 63,
+    "inforet": 84,
+    "sec": 123,
+    "mod": 76,
+    "mobile": 52,
+    "soft": 78,
+    "graph": 64,
+    "chi": 47,
+    "robotics": 92,
+    "visualization": 86,
+    "csed": 39
+   }
+  },
+  {
+   "institution": "University of Tennessee",
+   "homepage": "https://web.eecs.utk.edu",
+   "rank": 87,
+   "score": 1.8,
+   "faculty": 25,
+   "categories": {
+    "ai": 108,
+    "systems": 82,
+    "interdisciplinary": 80
+   },
+   "areas": {
+    "ai": 128,
+    "vision": 87,
+    "mlmining": 89,
+    "nlp": 141,
+    "inforet": 67,
+    "sec": 65,
+    "mod": 117,
+    "hpc": 26,
+    "mobile": 84,
+    "metrics": 54,
+    "soft": 50,
+    "chi": 76,
+    "robotics": 49,
+    "da": 98,
+    "visualization": 98,
+    "csed": 100
+   }
+  },
+  {
+   "institution": "Wayne State University",
+   "homepage": "https://www.cs.wayne.edu",
+   "rank": 87,
+   "score": 1.8,
+   "faculty": 14,
+   "categories": {
+    "ai": 79,
+    "systems": 82,
+    "interdisciplinary": 102
+   },
+   "areas": {
+    "ai": 77,
+    "vision": 52,
+    "mlmining": 87,
+    "nlp": 112,
+    "inforet": 74,
+    "comm": 57,
+    "sec": 107,
+    "mod": 117,
+    "mobile": 64,
+    "soft": 64,
+    "graph": 42,
+    "chi": 143,
+    "robotics": 105,
+    "da": 59,
+    "bed": 7,
+    "visualization": 48
+   }
+  },
+  {
+   "institution": "CUNY",
+   "homepage": "https://www.gc.cuny.edu/computer-science",
+   "rank": 95,
+   "score": 1.7,
+   "faculty": 39,
+   "categories": {
+    "ai": 104,
+    "systems": 95,
+    "theory": 58,
+    "interdisciplinary": 102
+   },
+   "areas": {
+    "ai": 109,
+    "vision": 87,
+    "mlmining": 110,
+    "nlp": 88,
+    "inforet": 116,
+    "sec": 84,
+    "mod": 98,
+    "hpc": 95,
+    "mobile": 87,
+    "soft": 54,
+    "act": 48,
+    "crypt": 57,
+    "chi": 135,
+    "robotics": 88,
+    "da": 68,
+    "bed": 51,
+    "visualization": 106,
+    "csed": 25
+   }
+  },
+  {
+   "institution": "Colorado State University",
+   "homepage": "https://compsci.colostate.edu/",
+   "rank": 95,
+   "score": 1.7,
+   "faculty": 23,
+   "categories": {
+    "ai": 116,
+    "systems": 88,
+    "theory": 83,
+    "interdisciplinary": 98
+   },
+   "areas": {
+    "ai": 90,
+    "vision": 115,
+    "mlmining": 108,
+    "nlp": 117,
+    "sec": 126,
+    "hpc": 77,
+    "plan": 40,
+    "soft": 66,
+    "act": 72,
+    "log": 65,
+    "chi": 119,
+    "robotics": 99,
+    "bio": 51,
+    "da": 29,
+    "bed": 71,
+    "visualization": 56,
+    "csed": 43
+   }
+  },
+  {
+   "institution": "George Washington University",
+   "homepage": "https://cs.engineering.gwu.edu/",
+   "rank": 95,
+   "score": 1.7,
+   "faculty": 16,
+   "categories": {
+    "ai": 102,
+    "systems": 75,
+    "theory": 98,
+    "interdisciplinary": 118
+   },
+   "areas": {
+    "ai": 117,
+    "vision": 97,
+    "mlmining": 117,
+    "nlp": 73,
+    "inforet": 107,
+    "arch": 92,
+    "comm": 65,
+    "sec": 47,
+    "mod": 70,
+    "hpc": 51,
+    "metrics": 70,
+    "crypt": 57,
+    "chi": 110,
+    "bed": 9,
+    "visualization": 98,
+    "csed": 51
+   }
+  },
+  {
+   "institution": "Lehigh University",
+   "homepage": "https://engineering.lehigh.edu/cse",
+   "rank": 95,
+   "score": 1.7,
+   "faculty": 13,
+   "categories": {
+    "ai": 84,
+    "systems": 123,
+    "interdisciplinary": 80
+   },
+   "areas": {
+    "ai": 71,
+    "vision": 93,
+    "mlmining": 86,
+    "nlp": 103,
+    "inforet": 51,
+    "comm": 57,
+    "sec": 113,
+    "mobile": 78,
+    "ops": 58,
+    "soft": 116,
+    "chi": 57,
+    "robotics": 56
+   }
+  },
+  {
+   "institution": "Rensselaer Polytechnic Institute",
+   "homepage": "https://compsci.rpi.edu/",
+   "rank": 95,
+   "score": 1.7,
+   "faculty": 22,
+   "categories": {
+    "ai": 95,
+    "systems": 107,
+    "theory": 69,
+    "interdisciplinary": 102
+   },
+   "areas": {
+    "ai": 58,
+    "vision": 150,
+    "mlmining": 74,
+    "nlp": 92,
+    "inforet": 98,
+    "arch": 61,
+    "sec": 93,
+    "mod": 98,
+    "hpc": 80,
+    "act": 55,
+    "log": 60,
+    "chi": 132,
+    "robotics": 123,
+    "da": 89,
+    "bed": 71,
+    "ecom": 17,
+    "csed": 56
+   }
+  },
+  {
+   "institution": "University of Massachusetts Lowell",
+   "homepage": "https://www.uml.edu/sciences/computer-science/",
+   "rank": 95,
+   "score": 1.7,
+   "faculty": 21,
+   "categories": {
+    "ai": 88,
+    "systems": 95,
+    "theory": 89,
+    "interdisciplinary": 111
+   },
+   "areas": {
+    "ai": 94,
+    "vision": 105,
+    "mlmining": 119,
+    "nlp": 39,
+    "inforet": 94,
+    "sec": 73,
+    "mod": 58,
+    "mobile": 95,
+    "plan": 53,
+    "act": 81,
+    "chi": 135,
+    "robotics": 85,
+    "visualization": 106,
+    "csed": 46
+   }
+  },
+  {
+   "institution": "University of North Texas",
+   "homepage": "https://www.cse.unt.edu",
+   "rank": 95,
+   "score": 1.7,
+   "faculty": 24,
+   "categories": {
+    "ai": 90,
+    "systems": 107,
+    "interdisciplinary": 98
+   },
+   "areas": {
+    "ai": 73,
+    "vision": 64,
+    "mlmining": 93,
+    "nlp": 107,
+    "inforet": 104,
+    "arch": 92,
+    "sec": 115,
+    "mod": 98,
+    "hpc": 72,
+    "metrics": 87,
+    "plan": 80,
+    "soft": 91,
+    "chi": 114,
+    "robotics": 83,
+    "bio": 31,
+    "da": 76,
+    "csed": 56
+   }
+  },
+  {
+   "institution": "Augusta University",
+   "homepage": "https://www.augusta.edu/ccs/",
+   "rank": 102,
+   "score": 1.6,
+   "faculty": 24,
+   "categories": {
+    "ai": 119,
+    "systems": 107,
+    "theory": 65,
+    "interdisciplinary": 80
+   },
+   "areas": {
+    "ai": 103,
+    "vision": 141,
+    "mlmining": 98,
+    "nlp": 137,
+    "sec": 107,
+    "mod": 94,
+    "hpc": 102,
+    "mobile": 78,
+    "plan": 63,
+    "act": 59,
+    "log": 52,
+    "chi": 91,
+    "robotics": 114,
+    "da": 89,
+    "visualization": 39,
+    "ecom": 26,
+    "csed": 70
+   }
+  },
+  {
+   "institution": "Case Western Reserve University",
+   "homepage": "https://engineering.case.edu/computer-and-data-sciences",
+   "rank": 102,
+   "score": 1.6,
+   "faculty": 17,
+   "categories": {
+    "ai": 88,
+    "systems": 95,
+    "interdisciplinary": 133
+   },
+   "areas": {
+    "ai": 80,
+    "vision": 102,
+    "mlmining": 95,
+    "nlp": 84,
+    "inforet": 74,
+    "sec": 145,
+    "mod": 54,
+    "hpc": 117,
+    "metrics": 58,
+    "soft": 36,
+    "graph": 49,
+    "robotics": 123,
+    "bio": 35,
+    "da": 55
+   }
+  },
+  {
+   "institution": "Illinois Institute of Technology",
+   "homepage": "https://www.iit.edu/computer-science",
+   "rank": 102,
+   "score": 1.6,
+   "faculty": 15,
+   "categories": {
+    "ai": 113,
+    "systems": 75,
+    "theory": 98,
+    "interdisciplinary": 133
+   },
+   "areas": {
+    "ai": 123,
+    "vision": 89,
+    "mlmining": 91,
+    "inforet": 98,
+    "arch": 54,
+    "comm": 52,
+    "sec": 71,
+    "hpc": 32,
+    "metrics": 61,
+    "log": 54,
+    "chi": 123,
+    "da": 57,
+    "bed": 71,
+    "visualization": 98,
+    "ecom": 44,
+    "csed": 91
+   }
+  },
+  {
+   "institution": "Texas State University",
+   "homepage": "https://www.cs.txstate.edu",
+   "rank": 102,
+   "score": 1.6,
+   "faculty": 16,
+   "categories": {
+    "ai": 119,
+    "systems": 88,
+    "interdisciplinary": 90
+   },
+   "areas": {
+    "ai": 117,
+    "vision": 115,
+    "mlmining": 128,
+    "nlp": 95,
+    "inforet": 135,
+    "arch": 66,
+    "hpc": 20,
+    "metrics": 76,
+    "plan": 75,
+    "soft": 91,
+    "chi": 123,
+    "robotics": 65,
+    "da": 74,
+    "bed": 16,
+    "visualization": 56,
+    "csed": 60
+   }
+  },
+  {
+   "institution": "University of Houston",
+   "homepage": "https://www2.cs.uh.edu",
+   "rank": 102,
+   "score": 1.6,
+   "faculty": 22,
+   "categories": {
+    "ai": 100,
+    "systems": 107,
+    "theory": 78,
+    "interdisciplinary": 102
+   },
+   "areas": {
+    "ai": 120,
+    "vision": 89,
+    "mlmining": 97,
+    "nlp": 101,
+    "inforet": 78,
+    "sec": 132,
+    "mod": 85,
+    "hpc": 26,
+    "ops": 58,
+    "soft": 74,
+    "act": 65,
+    "graph": 49,
+    "chi": 111,
+    "bio": 62,
+    "da": 112,
+    "visualization": 48,
+    "csed": 70
+   }
+  },
+  {
+   "institution": "University of Iowa",
+   "homepage": "https://cs.uiowa.edu/",
+   "rank": 102,
+   "score": 1.6,
+   "faculty": 17,
+   "categories": {
+    "ai": 110,
+    "systems": 95,
+    "theory": 58,
+    "interdisciplinary": 118
+   },
+   "areas": {
+    "ai": 130,
+    "vision": 112,
+    "mlmining": 100,
+    "nlp": 85,
+    "inforet": 104,
+    "comm": 65,
+    "sec": 115,
+    "hpc": 35,
+    "plan": 45,
+    "act": 72,
+    "log": 19,
+    "chi": 96,
+    "da": 80,
+    "bed": 28,
+    "visualization": 62
+   }
+  },
+  {
+   "institution": "University of Nebraska",
+   "homepage": "https://cse.unl.edu/",
+   "rank": 102,
+   "score": 1.6,
+   "faculty": 18,
+   "categories": {
+    "ai": 126,
+    "systems": 95,
+    "theory": 98,
+    "interdisciplinary": 72
+   },
+   "areas": {
+    "ai": 75,
+    "mlmining": 113,
+    "comm": 65,
+    "sec": 121,
+    "mod": 98,
+    "soft": 19,
+    "act": 81,
+    "chi": 123,
+    "robotics": 58,
+    "da": 68,
+    "visualization": 86,
+    "ecom": 47,
+    "csed": 13
+   }
+  },
+  {
+   "institution": "University of Oregon",
+   "homepage": "https://scds.uoregon.edu/cs",
+   "rank": 102,
+   "score": 1.6,
+   "faculty": 17,
+   "categories": {
+    "ai": 75,
+    "systems": 95,
+    "theory": 109,
+    "interdisciplinary": 169
+   },
+   "areas": {
+    "ai": 60,
+    "vision": 111,
+    "mlmining": 88,
+    "nlp": 43,
+    "inforet": 78,
+    "comm": 49,
+    "sec": 100,
+    "hpc": 20,
+    "metrics": 44,
+    "plan": 75,
+    "log": 65,
+    "chi": 135,
+    "robotics": 131,
+    "da": 112
+   }
+  },
+  {
+   "institution": "University of Texas at San Antonio",
+   "homepage": "https://www.cs.utsa.edu",
+   "rank": 102,
+   "score": 1.6,
+   "faculty": 24,
+   "categories": {
+    "ai": 124,
+    "systems": 88,
+    "interdisciplinary": 80
+   },
+   "areas": {
+    "ai": 112,
+    "vision": 141,
+    "mlmining": 121,
+    "nlp": 117,
+    "inforet": 116,
+    "arch": 92,
+    "sec": 82,
+    "hpc": 110,
+    "plan": 80,
+    "soft": 25,
+    "chi": 123,
+    "robotics": 131,
+    "bio": 45,
+    "da": 71,
+    "bed": 62,
+    "visualization": 29,
+    "csed": 14
+   }
+  },
+  {
+   "institution": "Brigham Young University",
+   "homepage": "https://cs.byu.edu",
+   "rank": 111,
+   "score": 1.5,
+   "faculty": 20,
+   "categories": {
+    "ai": 112,
+    "systems": 123,
+    "interdisciplinary": 90
+   },
+   "areas": {
+    "ai": 96,
+    "vision": 120,
+    "mlmining": 121,
+    "nlp": 88,
+    "inforet": 116,
+    "sec": 85,
+    "metrics": 54,
+    "graph": 42,
+    "chi": 75,
+    "robotics": 86
+   }
+  },
+  {
+   "institution": "Colorado School of Mines",
+   "homepage": "https://cs.mines.edu/",
+   "rank": 111,
+   "score": 1.5,
+   "faculty": 13,
+   "categories": {
+    "ai": 132,
+    "systems": 95,
+    "interdisciplinary": 80
+   },
+   "areas": {
+    "ai": 103,
+    "vision": 135,
+    "mlmining": 151,
+    "nlp": 123,
+    "inforet": 116,
+    "arch": 65,
+    "sec": 107,
+    "hpc": 61,
+    "mobile": 87,
+    "ops": 42,
+    "soft": 104,
+    "chi": 98,
+    "robotics": 49,
+    "bio": 50,
+    "da": 54,
+    "csed": 63
+   }
+  },
+  {
+   "institution": "Louisiana State University",
+   "homepage": "https://www.lsu.edu/eng/cse/",
+   "rank": 111,
+   "score": 1.5,
+   "faculty": 22,
+   "categories": {
+    "ai": 124,
+    "systems": 88,
+    "theory": 98,
+    "interdisciplinary": 111
+   },
+   "areas": {
+    "ai": 154,
+    "vision": 89,
+    "mlmining": 125,
+    "nlp": 141,
+    "inforet": 74,
+    "arch": 83,
+    "sec": 76,
+    "mod": 98,
+    "hpc": 77,
+    "mobile": 78,
+    "metrics": 38,
+    "soft": 69,
+    "act": 87,
+    "chi": 70,
+    "robotics": 123,
+    "da": 89,
+    "visualization": 86,
+    "csed": 87
+   }
+  },
+  {
+   "institution": "Syracuse University",
+   "homepage": "https://ecs.syracuse.edu/",
+   "rank": 111,
+   "score": 1.5,
+   "faculty": 15,
+   "categories": {
+    "ai": 110,
+    "systems": 95,
+    "theory": 98,
+    "interdisciplinary": 133
+   },
+   "areas": {
+    "ai": 114,
+    "vision": 82,
+    "mlmining": 102,
+    "inforet": 78,
+    "arch": 74,
+    "sec": 106,
+    "mod": 95,
+    "hpc": 90,
+    "mobile": 95,
+    "metrics": 70,
+    "ops": 58,
+    "soft": 116,
+    "act": 87,
+    "graph": 64,
+    "chi": 111,
+    "robotics": 105,
+    "da": 59,
+    "bed": 36
+   }
+  },
+  {
+   "institution": "University of New Hampshire",
+   "homepage": "https://www.cs.unh.edu",
+   "rank": 111,
+   "score": 1.5,
+   "faculty": 8,
+   "categories": {
+    "ai": 100,
+    "systems": 123,
+    "interdisciplinary": 111
+   },
+   "areas": {
+    "ai": 94,
+    "mlmining": 99,
+    "nlp": 103,
+    "inforet": 33,
+    "sec": 107,
+    "mod": 70,
+    "ops": 58,
+    "plan": 91,
+    "chi": 135,
+    "robotics": 71,
+    "visualization": 74
+   }
+  },
+  {
+   "institution": "University of South Carolina",
+   "homepage": "https://www.cse.sc.edu",
+   "rank": 111,
+   "score": 1.5,
+   "faculty": 15,
+   "categories": {
+    "ai": 98,
+    "systems": 123,
+    "theory": 98,
+    "interdisciplinary": 133
+   },
+   "areas": {
+    "ai": 82,
+    "vision": 68,
+    "mlmining": 113,
+    "nlp": 123,
+    "inforet": 98,
+    "comm": 65,
+    "mobile": 61,
+    "metrics": 54,
+    "soft": 74,
+    "act": 87,
+    "chi": 90,
+    "bio": 62,
+    "da": 98
+   }
+  },
+  {
+   "institution": "Auburn University",
+   "homepage": "https://www.eng.auburn.edu/comp/",
+   "rank": 117,
+   "score": 1.4,
+   "faculty": 14,
+   "categories": {
+    "ai": 96,
+    "systems": 107
+   },
+   "areas": {
+    "ai": 110,
+    "vision": 71,
+    "mlmining": 90,
+    "nlp": 101,
+    "inforet": 135,
+    "comm": 85,
+    "sec": 97,
+    "mod": 117,
+    "hpc": 81,
+    "soft": 61
+   }
+  },
+  {
+   "institution": "Boston College",
+   "homepage": "https://www.bc.edu/bc-web/schools/morrissey/departments/computer-science.html",
+   "rank": 117,
+   "score": 1.4,
+   "faculty": 11,
+   "categories": {
+    "ai": 121,
+    "systems": 142,
+    "theory": 54,
+    "interdisciplinary": 102
+   },
+   "areas": {
+    "ai": 164,
+    "vision": 105,
+    "mlmining": 102,
+    "nlp": 98,
+    "comm": 75,
+    "sec": 145,
+    "ops": 58,
+    "plan": 60,
+    "soft": 120,
+    "act": 51,
+    "log": 42,
+    "chi": 88,
+    "visualization": 53,
+    "ecom": 38
+   }
+  },
+  {
+   "institution": "Kent State University",
+   "homepage": "https://www.kent.edu/cs",
+   "rank": 117,
+   "score": 1.4,
+   "faculty": 10,
+   "categories": {
+    "ai": 137,
+    "systems": 107,
+    "theory": 89,
+    "interdisciplinary": 111
+   },
+   "areas": {
+    "ai": 138,
+    "vision": 135,
+    "mlmining": 123,
+    "nlp": 141,
+    "inforet": 135,
+    "mod": 49,
+    "hpc": 66,
+    "soft": 98,
+    "act": 80,
+    "chi": 143,
+    "robotics": 96,
+    "bio": 62,
+    "da": 103,
+    "visualization": 59,
+    "csed": 79
+   }
+  },
+  {
+   "institution": "Portland State University",
+   "homepage": "https://web.cecs.pdx.edu",
+   "rank": 117,
+   "score": 1.4,
+   "faculty": 9,
+   "categories": {
+    "ai": 126,
+    "systems": 142,
+    "theory": 69,
+    "interdisciplinary": 118
+   },
+   "areas": {
+    "ai": 169,
+    "vision": 56,
+    "mlmining": 165,
+    "nlp": 105,
+    "sec": 138,
+    "mod": 63,
+    "plan": 71,
+    "act": 72,
+    "crypt": 41,
+    "graph": 52,
+    "chi": 114,
+    "robotics": 123,
+    "visualization": 63
+   }
+  },
+  {
+   "institution": "Texas Tech University",
+   "homepage": "https://www.depts.ttu.edu/cs/",
+   "rank": 117,
+   "score": 1.4,
+   "faculty": 12,
+   "categories": {
+    "ai": 130,
+    "systems": 95,
+    "interdisciplinary": 133
+   },
+   "areas": {
+    "ai": 97,
+    "mlmining": 149,
+    "nlp": 128,
+    "inforet": 94,
+    "comm": 52,
+    "sec": 85,
+    "mod": 85,
+    "hpc": 68,
+    "mobile": 101,
+    "chi": 143,
+    "robotics": 101,
+    "bio": 51,
+    "da": 98,
+    "bed": 41
+   }
+  },
+  {
+   "institution": "University of Cincinnati",
+   "homepage": "https://www.ceas.uc.edu/academics/departments/computer-science.html",
+   "rank": 117,
+   "score": 1.4,
+   "faculty": 15,
+   "categories": {
+    "ai": 113,
+    "systems": 123,
+    "interdisciplinary": 118
+   },
+   "areas": {
+    "ai": 115,
+    "vision": 132,
+    "mlmining": 128,
+    "nlp": 71,
+    "inforet": 114,
+    "arch": 92,
+    "sec": 145,
+    "mod": 76,
+    "soft": 59,
+    "graph": 53,
+    "chi": 96,
+    "robotics": 114,
+    "da": 112
+   }
+  },
+  {
+   "institution": "University of Kansas",
+   "homepage": "https://eecs.ku.edu/",
+   "rank": 117,
+   "score": 1.4,
+   "faculty": 15,
+   "categories": {
+    "ai": 141,
+    "systems": 82,
+    "interdisciplinary": 150
+   },
+   "areas": {
+    "ai": 143,
+    "vision": 135,
+    "mlmining": 131,
+    "nlp": 128,
+    "sec": 62,
+    "hpc": 102,
+    "mobile": 101,
+    "plan": 55,
+    "soft": 69,
+    "robotics": 111,
+    "da": 84,
+    "bed": 12
+   }
+  },
+  {
+   "institution": "University of Kentucky",
+   "homepage": "https://cs.engr.uky.edu/",
+   "rank": 117,
+   "score": 1.4,
+   "faculty": 12,
+   "categories": {
+    "ai": 98,
+    "systems": 123,
+    "interdisciplinary": 169
+   },
+   "areas": {
+    "ai": 100,
+    "vision": 110,
+    "mlmining": 83,
+    "nlp": 112,
+    "inforet": 78,
+    "comm": 61,
+    "sec": 132,
+    "mod": 62,
+    "metrics": 76,
+    "robotics": 131,
+    "csed": 100
+   }
+  },
+  {
+   "institution": "University of Memphis",
+   "homepage": "https://www.memphis.edu/cs/",
+   "rank": 117,
+   "score": 1.4,
+   "faculty": 13,
+   "categories": {
+    "ai": 126,
+    "systems": 142,
+    "theory": 89,
+    "interdisciplinary": 80
+   },
+   "areas": {
+    "ai": 126,
+    "vision": 108,
+    "mlmining": 127,
+    "nlp": 149,
+    "inforet": 116,
+    "sec": 138,
+    "mod": 85,
+    "mobile": 101,
+    "metrics": 87,
+    "soft": 114,
+    "act": 79,
+    "chi": 93,
+    "robotics": 75,
+    "csed": 18
+   }
+  },
+  {
+   "institution": "University of Oklahoma",
+   "homepage": "https://www.ou.edu/coe/cs",
+   "rank": 117,
+   "score": 1.4,
+   "faculty": 18,
+   "categories": {
+    "ai": 130,
+    "systems": 123,
+    "theory": 98,
+    "interdisciplinary": 90
+   },
+   "areas": {
+    "ai": 138,
+    "vision": 129,
+    "mlmining": 132,
+    "nlp": 98,
+    "inforet": 135,
+    "comm": 75,
+    "sec": 93,
+    "mod": 95,
+    "hpc": 117,
+    "mobile": 73,
+    "soft": 98,
+    "crypt": 57,
+    "chi": 93,
+    "robotics": 96,
+    "visualization": 30,
+    "csed": 79
+   }
+  },
+  {
+   "institution": "Utah State University",
+   "homepage": "https://cs.usu.edu/",
+   "rank": 117,
+   "score": 1.4,
+   "faculty": 14,
+   "categories": {
+    "ai": 141,
+    "systems": 107,
+    "interdisciplinary": 90
+   },
+   "areas": {
+    "ai": 138,
+    "vision": 145,
+    "mlmining": 133,
+    "nlp": 128,
+    "inforet": 116,
+    "arch": 88,
+    "sec": 120,
+    "mod": 76,
+    "hpc": 95,
+    "mobile": 69,
+    "soft": 85,
+    "chi": 102,
+    "robotics": 114,
+    "visualization": 63,
+    "csed": 12
+   }
+  },
+  {
+   "institution": "Brandeis University",
+   "homepage": "https://www.brandeis.edu/computer-science/",
+   "rank": 128,
+   "score": 1.3,
+   "faculty": 10,
+   "categories": {
+    "ai": 104,
+    "systems": 142,
+    "interdisciplinary": 150
+   },
+   "areas": {
+    "ai": 117,
+    "vision": 102,
+    "mlmining": 104,
+    "nlp": 77,
+    "mod": 46,
+    "csed": 67
+   }
+  },
+  {
+   "institution": "DePaul University",
+   "homepage": "https://www.cdm.depaul.edu",
+   "rank": 128,
+   "score": 1.3,
+   "faculty": 17,
+   "categories": {
+    "ai": 148,
+    "systems": 123,
+    "theory": 78,
+    "interdisciplinary": 102
+   },
+   "areas": {
+    "ai": 128,
+    "mlmining": 123,
+    "sec": 85,
+    "mod": 117,
+    "plan": 63,
+    "act": 85,
+    "crypt": 57,
+    "log": 50,
+    "chi": 102,
+    "robotics": 109,
+    "visualization": 83,
+    "csed": 37
+   }
+  },
+  {
+   "institution": "Georgia State University",
+   "homepage": "https://csds.gsu.edu/",
+   "rank": 128,
+   "score": 1.3,
+   "faculty": 17,
+   "categories": {
+    "ai": 121,
+    "systems": 142,
+    "interdisciplinary": 118
+   },
+   "areas": {
+    "ai": 132,
+    "vision": 120,
+    "mlmining": 100,
+    "nlp": 123,
+    "comm": 85,
+    "mod": 85,
+    "hpc": 81,
+    "mobile": 84,
+    "chi": 123,
+    "bio": 29,
+    "csed": 54
+   }
+  },
+  {
+   "institution": "Michigan Technological University",
+   "homepage": "https://www.mtu.edu/cs/",
+   "rank": 128,
+   "score": 1.3,
+   "faculty": 11,
+   "categories": {
+    "ai": 161,
+    "systems": 123,
+    "theory": 65,
+    "interdisciplinary": 118
+   },
+   "areas": {
+    "ai": 154,
+    "nlp": 141,
+    "arch": 73,
+    "sec": 126,
+    "hpc": 75,
+    "ops": 54,
+    "act": 49,
+    "chi": 106,
+    "da": 89,
+    "visualization": 74,
+    "csed": 54
+   }
+  },
+  {
+   "institution": "Oakland University",
+   "homepage": "https://www.oakland.edu/secs/departments/cse/",
+   "rank": 128,
+   "score": 1.3,
+   "faculty": 9,
+   "categories": {
+    "ai": 117,
+    "systems": 107,
+    "interdisciplinary": 169
+   },
+   "areas": {
+    "ai": 138,
+    "vision": 97,
+    "mlmining": 116,
+    "nlp": 97,
+    "inforet": 131,
+    "mod": 98,
+    "hpc": 54,
+    "soft": 45,
+    "robotics": 131,
+    "da": 89
+   }
+  },
+  {
+   "institution": "Univ. of Louisiana - Lafayette",
+   "homepage": "https://computing.louisiana.edu/",
+   "rank": 128,
+   "score": 1.3,
+   "faculty": 12,
+   "categories": {
+    "ai": 155,
+    "systems": 107,
+    "interdisciplinary": 111
+   },
+   "areas": {
+    "ai": 143,
+    "vision": 150,
+    "mlmining": 138,
+    "inforet": 107,
+    "sec": 92,
+    "hpc": 110,
+    "metrics": 87,
+    "plan": 55,
+    "soft": 104,
+    "chi": 78,
+    "da": 84,
+    "visualization": 44
+   }
+  },
+  {
+   "institution": "University at Albany - SUNY",
+   "homepage": "https://www.albany.edu/computer-science",
+   "rank": 128,
+   "score": 1.3,
+   "faculty": 9,
+   "categories": {
+    "ai": 109,
+    "systems": 142,
+    "interdisciplinary": 118
+   },
+   "areas": {
+    "ai": 106,
+    "vision": 93,
+    "mlmining": 109,
+    "nlp": 137,
+    "inforet": 72,
+    "mod": 98,
+    "mobile": 78,
+    "soft": 114,
+    "robotics": 79,
+    "visualization": 106
+   }
+  },
+  {
+   "institution": "University of Arkansas",
+   "homepage": "https://www.csce.uark.edu",
+   "rank": 128,
+   "score": 1.3,
+   "faculty": 8,
+   "categories": {
+    "ai": 113,
+    "systems": 142,
+    "theory": 78,
+    "interdisciplinary": 169
+   },
+   "areas": {
+    "ai": 78,
+    "vision": 150,
+    "mlmining": 117,
+    "nlp": 107,
+    "inforet": 88,
+    "sec": 138,
+    "mod": 122,
+    "act": 64,
+    "chi": 143,
+    "da": 84
+   }
+  },
+  {
+   "institution": "University of Missouri",
+   "homepage": "https://engineering.missouri.edu/departments/eecs/",
+   "rank": 128,
+   "score": 1.3,
+   "faculty": 7,
+   "categories": {
+    "ai": 117,
+    "systems": 142,
+    "theory": 83,
+    "interdisciplinary": 133
+   },
+   "areas": {
+    "ai": 143,
+    "vision": 86,
+    "mlmining": 133,
+    "nlp": 81,
+    "sec": 126,
+    "plan": 80,
+    "log": 36,
+    "bio": 26,
+    "da": 89,
+    "visualization": 71
+   }
+  },
+  {
+   "institution": "University of Nevada",
+   "homepage": "https://www.cse.unr.edu",
+   "rank": 128,
+   "score": 1.3,
+   "faculty": 15,
+   "categories": {
+    "ai": 126,
+    "systems": 163,
+    "interdisciplinary": 90
+   },
+   "areas": {
+    "ai": 130,
+    "vision": 89,
+    "mlmining": 128,
+    "nlp": 141,
+    "comm": 85,
+    "mod": 98,
+    "hpc": 110,
+    "chi": 102,
+    "robotics": 37,
+    "visualization": 86
+   }
+  },
+  {
+   "institution": "University of New Mexico",
+   "homepage": "https://www.cs.unm.edu/",
+   "rank": 128,
+   "score": 1.3,
+   "faculty": 8,
+   "categories": {
+    "ai": 158,
+    "systems": 107,
+    "theory": 89,
+    "interdisciplinary": 102
+   },
+   "areas": {
+    "ai": 148,
+    "mlmining": 146,
+    "inforet": 107,
+    "sec": 115,
+    "hpc": 81,
+    "log": 46,
+    "chi": 101,
+    "robotics": 65,
+    "da": 112,
+    "bed": 8
+   }
+  },
+  {
+   "institution": "Virginia Commonwealth University",
+   "homepage": "https://egr.vcu.edu/departments/computer-science/",
+   "rank": 128,
+   "score": 1.3,
+   "faculty": 10,
+   "categories": {
+    "ai": 148,
+    "systems": 107,
+    "theory": 89,
+    "interdisciplinary": 133
+   },
+   "areas": {
+    "ai": 149,
+    "vision": 131,
+    "mlmining": 135,
+    "nlp": 141,
+    "sec": 97,
+    "mod": 98,
+    "mobile": 55,
+    "metrics": 76,
+    "soft": 61,
+    "crypt": 46,
+    "chi": 132,
+    "bio": 26
+   }
+  },
+  {
+   "institution": "Cleveland State University",
+   "homepage": "https://engineering.csuohio.edu/cs",
+   "rank": 140,
+   "score": 1.2,
+   "faculty": 6,
+   "categories": {
+    "ai": 132,
+    "systems": 123,
+    "interdisciplinary": 150
+   },
+   "areas": {
+    "ai": 132,
+    "vision": 115,
+    "mlmining": 138,
+    "nlp": 123,
+    "arch": 92,
+    "comm": 52,
+    "mod": 122,
+    "mobile": 58,
+    "robotics": 131,
+    "da": 103,
+    "csed": 100
+   }
+  },
+  {
+   "institution": "Florida Atlantic University",
+   "homepage": "https://www.fau.edu/engineering/eecs/",
+   "rank": 140,
+   "score": 1.2,
+   "faculty": 8,
+   "categories": {
+    "ai": 141,
+    "systems": 142,
+    "interdisciplinary": 133
+   },
+   "areas": {
+    "ai": 123,
+    "vision": 135,
+    "mlmining": 138,
+    "inforet": 131,
+    "chi": 135,
+    "robotics": 93,
+    "da": 42,
+    "bed": 51,
+    "csed": 107
+   }
+  },
+  {
+   "institution": "IUPUI",
+   "homepage": "https://cs.iupui.edu",
+   "rank": 140,
+   "score": 1.2,
+   "faculty": 10,
+   "categories": {
+    "ai": 155,
+    "interdisciplinary": 111
+   },
+   "areas": {
+    "ai": 158,
+    "vision": 154,
+    "mlmining": 146,
+    "nlp": 123,
+    "inforet": 116,
+    "chi": 65,
+    "csed": 87
+   }
+  },
+  {
+   "institution": "Missouri S&T",
+   "homepage": "https://cs.mst.edu/",
+   "rank": 140,
+   "score": 1.2,
+   "faculty": 9,
+   "categories": {
+    "ai": 137,
+    "systems": 107,
+    "interdisciplinary": 150
+   },
+   "areas": {
+    "ai": 158,
+    "vision": 124,
+    "nlp": 137,
+    "inforet": 43,
+    "arch": 92,
+    "sec": 126,
+    "mod": 117,
+    "hpc": 85,
+    "ops": 54,
+    "soft": 85,
+    "chi": 123,
+    "bed": 21
+   }
+  },
+  {
+   "institution": "New Mexico State University",
+   "homepage": "https://www.cs.nmsu.edu",
+   "rank": 140,
+   "score": 1.2,
+   "faculty": 13,
+   "categories": {
+    "ai": 137,
+    "systems": 142,
+    "interdisciplinary": 150
+   },
+   "areas": {
+    "ai": 98,
+    "mlmining": 146,
+    "nlp": 153,
+    "inforet": 107,
+    "sec": 100,
+    "hpc": 110,
+    "chi": 119,
+    "da": 103
+   }
+  },
+  {
+   "institution": "New York Tech",
+   "homepage": "https://www.nyit.edu/academics/engineering-and-computing-sciences/computer-science/",
+   "rank": 140,
+   "score": 1.2,
+   "faculty": 3,
+   "categories": {
+    "ai": 141,
+    "interdisciplinary": 118
+   },
+   "areas": {
+    "ai": 134,
+    "vision": 150,
+    "mlmining": 135,
+    "nlp": 128,
+    "inforet": 135,
+    "chi": 118,
+    "robotics": 88
+   }
+  },
+  {
+   "institution": "Northern Arizona University",
+   "homepage": "https://nau.edu/school-informatics-computing-cyber-systems/",
+   "rank": 140,
+   "score": 1.2,
+   "faculty": 7,
+   "categories": {
+    "ai": 161,
+    "systems": 107,
+    "interdisciplinary": 150
+   },
+   "areas": {
+    "vision": 132,
+    "mlmining": 149,
+    "hpc": 64,
+    "soft": 17,
+    "chi": 114,
+    "robotics": 142
+   }
+  },
+  {
+   "institution": "Old Dominion University",
+   "homepage": "https://www.cs.odu.edu",
+   "rank": 140,
+   "score": 1.2,
+   "faculty": 8,
+   "categories": {
+    "ai": 148,
+    "systems": 123,
+    "interdisciplinary": 118
+   },
+   "areas": {
+    "ai": 136,
+    "vision": 154,
+    "mlmining": 138,
+    "nlp": 137,
+    "inforet": 116,
+    "comm": 85,
+    "sec": 115,
+    "hpc": 102,
+    "metrics": 70,
+    "soft": 116,
+    "chi": 87,
+    "bio": 42,
+    "da": 103,
+    "visualization": 98,
+    "csed": 100
+   }
+  },
+  {
+   "institution": "Southern Methodist University",
+   "homepage": "https://www.smu.edu/lyle/departments/cs",
+   "rank": 140,
+   "score": 1.2,
+   "faculty": 6,
+   "categories": {
+    "ai": 161,
+    "systems": 107,
+    "interdisciplinary": 150
+   },
+   "areas": {
+    "ai": 166,
+    "vision": 154,
+    "nlp": 128,
+    "arch": 74,
+    "sec": 93,
+    "mobile": 64,
+    "soft": 74,
+    "chi": 119
+   }
+  },
+  {
+   "institution": "The University of Alabama",
+   "homepage": "https://cs.ua.edu",
+   "rank": 140,
+   "score": 1.2,
+   "faculty": 5,
+   "categories": {
+    "ai": 141,
+    "systems": 142,
+    "interdisciplinary": 118
+   },
+   "areas": {
+    "ai": 154,
+    "mlmining": 143,
+    "nlp": 98,
+    "inforet": 107,
+    "arch": 77,
+    "mod": 122,
+    "soft": 69,
+    "csed": 17
+   }
+  },
+  {
+   "institution": "UCCS",
+   "homepage": "https://www.cs.uccs.edu",
+   "rank": 140,
+   "score": 1.2,
+   "faculty": 8,
+   "categories": {
+    "ai": 132,
+    "systems": 123,
+    "interdisciplinary": 150
+   },
+   "areas": {
+    "ai": 147,
+    "vision": 85,
+    "mlmining": 151,
+    "nlp": 128,
+    "sec": 107,
+    "hpc": 102,
+    "soft": 88,
+    "da": 89,
+    "bed": 44,
+    "visualization": 74
+   }
+  },
+  {
+   "institution": "University of Colorado - Denver",
+   "homepage": "https://engineering.ucdenver.edu/departments/computer-science-and-engineering",
+   "rank": 140,
+   "score": 1.2,
+   "faculty": 3,
+   "categories": {
+    "ai": 169,
+    "systems": 123,
+    "interdisciplinary": 118
+   },
+   "areas": {
+    "ai": 172,
+    "inforet": 116,
+    "comm": 57,
+    "sec": 130,
+    "mobile": 39,
+    "chi": 106,
+    "robotics": 93
+   }
+  },
+  {
+   "institution": "University of Hawaii at Manoa",
+   "homepage": "https://www.ics.hawaii.edu/",
+   "rank": 140,
+   "score": 1.2,
+   "faculty": 11,
+   "categories": {
+    "ai": 148,
+    "systems": 123,
+    "theory": 69,
+    "interdisciplinary": 169
+   },
+   "areas": {
+    "ai": 158,
+    "vision": 132,
+    "mlmining": 151,
+    "nlp": 114,
+    "inforet": 116,
+    "sec": 138,
+    "mod": 95,
+    "hpc": 95,
+    "plan": 80,
+    "soft": 53,
+    "act": 72,
+    "log": 31,
+    "da": 116,
+    "csed": 91
+   }
+  },
+  {
+   "institution": "University of Massachusetts Boston",
+   "homepage": "https://www.cs.umb.edu",
+   "rank": 140,
+   "score": 1.2,
+   "faculty": 7,
+   "categories": {
+    "ai": 132,
+    "systems": 142,
+    "interdisciplinary": 150
+   },
+   "areas": {
+    "ai": 121,
+    "vision": 141,
+    "mlmining": 151,
+    "nlp": 117,
+    "inforet": 104,
+    "mod": 64,
+    "plan": 60,
+    "robotics": 120,
+    "visualization": 63
+   }
+  },
+  {
+   "institution": "University of Michigan-Dearborn",
+   "homepage": "https://umdearborn.edu/cecs/departments/computer-and-information-science",
+   "rank": 140,
+   "score": 1.2,
+   "faculty": 12,
+   "categories": {
+    "ai": 169,
+    "systems": 95,
+    "interdisciplinary": 150
+   },
+   "areas": {
+    "ai": 166,
+    "mlmining": 161,
+    "nlp": 149,
+    "sec": 91,
+    "mod": 70,
+    "hpc": 102,
+    "mobile": 76,
+    "soft": 54,
+    "chi": 123,
+    "robotics": 142
+   }
+  },
+  {
+   "institution": "University of Nebraska - Omaha",
+   "homepage": "https://www.unomaha.edu/college-of-information-science-and-technology/computer-science/index.php",
+   "rank": 140,
+   "score": 1.2,
+   "faculty": 9,
+   "categories": {
+    "ai": 148,
+    "systems": 142,
+    "interdisciplinary": 133
+   },
+   "areas": {
+    "ai": 101,
+    "mlmining": 161,
+    "hpc": 85,
+    "soft": 91,
+    "chi": 131,
+    "robotics": 123,
+    "bed": 60,
+    "csed": 67
+   }
+  },
+  {
+   "institution": "University of Texas - El Paso",
+   "homepage": "https://www.utep.edu/cs/",
+   "rank": 140,
+   "score": 1.2,
+   "faculty": 8,
+   "categories": {
+    "ai": 132,
+    "systems": 123,
+    "interdisciplinary": 150
+   },
+   "areas": {
+    "ai": 106,
+    "vision": 145,
+    "mlmining": 143,
+    "nlp": 128,
+    "inforet": 131,
+    "sec": 112,
+    "soft": 48,
+    "robotics": 142,
+    "ecom": 47
+   }
+  },
+  {
+   "institution": "University of Vermont",
+   "homepage": "https://www.uvm.edu/cems/cs",
+   "rank": 140,
+   "score": 1.2,
+   "faculty": 8,
+   "categories": {
+    "ai": 158,
+    "systems": 107,
+    "interdisciplinary": 133
+   },
+   "areas": {
+    "ai": 158,
+    "nlp": 117,
+    "inforet": 131,
+    "sec": 104,
+    "mod": 98,
+    "metrics": 76,
+    "plan": 58,
+    "soft": 91,
+    "chi": 111,
+    "robotics": 107,
+    "da": 103
+   }
+  },
+  {
+   "institution": "West Virginia University",
+   "homepage": "https://lcsee.statler.wvu.edu/",
+   "rank": 140,
+   "score": 1.2,
+   "faculty": 4,
+   "categories": {
+    "ai": 121
+   },
+   "areas": {
+    "ai": 105,
+    "vision": 73,
+    "mlmining": 137
+   }
+  },
+  {
+   "institution": "Wichita State University",
+   "homepage": "https://www.wichita.edu/SoC",
+   "rank": 140,
+   "score": 1.2,
+   "faculty": 6,
+   "categories": {
+    "ai": 141,
+    "systems": 142,
+    "interdisciplinary": 118
+   },
+   "areas": {
+    "ai": 158,
+    "mlmining": 111,
+    "nlp": 114,
+    "sec": 132,
+    "mobile": 87,
+    "soft": 104,
+    "chi": 132,
+    "robotics": 74
+   }
+  },
+  {
+   "institution": "Baylor University",
+   "homepage": "https://www.ecs.baylor.edu/programs-departments/computer-science",
+   "rank": 160,
+   "score": 1.1,
+   "faculty": 5,
+   "categories": {
+    "ai": 141,
+    "systems": 142
+   },
+   "areas": {
+    "ai": 126,
+    "vision": 145,
+    "mlmining": 143,
+    "nlp": 149,
+    "inforet": 116,
+    "arch": 83,
+    "sec": 130,
+    "soft": 104
+   }
+  },
+  {
+   "institution": "Boise State University",
+   "homepage": "https://www.boisestate.edu/coen-cs/",
+   "rank": 160,
+   "score": 1.1,
+   "faculty": 7,
+   "categories": {
+    "ai": 148,
+    "systems": 142,
+    "interdisciplinary": 150
+   },
+   "areas": {
+    "ai": 135,
+    "mlmining": 161,
+    "nlp": 128,
+    "inforet": 107,
+    "sec": 132,
+    "mod": 98,
+    "hpc": 110,
+    "chi": 135,
+    "robotics": 107
+   }
+  },
+  {
+   "institution": "Kansas State University",
+   "homepage": "https://www.cs.ksu.edu/",
+   "rank": 160,
+   "score": 1.1,
+   "faculty": 4,
+   "categories": {
+    "ai": 155,
+    "systems": 163
+   },
+   "areas": {
+    "ai": 143,
+    "nlp": 141,
+    "inforet": 88,
+    "sec": 138
+   }
+  },
+  {
+   "institution": "Mississippi State University",
+   "homepage": "https://www.cse.msstate.edu/",
+   "rank": 160,
+   "score": 1.1,
+   "faculty": 6,
+   "categories": {
+    "ai": 169,
+    "systems": 163,
+    "theory": 98,
+    "interdisciplinary": 150
+   },
+   "areas": {
+    "ai": 149,
+    "sec": 138,
+    "act": 81,
+    "robotics": 109,
+    "visualization": 74
+   }
+  },
+  {
+   "institution": "Montana State University",
+   "homepage": "https://www.cs.montana.edu",
+   "rank": 160,
+   "score": 1.1,
+   "faculty": 5,
+   "categories": {
+    "ai": 169,
+    "systems": 163,
+    "theory": 98,
+    "interdisciplinary": 150
+   },
+   "areas": {
+    "ai": 158,
+    "mobile": 95,
+    "act": 91,
+    "robotics": 120,
+    "bio": 51,
+    "visualization": 74
+   }
+  },
+  {
+   "institution": "Naval Postgraduate School",
+   "homepage": "https://nps.edu/web/cs",
+   "rank": 160,
+   "score": 1.1,
+   "faculty": 7,
+   "categories": {
+    "systems": 123,
+    "theory": 98,
+    "interdisciplinary": 133
+   },
+   "areas": {
+    "comm": 75,
+    "sec": 73,
+    "metrics": 76,
+    "crypt": 57,
+    "chi": 106,
+    "robotics": 131,
+    "visualization": 86
+   }
+  },
+  {
+   "institution": "Nova Southeastern University",
+   "homepage": "https://cec.nova.edu",
+   "rank": 160,
+   "score": 1.1,
+   "faculty": 1,
+   "categories": {
+    "ai": 161,
+    "interdisciplinary": 150
+   },
+   "areas": {
+    "ai": 154,
+    "vision": 145,
+    "mlmining": 151,
+    "nlp": 153,
+    "chi": 143,
+    "robotics": 123,
+    "visualization": 106
+   }
+  },
+  {
+   "institution": "Ohio University",
+   "homepage": "https://www.ohio.edu/engineering/eecs",
+   "rank": 160,
+   "score": 1.1,
+   "faculty": 8,
+   "categories": {
+    "systems": 142,
+    "interdisciplinary": 133
+   },
+   "areas": {
+    "arch": 61,
+    "robotics": 114,
+    "bio": 75,
+    "da": 84,
+    "csed": 43
+   }
+  },
+  {
+   "institution": "Towson University",
+   "homepage": "https://www.towson.edu/fcsm/departments/computerinfosci/",
+   "rank": 160,
+   "score": 1.1,
+   "faculty": 6,
+   "categories": {
+    "ai": 169,
+    "theory": 83,
+    "interdisciplinary": 133
+   },
+   "areas": {
+    "ai": 149,
+    "act": 70,
+    "robotics": 131,
+    "csed": 51
+   }
+  },
+  {
+   "institution": "Univ. of Missouri - Kansas City",
+   "homepage": "https://sse.umkc.edu/academics/programs/computer-science-and-information-technology.html",
+   "rank": 160,
+   "score": 1.1,
+   "faculty": 4,
+   "categories": {
+    "ai": 137,
+    "systems": 142
+   },
+   "areas": {
+    "ai": 136,
+    "vision": 129,
+    "mlmining": 125,
+    "nlp": 141,
+    "sec": 115
+   }
+  },
+  {
+   "institution": "Univ. of Wisconsin - Milwaukee",
+   "homepage": "https://uwm.edu/engineering/departments/computer-science/",
+   "rank": 160,
+   "score": 1.1,
+   "faculty": 3,
+   "categories": {
+    "ai": 169,
+    "systems": 163,
+    "theory": 75
+   },
+   "areas": {
+    "mlmining": 151,
+    "arch": 103,
+    "act": 70,
+    "crypt": 51
+   }
+  },
+  {
+   "institution": "University of Denver",
+   "homepage": "https://ritchieschool.du.edu/computer-science",
+   "rank": 160,
+   "score": 1.1,
+   "faculty": 3,
+   "categories": {
+    "interdisciplinary": 118
+   },
+   "areas": {
+    "chi": 119,
+    "robotics": 88,
+    "csed": 91
+   }
+  },
+  {
+   "institution": "University of Louisville",
+   "homepage": "https://engineering.louisville.edu/academics/departments/computer/",
+   "rank": 160,
+   "score": 1.1,
+   "faculty": 1,
+   "categories": {
+    "ai": 161,
+    "interdisciplinary": 133
+   },
+   "areas": {
+    "vision": 113,
+    "chi": 123,
+    "robotics": 101
+   }
+  },
+  {
+   "institution": "University of Mississippi",
+   "homepage": "https://cs.olemiss.edu/",
+   "rank": 160,
+   "score": 1.1,
+   "faculty": 1,
+   "categories": {
+    "ai": 148
+   },
+   "areas": {
+    "ai": 149,
+    "vision": 113,
+    "mlmining": 138
+   }
+  },
+  {
+   "institution": "University of Nevada Las Vegas",
+   "homepage": "https://www.unlv.edu/cs",
+   "rank": 160,
+   "score": 1.1,
+   "faculty": 7,
+   "categories": {
+    "ai": 179,
+    "systems": 123,
+    "interdisciplinary": 150
+   },
+   "areas": {
+    "nlp": 149,
+    "mobile": 87,
+    "soft": 78,
+    "bed": 18,
+    "csed": 63
+   }
+  },
+  {
+   "institution": "University of Rhode Island",
+   "homepage": "https://web.uri.edu/cs/",
+   "rank": 160,
+   "score": 1.1,
+   "faculty": 5,
+   "categories": {
+    "ai": 161,
+    "systems": 163,
+    "interdisciplinary": 133
+   },
+   "areas": {
+    "vision": 124,
+    "mlmining": 161,
+    "inforet": 135,
+    "arch": 92,
+    "sec": 145,
+    "chi": 105,
+    "da": 116,
+    "csed": 91
+   }
+  },
+  {
+   "institution": "University of Southern Mississippi",
+   "homepage": "https://www.usm.edu/computing-sciences-computer-engineering/index.php",
+   "rank": 160,
+   "score": 1.1,
+   "faculty": 3,
+   "categories": {
+    "ai": 161,
+    "interdisciplinary": 133
+   },
+   "areas": {
+    "ai": 149,
+    "mlmining": 151,
+    "robotics": 91
+   }
+  },
+  {
+   "institution": "University of Tulsa",
+   "homepage": "https://engineering.utulsa.edu/computer-science/",
+   "rank": 160,
+   "score": 1.1,
+   "faculty": 3,
+   "categories": {
+    "ai": 161,
+    "systems": 163,
+    "interdisciplinary": 150
+   },
+   "areas": {
+    "ai": 169,
+    "vision": 145,
+    "mlmining": 151,
+    "nlp": 128,
+    "sec": 145,
+    "csed": 79
+   }
+  },
+  {
+   "institution": "Air Force Inst. of Technology",
+   "homepage": "https://www.afit.edu/ENG/",
+   "rank": 178,
+   "score": 1.0,
+   "faculty": 1,
+   "categories": {
+    "interdisciplinary": 150
+   },
+   "areas": {
+    "csed": 79
+   }
+  },
+  {
+   "institution": "Florida Institute of Technology",
+   "homepage": "https://cs.fit.edu/",
+   "rank": 178,
+   "score": 1.0,
+   "faculty": 2,
+   "categories": {
+    "ai": 179,
+    "interdisciplinary": 169
+   },
+   "areas": {
+    "vision": 154,
+    "robotics": 131
+   }
+  },
+  {
+   "institution": "New Mexico Tech",
+   "homepage": "https://www.nmt.edu/academics/compsci/index.php",
+   "rank": 178,
+   "score": 1.0,
+   "faculty": 1,
+   "categories": {
+    "ai": 179
+   },
+   "areas": {
+    "mlmining": 151
+   }
+  },
+  {
+   "institution": "OHSU",
+   "homepage": "https://www.ohsu.edu/school-of-medicine/medical-informatics-and-clinical-epidemiology",
+   "rank": 178,
+   "score": 1.0,
+   "faculty": 3,
+   "categories": {
+    "ai": 158
+   },
+   "areas": {
+    "vision": 135,
+    "nlp": 107
+   }
+  },
+  {
+   "institution": "Oklahoma State University",
+   "homepage": "https://cs.okstate.edu",
+   "rank": 178,
+   "score": 1.0,
+   "faculty": 3,
+   "categories": {
+    "ai": 169,
+    "systems": 142
+   },
+   "areas": {
+    "vision": 135,
+    "mod": 76
+   }
+  },
+  {
+   "institution": "UNC - Greensboro",
+   "homepage": "https://compsci.uncg.edu/",
+   "rank": 178,
+   "score": 1.0,
+   "faculty": 1,
+   "categories": {
+    "interdisciplinary": 169
+   },
+   "areas": {
+    "visualization": 98
+   }
+  },
+  {
+   "institution": "Univ. of Arkansas - Little Rock",
+   "homepage": "https://ualr.edu/computerscience/",
+   "rank": 178,
+   "score": 1.0,
+   "faculty": 1,
+   "categories": {
+    "systems": 163
+   },
+   "areas": {
+    "sec": 132
+   }
+  },
+  {
+   "institution": "University of Alabama - Birmingham",
+   "homepage": "https://www.uab.edu/cas/computerscience/",
+   "rank": 178,
+   "score": 1.0,
+   "faculty": 3,
+   "categories": {
+    "ai": 169,
+    "systems": 163
+   },
+   "areas": {
+    "ai": 169,
+    "vision": 141,
+    "hpc": 90
+   }
+  },
+  {
+   "institution": "University of Alabama - Huntsville",
+   "homepage": "https://www.uah.edu/science/departments/computer-science",
+   "rank": 178,
+   "score": 1.0,
+   "faculty": 1,
+   "categories": {
+    "systems": 163
+   },
+   "areas": {
+    "mod": 98
+   }
+  },
+  {
+   "institution": "University of Idaho",
+   "homepage": "https://www.uidaho.edu/engr/departments/cs",
+   "rank": 178,
+   "score": 1.0,
+   "faculty": 1,
+   "categories": {
+    "ai": 169
+   },
+   "areas": {
+    "ai": 164
+   }
+  },
+  {
+   "institution": "University of Miami",
+   "homepage": "https://www.cs.miami.edu",
+   "rank": 178,
+   "score": 1.0,
+   "faculty": 2,
+   "categories": {
+    "ai": 179,
+    "systems": 142
+   },
+   "areas": {
+    "mlmining": 151,
+    "mod": 75
+   }
+  },
+  {
+   "institution": "University of New Orleans",
+   "homepage": "https://www.uno.edu/academics/cos/computer-science",
+   "rank": 178,
+   "score": 1.0,
+   "faculty": 3,
+   "categories": {
+    "ai": 169,
+    "interdisciplinary": 150
+   },
+   "areas": {
+    "ai": 166,
+    "robotics": 120
+   }
+  },
+  {
+   "institution": "University of Wyoming",
+   "homepage": "https://www.uwyo.edu/cosc/department/index.html",
+   "rank": 178,
+   "score": 1.0,
+   "faculty": 2,
+   "categories": {
+    "interdisciplinary": 133
+   },
+   "areas": {
+    "visualization": 34
+   }
+  },
+  {
+   "institution": "Western Michigan University",
+   "homepage": "https://wmich.edu/cs",
+   "rank": 178,
+   "score": 1.0,
+   "faculty": 1,
+   "categories": {
+    "interdisciplinary": 169
+   },
+   "areas": {
+    "csed": 91
+   }
+  }
+ ]
+}

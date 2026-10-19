@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="title.rankings">Rankings · Dog No Apply</title>
+  <meta name="description" data-i18n-content="meta.rankings" content="">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <script src="js/i18n.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="siteNav" class="site-nav"></header>
+  <script src="js/layout.js"></script>
+
+  <div class="page-head">
+    <div class="wrap">
+      <h1 data-i18n="rk.h1"></h1>
+      <p class="sub" data-i18n="rk.sub"></p>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <section class="controls" data-i18n-aria-label="rk.filters">
+      <label class="field grow">
+        <span data-i18n="rk.search"></span>
+        <input id="q" type="search" data-i18n-placeholder="rk.searchPh">
+      </label>
+      <label class="field">
+        <span data-i18n="rk.year"></span>
+        <select id="year"></select>
+      </label>
+      <label class="field">
+        <span data-i18n="rk.state"></span>
+        <select id="state"><option value="" data-i18n="rk.allStates"></option></select>
+      </label>
+      <div class="field">
+        <span data-i18n="rk.type"></span>
+        <div class="seg" id="control" role="radiogroup" data-i18n-aria-label="rk.type">
+          <button type="button" data-v="" aria-pressed="true" data-i18n="control.all"></button>
+          <button type="button" data-v="public" aria-pressed="false" data-i18n="control.public"></button>
+          <button type="button" data-v="private" aria-pressed="false" data-i18n="control.private"></button>
+        </div>
+      </div>
+      <label class="field">
+        <span data-i18n="csr.dir"></span>
+        <select id="csrDir"></select>
+      </label>
+      <label class="field">
+        <span data-i18n="rk.range"></span>
+        <span class="range">
+          <input id="rmin" type="number" min="1" inputmode="numeric" placeholder="1">
+          <span>–</span>
+          <input id="rmax" type="number" min="1" inputmode="numeric" data-i18n-placeholder="rk.any">
+        </span>
+      </label>
+      <label class="check">
+        <input id="unranked" type="checkbox"> <span data-i18n="rk.unranked"></span>
+      </label>
+      <label class="check">
+        <input id="onlyFav" type="checkbox"> <span data-i18n="common.onlyLib"></span> <span id="favCount" class="pill">0</span>
+      </label>
+
+      <p class="group-label" data-i18n="rk.geo"></p>
+      <label class="field">
+        <span data-i18n="geo.city"></span>
+        <select id="city"></select>
+      </label>
+      <div class="field">
+        <span data-i18n="geo.setting"></span>
+        <div class="seg" id="setting" role="radiogroup" data-i18n-aria-label="geo.setting">
+          <button type="button" data-v="" aria-pressed="true" data-i18n="control.all"></button>
+          <button type="button" data-v="metro" aria-pressed="false" data-i18n="setting.metroShort"></button>
+          <button type="button" data-v="town" aria-pressed="false" data-i18n="setting.townShort"></button>
+        </div>
+      </div>
+      <label class="field grow">
+        <span data-i18n="geo.cluster"></span>
+        <select id="cluster"></select>
+      </label>
+
+      <p class="group-label" data-i18n="cost.group"></p>
+      <div class="field">
+        <span data-i18n="cost.basis"></span>
+        <div class="seg" id="res" role="radiogroup" data-i18n-aria-label="cost.basis">
+          <button type="button" data-v="out" data-i18n="cost.outShort"></button>
+          <button type="button" data-v="in" data-i18n="cost.in"></button>
+        </div>
+      </div>
+      <label class="field">
+        <span data-i18n="cost.maxTuition"></span>
+        <input id="maxTuition" class="money" type="number" min="0" step="1000" inputmode="numeric" data-i18n-placeholder="cost.noMax">
+      </label>
+      <label class="field">
+        <span data-i18n="cost.maxLiving"></span>
+        <input id="maxLiving" class="money" type="number" min="0" step="1000" inputmode="numeric" data-i18n-placeholder="cost.noMax">
+      </label>
+      <label class="field" id="fxField" hidden>
+        <span data-i18n="cost.fx"></span>
+        <input id="fx" class="fx" type="number" min="0.1" step="0.01" inputmode="decimal">
+      </label>
+    </section>
+
+    <p class="summary" id="summary"></p>
+
+    <div class="table-wrap">
+      <table id="table">
+        <thead>
+          <tr>
+            <th class="c-sel"><input type="checkbox" id="selAll" data-i18n-aria-label="sel.all" data-i18n-title="sel.all"></th>
+            <th class="c-fav" data-i18n-aria-label="nav.library"></th>
+            <th data-sort="rank" class="c-rank sortable" data-i18n="rk.th.rank"></th>
+            <th data-sort="name" class="sortable" data-i18n="rk.th.school"></th>
+            <th data-sort="cs" class="sortable c-sub" data-i18n="subj.cs" data-i18n-title="rk.th.csTitle"></th>
+            <th data-sort="csr" class="sortable c-sub" id="csrHead" data-i18n-title="rk.th.csrTitle"></th>
+            <th data-sort="cost" class="sortable" id="costHead" data-i18n="cost.th"></th>
+            <th data-sort="city" class="sortable c-hide-sm" data-i18n="rk.th.city"></th>
+            <th data-sort="state" class="sortable c-hide-sm" data-i18n="rk.state"></th>
+            <th data-sort="control" class="sortable" data-i18n="rk.type"></th>
+            <th data-sort="change" class="sortable c-hide-sm" data-i18n="rk.th.change" data-i18n-title="rk.th.changeTitle"></th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+    <p class="empty" id="empty" hidden data-i18n="rk.empty"></p>
+
+    <div class="sel-bar" id="selBar" hidden>
+      <span id="selCount"></span>
+      <button type="button" class="btn btn-primary" id="selAdd" data-i18n="sel.add"></button>
+      <button type="button" class="btn btn-ghost" id="selRemove" data-i18n="sel.remove"></button>
+      <button type="button" class="btn btn-link" id="selClear" data-i18n="sel.clear"></button>
+    </div>
+    <div class="toast" id="toast" role="status" hidden></div>
+  </main>
+
+  <script src="data/colleges.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/rankings.js"></script>
+</body>
+</html>

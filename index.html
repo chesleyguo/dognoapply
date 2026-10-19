@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="title.home">Dog No Apply · Grad school applications, sniffed out</title>
+  <meta name="description" data-i18n-content="meta.home" content="">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <script src="js/i18n.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="siteNav" class="site-nav"></header>
+  <script src="js/layout.js"></script>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+      <p class="eyebrow" data-i18n="home.eyebrow"></p>
+      <h1 data-i18n="home.h1"></h1>
+      <p class="lead" data-i18n="home.lead"></p>
+      <form class="hero-search" action="rankings.html" role="search">
+        <input name="q" type="search" data-i18n-placeholder="home.searchPh" data-i18n-aria-label="common.searchSchools">
+        <button type="submit" class="btn btn-gold" data-i18n="home.search"></button>
+      </form>
+      <ul class="hero-stats" id="heroStats"></ul>
+      </div>
+      <div class="hero-dog">
+        <p class="dog-bubble" id="dogBubble" role="status" aria-live="polite" data-i18n="home.dogHint"></p>
+        <button type="button" class="dog-btn" id="dogBtn" data-i18n-aria-label="home.dogHint">
+          <svg class="dog-svg" viewBox="0 0 64 64" width="220" height="220" data-ex="meh" aria-hidden="true">
+            <!-- Same dog as assets/logo.svg; the face parts below swap per expression (data-ex). -->
+            <path d="M10 30 L13 6 Q14 3 17 5 L29 18 Z" fill="#c98a1c"/>
+            <path d="M54 30 L51 6 Q50 3 47 5 L35 18 Z" fill="#c98a1c"/>
+            <path d="M14.5 24 L16 10 L25 19 Z" fill="#f7d9a6"/>
+            <path d="M49.5 24 L48 10 L39 19 Z" fill="#f7d9a6"/>
+            <ellipse cx="32" cy="36" rx="23" ry="21" fill="#e9a83b"/>
+            <path d="M12 40 Q14 56 32 58 Q50 56 52 40 Q46 48 32 48 Q18 48 12 40 Z" fill="#fff4e2"/>
+            <ellipse cx="32" cy="46" rx="11" ry="8.5" fill="#fff4e2"/>
+
+            <g class="ex ex-meh">
+              <ellipse cx="22" cy="34" rx="4" ry="4.2" fill="#16305f"/><ellipse cx="42" cy="34" rx="4" ry="4.2" fill="#16305f"/>
+              <rect x="17" y="28.6" width="10" height="5.4" rx="1.2" fill="#e9a83b"/><rect x="37" y="28.6" width="10" height="5.4" rx="1.2" fill="#e9a83b"/>
+              <path d="M17.5 34 H26.5 M37.5 34 H46.5" stroke="#16305f" stroke-width="1.6" stroke-linecap="round"/>
+              <circle cx="23.6" cy="35.6" r=".9" fill="#fff"/><circle cx="43.6" cy="35.6" r=".9" fill="#fff"/>
+              <path d="M17 25.5 Q22 23.5 26 25 M38 25 Q42 23.5 47 25.5" stroke="#c98a1c" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+              <path d="M32 44.6 V47.2 M27.6 48 Q32 50.6 36.4 48" stroke="#16305f" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              <path d="M33.4 49 Q34.8 53.5 37.4 52.4 Q38.6 51.2 37.6 48.6 Z" fill="#f27b8a"/>
+            </g>
+
+            <g class="ex ex-happy">
+              <path d="M18 35 Q22 29.5 26 35 M38 35 Q42 29.5 46 35" stroke="#16305f" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+              <path d="M17 24.5 Q22 21 26 23.5 M38 23.5 Q42 21 47 24.5" stroke="#c98a1c" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+              <circle cx="15.5" cy="41.5" r="3.2" fill="#f6a1a8" opacity=".7"/><circle cx="48.5" cy="41.5" r="3.2" fill="#f6a1a8" opacity=".7"/>
+              <path d="M32 44.6 V46.4" stroke="#16305f" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M26.5 46.4 Q32 56 37.5 46.4 Z" fill="#16305f"/>
+              <path d="M28.8 50.8 Q32 55.2 35.2 50.8 Q32 49.2 28.8 50.8 Z" fill="#f27b8a"/>
+            </g>
+
+            <g class="ex ex-surprised">
+              <ellipse cx="22" cy="33.5" rx="4.6" ry="5.4" fill="#16305f"/><ellipse cx="42" cy="33.5" rx="4.6" ry="5.4" fill="#16305f"/>
+              <circle cx="23.6" cy="31.6" r="1.6" fill="#fff"/><circle cx="43.6" cy="31.6" r="1.6" fill="#fff"/>
+              <path d="M17 22.5 Q22 19.5 26 22 M38 22 Q42 19.5 47 22.5" stroke="#c98a1c" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+              <path d="M32 44.6 V46.4" stroke="#16305f" stroke-width="1.5" stroke-linecap="round"/>
+              <ellipse cx="32" cy="50.2" rx="2.6" ry="3.2" fill="#16305f"/>
+            </g>
+
+            <g class="ex ex-wink">
+              <path d="M18 34.5 Q22 31 26 34.5" stroke="#16305f" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+              <ellipse cx="42" cy="34" rx="4" ry="4.4" fill="#16305f"/><circle cx="43.6" cy="32.6" r="1.2" fill="#fff"/>
+              <path d="M17 26.5 Q22 25.5 26 26.5 M38 23.5 Q42 21.5 47 24" stroke="#c98a1c" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+              <path d="M32 44.6 V47 M27.8 48.2 Q32.5 50.8 37 47.2" stroke="#16305f" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              <path d="M33.6 49.2 Q35 53.6 37.6 52.4 Q38.8 51.2 37.6 48.4 Z" fill="#f27b8a"/>
+            </g>
+
+            <g class="ex ex-love">
+              <path d="M22 38.4 C15.6 33.6 17.2 27.8 22 31.2 C26.8 27.8 28.4 33.6 22 38.4 Z M42 38.4 C35.6 33.6 37.2 27.8 42 31.2 C46.8 27.8 48.4 33.6 42 38.4 Z" fill="#f05a78"/>
+              <path d="M17 24 Q22 21 26 23.5 M38 23.5 Q42 21 47 24" stroke="#c98a1c" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+              <circle cx="15.5" cy="41.5" r="3.2" fill="#f6a1a8" opacity=".7"/><circle cx="48.5" cy="41.5" r="3.2" fill="#f6a1a8" opacity=".7"/>
+              <path d="M32 44.6 V46.4" stroke="#16305f" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M26.5 46.4 Q32 56 37.5 46.4 Z" fill="#16305f"/>
+              <path d="M28.8 50.8 Q32 55.2 35.2 50.8 Q32 49.2 28.8 50.8 Z" fill="#f27b8a"/>
+            </g>
+
+            <g class="ex ex-skeptical">
+              <ellipse cx="22" cy="34" rx="4" ry="4.2" fill="#16305f"/><ellipse cx="42" cy="34" rx="4" ry="4.2" fill="#16305f"/>
+              <rect x="17" y="28.6" width="10" height="6.6" rx="1.2" fill="#e9a83b"/><rect x="37" y="28.6" width="10" height="6.6" rx="1.2" fill="#e9a83b"/>
+              <path d="M17.5 35.2 H26.5 M37.5 35.2 H46.5" stroke="#16305f" stroke-width="1.6" stroke-linecap="round"/>
+              <path d="M16.5 22 Q21.5 18.8 26 22.2 M38 27 Q42.5 24 47.5 24.6" stroke="#c98a1c" stroke-width="1.9" fill="none" stroke-linecap="round"/>
+              <path d="M32 44.6 V47.4 M27.4 49 Q30 47.6 32 48.6 Q34.2 49.6 36.6 48" stroke="#16305f" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            </g>
+
+            <!-- nose last so it sits on top of every mouth -->
+            <path d="M27.5 41 Q32 38.6 36.5 41 Q34.5 44.5 32 44.6 Q29.5 44.5 27.5 41 Z" fill="#16305f"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <main class="wrap home">
+    <section>
+      <h2 class="section-title" data-i18n="home.features"></h2>
+      <div class="cards">
+        <a class="card" href="rankings.html">
+          <span class="card-icon" aria-hidden="true">📊</span>
+          <h3 data-i18n="home.card.rankings"></h3>
+          <p data-i18n="home.card.rankingsDesc"></p>
+          <span class="card-link" data-i18n="home.card.rankingsLink"></span>
+        </a>
+        <a class="card" href="map.html">
+          <span class="card-icon" aria-hidden="true">🗺️</span>
+          <h3 data-i18n="home.card.map"></h3>
+          <p data-i18n="home.card.mapDesc"></p>
+          <span class="card-link" data-i18n="home.card.mapLink"></span>
+        </a>
+        <a class="card" href="library.html">
+          <span class="card-icon" aria-hidden="true">📋</span>
+          <h3 data-i18n="home.card.library"></h3>
+          <p data-i18n="home.card.libraryDesc"></p>
+          <span class="card-link" data-i18n="home.card.libraryLink"></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="home-grid">
+      <div>
+        <h2 class="section-title" id="top10Title"></h2>
+        <ol class="top-list" id="topList"></ol>
+        <a class="more" href="rankings.html" data-i18n="home.fullList"></a>
+      </div>
+      <div>
+        <h2 class="section-title" data-i18n="home.byState"></h2>
+        <p class="muted" data-i18n="home.byStateSub"></p>
+        <div class="chips" id="stateChips"></div>
+        <h2 class="section-title" style="margin-top:28px" data-i18n="home.byCluster"></h2>
+        <p class="muted" data-i18n="home.byClusterSub"></p>
+        <div class="chips" id="clusterChips"></div>
+        <h2 class="section-title" style="margin-top:28px" data-i18n="home.byType"></h2>
+        <div class="chips">
+          <a class="chip" href="rankings.html?control=public" data-i18n="home.publicUnis"></a>
+          <a class="chip" href="rankings.html?control=private" data-i18n="home.privateUnis"></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="data/colleges.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

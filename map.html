@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="title.map">University Map · Dog No Apply</title>
+  <meta name="description" data-i18n-content="meta.map" content="">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <script src="js/i18n.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="wide map-page">
+  <header id="siteNav" class="site-nav"></header>
+  <script src="js/layout.js"></script>
+
+  <main class="map-layout">
+    <aside class="map-side" data-i18n-aria-label="map.side">
+      <div class="map-side-head">
+        <h1 data-i18n="map.h1"></h1>
+        <p class="muted" id="mapSummary"></p>
+      </div>
+      <div class="map-filters">
+        <input id="mapQ" type="search" data-i18n-placeholder="common.searchSchools" data-i18n-aria-label="common.searchSchools">
+        <div class="seg" id="mapControl" role="radiogroup" data-i18n-aria-label="rk.type">
+          <button type="button" data-v="" aria-pressed="true" data-i18n="control.all"></button>
+          <button type="button" data-v="public" aria-pressed="false" data-i18n="control.public"></button>
+          <button type="button" data-v="private" aria-pressed="false" data-i18n="control.private"></button>
+        </div>
+        <div class="seg" id="mapSetting" role="radiogroup" data-i18n-aria-label="geo.setting">
+          <button type="button" data-v="" aria-pressed="true" data-i18n="control.all"></button>
+          <button type="button" data-v="metro" aria-pressed="false" data-i18n="setting.metroShort"></button>
+          <button type="button" data-v="town" aria-pressed="false" data-i18n="setting.townShort"></button>
+        </div>
+        <label class="field">
+          <span data-i18n="geo.cluster"></span>
+          <select id="mapCluster"></select>
+        </label>
+        <label class="field">
+          <span data-i18n="map.rank"></span>
+          <select id="mapRank"></select>
+        </label>
+        <label class="field">
+          <span data-i18n="map.field"></span>
+          <select id="mapSubj">
+            <option value="" data-i18n="map.anyField"></option>
+            <option value="cs" data-i18n="map.hasCs"></option>
+            <option value="csr" data-i18n="map.hasCsr"></option>
+          </select>
+        </label>
+        <label class="check"><input id="mapLib" type="checkbox"> <span data-i18n="common.onlyLib"></span></label>
+        <div class="map-legend">
+          <span><i class="lg public"></i><span data-i18n="control.public"></span></span>
+          <span><i class="lg private"></i><span data-i18n="control.private"></span></span>
+          <span><i class="lg lib"></i><span data-i18n="map.legendLib"></span></span>
+        </div>
+      </div>
+      <ol class="map-list" id="mapList"></ol>
+    </aside>
+    <div id="map" class="map" role="region" data-i18n-aria-label="map.region"></div>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="data/colleges.js"></script>
+  <script src="data/us-states.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/map.js"></script>
+</body>
+</html>

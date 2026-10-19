@@ -1,0 +1,409 @@
+// Bilingual UI strings (English default, Simplified Chinese optional). Exposes window.I18N.
+// Load in <head> before everything else. Static markup uses data-i18n="key" (innerHTML) and
+// data-i18n-{placeholder,title,aria-label,content}="key" (attributes); scripts call I18N.t(key, vars).
+(() => {
+  const KEY = "dognoapply.lang";
+  let lang = "en";
+  try { if (localStorage.getItem(KEY) === "zh") lang = "zh"; } catch {}
+  document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+  // Keep the page hidden until static text is filled in, so there is no flash of empty labels.
+  document.documentElement.classList.add("i18n-pending");
+
+  // key: [English, 简体中文]. Strings may contain trusted HTML; {vars} are substituted by t().
+  const STR = {
+    // ---- site chrome ----
+    "site.name": ["Dog No Apply", "狗都不申"],
+    "site.short": ["Dog No Apply", "狗都不申"],
+    "site.logoAlt": ["Dog No Apply logo: an unimpressed Shiba", "狗都不申 logo：一只不屑的柴犬"],
+    "nav.home": ["Home", "首页"],
+    "nav.rankings": ["Rankings", "排名查询"],
+    "nav.map": ["Map", "大学地图"],
+    "nav.library": ["My Schools", "选校库"],
+    "nav.about": ["About", "关于"],
+    "nav.menu": ["Menu", "菜单"],
+    "nav.main": ["Main navigation", "主导航"],
+    "lang.switch": ["中文", "EN"],
+    "lang.switchLabel": ["切换到简体中文", "Switch to English"],
+    "foot.sources": [
+      "Data: U.S. News &amp; World Report National University rankings (1984–2027 editions) and graduate Computer Science rankings; <a href=\"https://csrankings.org/\" target=\"_blank\" rel=\"noopener\">CSRankings</a> (CC BY-NC-ND 4.0); city, public/private status and websites from the U.S. Department of Education IPEDS 2024 directory.",
+      "数据来源：US News &amp; World Report 全美综合大学排名（1984–2027 版）及研究生计算机科学排名；<a href=\"https://csrankings.org/\" target=\"_blank\" rel=\"noopener\">CSRankings</a>（CC BY-NC-ND 4.0）；城市、公私立与官网来自美国教育部 IPEDS 2024 机构目录。",
+    ],
+    "foot.tagline": ["Dog No Apply · made with 🦴 · woof.", "狗都不申 · 用 🦴 做的 · 汪。"],
+    "foot.disclaimer": [
+      "For reference only. Always confirm details on each school's official website before applying.",
+      "本站仅供参考，申请前请以学校官网为准。",
+    ],
+
+    // ---- shared ----
+    "control.all": ["All", "全部"],
+    "control.public": ["Public", "公立"],
+    "control.private": ["Private", "私立"],
+    "status.considering": ["Considering", "考虑中"],
+    "status.applying": ["Applying", "决定申请"],
+    "status.submitted": ["Submitted", "已提交"],
+    "status.interview": ["Interviewing", "面试中"],
+    "status.admitted": ["Admitted", "已录取"],
+    "status.rejected": ["Rejected", "拒信"],
+    "status.waitlist": ["Waitlisted", "Waitlist"],
+    "status.outcome": ["Outcome", "结果"],
+    "subj.overall": ["Overall", "综合"],
+    "subj.cs": ["US News CS", "US News CS"],
+    "subj.csr": ["CSRankings", "CSRankings"],
+    "common.onlyLib": ["Only My Schools", "只看我的选校库"],
+    "cost.group": ["Costs (estimates)", "费用估算"],
+    "cost.basis": ["Tuition rate", "学费口径"],
+    "cost.out": ["Out-of-state / international", "州外 / 国际生"],
+    "cost.outShort": ["Out-of-state / intl.", "州外 / 国际生"],
+    "cost.in": ["In-state", "州内"],
+    "cost.maxTuition": ["Max tuition & fees / yr (USD)", "学费上限 / 年（人民币元）"],
+    "cost.maxLiving": ["Max living costs / yr (USD)", "生活费上限 / 年（人民币元）"],
+    "cost.fx": ["Exchange rate (CNY per USD)", "汇率（1 美元兑人民币）"],
+    "cost.fxNote": ["", "人民币金额按 1 美元 = {rate} 元换算，原始数据为美元。"],
+    "cost.noMax": ["No limit", "不限"],
+    "cost.breakdown": ["Tuition & fees {tuition} + living {living} + books {books}", "学费杂费 {tuition} + 生活费 {living} + 书本 {books}"],
+    "sel.all": ["Select all schools shown", "全选当前显示的学校"],
+    "sel.row": ["Select {name}", "选择 {name}"],
+    "sel.count": ["{n} selected", "已选 {n} 所"],
+    "sel.add": ["Add to My Schools", "加入选校库"],
+    "sel.remove": ["Remove from My Schools", "移出选校库"],
+    "sel.clear": ["Clear selection", "取消选择"],
+    "sel.added": ["Woof! Added {n} schools to My Schools (Considering).", "汪！已将 {n} 所学校加入选校库（考虑中）。"],
+    "sel.removed": ["Removed {n} schools from My Schools.", "已将 {n} 所学校移出选校库。"],
+    "sel.view": ["Open My Schools →", "打开选校库 →"],
+    "cost.th": ["Est. cost / yr", "估算费用 / 年"],
+    "cost.thTitle": [
+      "Estimated cost for one academic year ({year}): graduate tuition & fees + living costs + books",
+      "一学年估算费用（{year}）：研究生学费与杂费 + 生活费 + 书本费",
+    ],
+    "cost.perYear": ["{amt}/yr", "{amt}/年"],
+    "cost.title": ["Estimated cost (one academic year, {year})", "费用估算（一学年，{year}）"],
+    "cost.tuition": ["Graduate tuition & fees", "研究生学费与杂费"],
+    "cost.living": ["Living costs (off-campus food, housing, other)", "生活费（校外食宿及其他）"],
+    "cost.livingOn": ["Living costs (on-campus estimate)", "生活费（按校内住宿估算）"],
+    "cost.books": ["Books & supplies", "书本与用品"],
+    "cost.total": ["Total", "合计"],
+    "cost.note": [
+      "Average graduate tuition reported by the school to the U.S. Department of Education (IPEDS); individual programs, such as professional master's degrees, can cost more. Living costs are the school's own estimate for one academic year (about 9 months), so summer months are extra. Figures are for {year} and have likely risen since.",
+      "学费为学校向美国教育部（IPEDS）报告的研究生平均学费，部分项目（如职业型硕士）可能更高。生活费是学校自己估算的一个学年（约 9 个月）的费用，暑假期间需另算。数据为 {year} 学年，目前很可能已有上涨。",
+    ],
+    "geo.city": ["City", "城市"],
+    "geo.allCities": ["All cities", "全部城市"],
+    "geo.setting": ["Setting", "地区类型"],
+    "setting.metro": ["Major metro", "大都会区"],
+    "setting.town": ["College town / smaller city", "大学城·中小城市"],
+    "setting.metroShort": ["Major metro", "大都会区"],
+    "setting.townShort": ["College town", "大学城"],
+    "geo.cluster": ["Industry cluster", "产业集群"],
+    "geo.anyCluster": ["Any", "不限"],
+    "geo.metroArea": ["Metro area", "所在都会区"],
+    "geo.pop": ["pop. {pop}", "人口 {pop}"],
+    "geo.clusters": ["Nearby industry clusters", "周边产业集群"],
+    "geo.noCluster": ["Not in one of the listed industry clusters.", "不在已列出的产业集群范围内。"],
+    "common.searchSchools": ["Search schools or cities", "搜索学校或城市"],
+
+    // ---- school detail dialog ----
+    "d.close": ["Close", "关闭"],
+    "d.website": ["Official website ↗", "学校官网 ↗"],
+    "d.viewOnMap": ["View on map", "在大学地图中查看"],
+    "d.overallRank": ["{year} overall rank", "{year} 综合排名"],
+    "d.csGrad": ["Computer Science (U.S. News grad)", "计算机科学（US News 研究生）"],
+    "d.csr": ["CSRankings (US institutions)", "CSRankings（美国院校）"],
+    "csr.title": ["CSRankings research areas", "CSRankings 研究方向"],
+    "csr.sub": [
+      "Rank among US institutions by faculty publications at top venues, {from}–{to}; {faculty} faculty counted.",
+      "按 {from}–{to} 年教师在顶级会议发表的论文统计的美国院校排名，计入 {faculty} 位教师。",
+    ],
+    "csr.strong": ["Strongest areas", "优势方向"],
+    "csr.none": ["Not listed on CSRankings (US).", "CSRankings（美国）未收录。"],
+    "csr.credit": [
+      "Source: <a href=\"https://csrankings.org/#/index?all&amp;us\" target=\"_blank\" rel=\"noopener\">CSRankings</a> (CC BY-NC-ND 4.0), shown unmodified.",
+      "来源：<a href=\"https://csrankings.org/#/index?all&amp;us\" target=\"_blank\" rel=\"noopener\">CSRankings</a>（CC BY-NC-ND 4.0），未作修改。",
+    ],
+    "csr.dir": ["CSRankings area", "CSRankings 方向"],
+    "csr.allAreas": ["All areas (overall)", "全部方向（综合）"],
+    "csr.categories": ["Categories", "大类"],
+    "csr.cat.ai": ["AI", "人工智能"],
+    "csr.cat.systems": ["Systems", "系统"],
+    "csr.cat.theory": ["Theory", "理论"],
+    "csr.cat.interdisciplinary": ["Interdisciplinary", "交叉领域"],
+    "csr.area.ai": ["Artificial intelligence", "人工智能"],
+    "csr.area.vision": ["Computer vision", "计算机视觉"],
+    "csr.area.mlmining": ["Machine learning", "机器学习"],
+    "csr.area.nlp": ["Natural language processing", "自然语言处理"],
+    "csr.area.inforet": ["Web & information retrieval", "Web 与信息检索"],
+    "csr.area.arch": ["Computer architecture", "计算机体系结构"],
+    "csr.area.comm": ["Computer networks", "计算机网络"],
+    "csr.area.sec": ["Computer security", "计算机安全"],
+    "csr.area.mod": ["Databases", "数据库"],
+    "csr.area.da": ["Design automation", "电子设计自动化"],
+    "csr.area.bed": ["Embedded & real-time systems", "嵌入式与实时系统"],
+    "csr.area.hpc": ["High-performance computing", "高性能计算"],
+    "csr.area.mobile": ["Mobile computing", "移动计算"],
+    "csr.area.metrics": ["Measurement & performance analysis", "测量与性能分析"],
+    "csr.area.ops": ["Operating systems", "操作系统"],
+    "csr.area.plan": ["Programming languages", "编程语言"],
+    "csr.area.soft": ["Software engineering", "软件工程"],
+    "csr.area.act": ["Algorithms & complexity", "算法与复杂性"],
+    "csr.area.crypt": ["Cryptography", "密码学"],
+    "csr.area.log": ["Logic & verification", "逻辑与验证"],
+    "csr.area.bio": ["Computational biology & bioinformatics", "计算生物学与生物信息学"],
+    "csr.area.graph": ["Computer graphics", "计算机图形学"],
+    "csr.area.csed": ["Computer science education", "计算机教育"],
+    "csr.area.ecom": ["Economics & computation", "经济与计算"],
+    "csr.area.chi": ["Human-computer interaction", "人机交互"],
+    "csr.area.robotics": ["Robotics", "机器人"],
+    "csr.area.visualization": ["Visualization", "可视化"],
+    "d.history": ["Overall rank history", "综合排名走势"],
+    "d.span": ["Year range", "年份范围"],
+    "d.recent": ["Last 10 years", "近十年"],
+    "d.all": ["All years (since {year})", "全部年份（{year} 起）"],
+    "d.best.recent": ["Best in last 10 years", "近十年最佳"],
+    "d.best.all": ["All-time best", "历史最佳"],
+    "d.count.recent": ["Years ranked (last 10)", "近十年上榜次数"],
+    "d.count.all": ["Years ranked (all)", "历史上榜次数"],
+    "d.chartOne": ["Ranked in only one year in this period, so there is no trend to plot.", "该时间段内只有一年上榜，无法绘制走势。"],
+    "d.chartNone": ["Not ranked in this period.", "该时间段内未进入榜单。"],
+    "d.chartTryAll": [" Switch to “All years” to see earlier ranks.", "可切换到「全部年份」查看更早的排名。"],
+    "d.chartCap": [
+      "The vertical axis is overall rank (higher is better). Gaps mean the school was not ranked that year. Hover a dot for the exact rank.",
+      "纵轴为综合排名（越靠上越好），断开处表示该年未进入榜单。悬停圆点查看具体名次。",
+    ],
+    "d.chartAria": ["{name} rank history", "{name} 排名走势"],
+    "d.inLib": ["✓ In My Schools · {status} (click to remove)", "✓ 已在选校库 · {status}（点击移出）"],
+    "d.addLib": ["+ Add to My Schools", "＋ 加入选校库"],
+
+    // ---- home ----
+    "title.home": ["Dog No Apply · Grad school applications, sniffed out", "狗都不申 · 研究生选校申请助手"],
+    "meta.home": [
+      "Dog No Apply: U.S. grad school rankings, research areas, location and cost filters, and a board to track every application.",
+      "狗都不申：美国研究生选校申请助手。综合排名与专业排名、地理位置与费用筛选，用看板跟踪每一份申请。",
+    ],
+    "home.eyebrow": ["U.S. grad school applications, minus the guesswork", "美国研究生申请，少踩点坑"],
+    "home.h1": ["Dog No Apply? Sniff around first.", "狗都不申？先闻闻再说。"],
+    "home.lead": [
+      "Rankings, research areas, location and costs in one place. Sniff out the schools actually worth applying to, then keep every application on a leash with one board.",
+      "排名、研究方向、地理位置、学费生活费一网打尽，帮你闻出真正值得申的学校，再用看板把每一份申请牵好。",
+    ],
+    "home.dogHint": ["Psst, click the dog", "戳一下狗头试试"],
+    "home.dogLines": [
+      "happy~Woof! Check CSRankings before you decide.|skeptical~$90k a year? …dog no apply.|happy~College towns have cheaper rent. Dog approves.|surprised~Deadlines don't chase themselves. Woof!|love~Got in? Drag the card to Admitted 🎉|wink~Too many choices? Toss them in My Schools and sniff later.|skeptical~Filter by tuition first. Dog food isn't free.|meh~Another ranking list? …fine, I'll look.",
+      "happy~汪！先看看 CSRankings 再决定。|skeptical~一年学费生活费 60 万？……狗都不申。|happy~大学城房租便宜，狗狗点赞。|surprised~截止日期不会自己追你，汪！|love~录取了记得把卡片拖到「已录取」🎉|wink~学校太多？先丢进选校库慢慢挑。|skeptical~先按学费筛一筛，狗粮也要钱的。|meh~又一份排名？……行吧，看看。",
+    ],
+    "home.searchPh": ["Search schools or cities, e.g. Stanford, Boston", "搜索学校或城市，如 Stanford、Boston"],
+    "home.search": ["Search", "搜索"],
+    "home.stat.ranked": ["universities in the {year} overall ranking", "所大学 · {year} 综合排名"],
+    "home.stat.states": ["states and D.C.", "个州和特区"],
+    "home.stat.clusters": ["industry clusters", "个产业集群"],
+    "home.stat.years": ["10-year rank trends", "近十年排名走势"],
+    "home.features": ["Features", "功能"],
+    "home.card.rankings": ["Rankings", "排名查询"],
+    "home.card.rankingsDesc": [
+      "See overall and graduate program rankings side by side. Filter by state, city, major metro vs. college town and nearby industry cluster, and see how ranks changed over the last 10 years.",
+      "综合排名与研究生专业排名一起看，按州、城市、大都会区或大学城、周边产业集群筛选，查看近十年排名变化。",
+    ],
+    "home.card.rankingsLink": ["Start searching →", "开始查询 →"],
+    "home.card.map": ["University Map", "大学地图"],
+    "home.card.mapDesc": [
+      "See every university on a map of the U.S. Filter by public/private, overall rank and field to see which cities they are in.",
+      "在美国地图上查看所有大学的位置，按公私立、综合排名和专业筛选，看看学校都分布在哪些城市。",
+    ],
+    "home.card.mapLink": ["Open the map →", "打开地图 →"],
+    "home.card.library": ["My Schools board", "选校库看板"],
+    "home.card.libraryDesc": [
+      "Drag schools through Considering → Applying → Submitted → Interviewing → Admitted / Rejected / Waitlisted to track every application.",
+      "把学校拖到 考虑中 → 决定申请 → 已提交 → 面试中 → 录取 / 拒信 / Waitlist，跟踪每一所学校的申请进度。",
+    ],
+    "home.card.libraryLink": ["Open the board →", "打开看板 →"],
+    "home.top10": ["{year} top 10", "{year} 版前十名"],
+    "home.fullList": ["See the full rankings →", "查看完整榜单 →"],
+    "home.byState": ["Browse by state", "按州浏览"],
+    "home.byStateSub": ["States with the most ranked schools", "上榜学校最多的州"],
+    "home.byType": ["Browse by type", "按类型浏览"],
+    "home.byCluster": ["Browse by industry cluster", "按产业集群浏览"],
+    "home.byClusterSub": ["Schools in each cluster's metro areas", "位于各产业集群都会区内的学校"],
+    "home.publicUnis": ["Public universities", "公立大学"],
+    "home.privateUnis": ["Private universities", "私立大学"],
+
+    // ---- rankings ----
+    "title.rankings": ["Rankings · Dog No Apply", "排名查询 · 狗都不申"],
+    "meta.rankings": [
+      "U.S. News university rankings with graduate CS and biological sciences ranks: filter by state, public/private and rank range, and see rank trends.",
+      "US News 美国综合大学排名查询：按州、公私立、排名范围筛选，查看历年排名走势。",
+    ],
+    "rk.h1": ["Rankings", "排名查询"],
+    "rk.sub": [
+      "U.S. News national university rankings and graduate program rankings (Computer Science so far, from U.S. News and CSRankings by research area; more fields coming) · location · city type · industry clusters. Click ★ to add a school to My Schools.",
+      "US News 全美综合大学排名与研究生专业排名（目前已收录计算机科学：US News 排名及按研究方向的 CSRankings 排名，更多专业陆续添加）· 地理位置 · 城市类型 · 产业集群。点 ★ 加入选校库。",
+    ],
+    "rk.filters": ["Filters", "筛选"],
+    "rk.search": ["Search", "搜索"],
+    "rk.searchPh": ["School or city, e.g. Boston, Berkeley", "学校名或城市，如 Boston、Berkeley"],
+    "rk.year": ["Ranking year", "排名年份"],
+    "rk.state": ["State", "州"],
+    "rk.allStates": ["All states", "全部州"],
+    "rk.type": ["Type", "类型"],
+    "rk.range": ["Rank range", "排名范围"],
+    "rk.any": ["Any", "不限"],
+    "rk.unranked": ["Show schools not ranked that year", "显示该年未上榜的学校"],
+    "rk.geo": ["Location & careers", "地理与就业"],
+    "rk.th.rank": ["Rank", "排名"],
+    "rk.th.school": ["School", "学校"],
+    "rk.th.city": ["City", "城市"],
+    "rk.th.change": ["Change", "变化"],
+    "rk.th.csTitle": ["U.S. News graduate Computer Science ranking", "US News 研究生计算机科学排名"],
+    "rk.th.csrTitle": ["CSRankings rank among US institutions (in the selected area)", "CSRankings 美国院校排名（所选方向）"],
+    "rk.th.changeTitle": ["Change from the previous year", "与上一年相比"],
+    "rk.empty": ["Not a single school… dog no apply. Try loosening the filters. 🐾", "一所都没有……狗都不申。放宽点条件试试？🐾"],
+    "rk.yearOpt": ["{year} edition", "{year} 版"],
+    "rk.more": ["Earlier years ({from}–{to})…", "更早年份（{from}–{to}）…"],
+    "rk.less": ["↑ Last 10 years only", "↑ 只显示近十年"],
+    "rk.new": ["New", "新上榜"],
+    "rk.star": ["Add to My Schools", "加入选校库"],
+    "rk.starTitle": ["Add to / remove from My Schools", "加入/移出选校库"],
+    "rk.summary": ["{n} schools ({pub} public · {priv} private) · {year} rankings", "共 {n} 所学校（公立 {pub} · 私立 {priv}）· {year} 版排名"],
+
+    // ---- map ----
+    "title.map": ["University Map · Dog No Apply", "大学地图 · 狗都不申"],
+    "meta.map": ["See where every university is on a map of the U.S., filtered by public/private and rank.", "在美国地图上查看所有大学的位置，按公私立、排名筛选。"],
+    "map.h1": ["University Map", "大学地图"],
+    "map.side": ["Filters and school list", "筛选与学校列表"],
+    "map.region": ["Map of U.S. universities", "美国大学分布地图"],
+    "map.rank": ["Rank", "排名"],
+    "map.top": ["{year} overall top {n}", "{year} 综合前 {n}"],
+    "map.ranked": ["All ranked in {year}", "{year} 全部上榜"],
+    "map.all": ["All schools (incl. previously ranked)", "全部学校（含往年上榜）"],
+    "map.field": ["Field", "专业"],
+    "map.anyField": ["Any", "不限"],
+    "map.hasCs": ["Has a U.S. News CS ranking", "有 US News CS 排名"],
+    "map.hasCsr": ["Listed on CSRankings", "CSRankings 有排名"],
+    "map.legendLib": ["In My Schools", "在选校库中"],
+    "map.summary": ["Showing {n} ({pub} public · {priv} private)", "显示 {n} 所（公立 {pub} · 私立 {priv}）"],
+    "map.none": ["Nothing here. Dog no apply. 🐾", "这里一所都没有，狗都不申。🐾"],
+    "map.details": ["Details", "详情"],
+    "map.add": ["+ My Schools", "＋ 选校库"],
+    "map.stateCount": [" · {n} schools", " · {n} 所"],
+    "map.attrib": ["State borders: US Census Bureau (us-atlas)", "州界：US Census Bureau（us-atlas）"],
+
+    // ---- library ----
+    "title.library": ["My Schools · Dog No Apply", "选校库 · 狗都不申"],
+    "meta.library": ["Manage your school list: drag cards to track every step from considering to admission.", "管理你的选校清单：拖拽学校卡片，跟踪从考虑到录取的每一步。"],
+    "lib.h1": ["My Schools", "我的选校库"],
+    "lib.sub": [
+      "Drag schools between stages to track every step from considering to admission. Saved only in this browser.",
+      "把学校拖到对应阶段，跟踪从考虑到录取的每一步。数据只保存在当前浏览器中。",
+    ],
+    "lib.addPh": ["+ Add a school: type a name or city", "＋ 添加学校：输入校名或城市"],
+    "lib.addLabel": ["Add a school", "添加学校"],
+    "lib.view": ["View", "视图"],
+    "lib.board": ["Board", "看板"],
+    "lib.table": ["Table", "表格"],
+    "lib.th.status": ["Status", "状态"],
+    "lib.th.overallTitle": ["Overall rank (latest edition)", "最新版综合排名"],
+    "lib.th.location": ["Location", "地点"],
+    "lib.th.remove": ["Remove", "移除"],
+    "lib.empty1": ["My Schools is empty. Surely even a dog would apply somewhere? 🐶", "选校库空空如也。狗都要申一所吧？🐶"],
+    "lib.empty2": [
+      "Use the search box above to add schools, or click ★ next to a school on the Rankings page.",
+      "用上面的搜索框添加学校，或者在排名页点学校左边的 ★。",
+    ],
+    "lib.goRankings": ["Go to Rankings", "去排名查询"],
+    "lib.total": ["{n} schools", "共 {n} 所"],
+    "lib.overall": ["Overall #{r}", "综合 #{r}"],
+    "lib.unranked": ["Overall: not ranked", "综合未上榜"],
+    "lib.remove": ["Remove {name} from My Schools", "从选校库移除 {name}"],
+    "lib.statusOf": ["Status of {name}", "{name} 的状态"],
+    "lib.dropHere": ["Drop here 🐾", "拖到这里 🐾"],
+    "lib.congrats": ["Woof woof! Congrats on the admit! 🎉", "汪汪！恭喜录取！🎉"],
+    "lib.noMatch": ["No matches, or already in My Schools", "没有找到，或已在选校库中"],
+
+    // ---- about ----
+    "title.about": ["About · Dog No Apply", "关于 · 狗都不申"],
+    "about.h1": ["About Dog No Apply", "关于狗都不申"],
+    "about.sub": [
+      "“狗都不申” (gǒu dōu bù shēn) is Chinese internet slang for “not even a dog would apply”. This little tool helps you work out which U.S. grad schools are actually worth it: rankings, research areas, location and costs, plus a board to keep track of every application.",
+      "“狗都不申”是一句网络玩笑：这学校，狗都不申。这个小工具帮你弄清楚哪些美国研究生院真正值得申：排名、研究方向、地理位置和费用，再用看板跟踪每一份申请。",
+    ],
+    "about.sources": ["Data sources", "数据来源"],
+    "about.src.rank": [
+      "<b>Overall rankings</b>: U.S. News &amp; World Report National Universities rankings, 1984–2027 editions, covering schools that have been ranked in roughly the top 150.",
+      "<b>排名</b>：US News &amp; World Report 全美综合大学（National Universities）排名，1984–2027 版，收录曾进入前 150 名左右的学校。",
+    ],
+    "about.src.subj": [
+      "<b>Graduate program rankings</b>: U.S. News Best Graduate Schools. Only Computer Science is included for now; more fields will be added.",
+      "<b>研究生专业排名</b>：US News Best Graduate Schools 研究生专业排名。目前只收录计算机科学，更多专业会陆续添加。",
+    ],
+    "about.src.csr": [
+      "<b>CSRankings</b>: computed from the public data of <a href=\"https://github.com/emeryberger/CSrankings\" target=\"_blank\" rel=\"noopener\">CSRankings</a> with its own method, for US institutions, all areas, the last 10 years (the default view at <a href=\"https://csrankings.org/#/index?all&amp;us\" target=\"_blank\" rel=\"noopener\">csrankings.org</a>). The ranks match the site exactly and are shown unmodified. CSRankings is licensed CC BY-NC-ND 4.0, so this site uses it for non-commercial purposes only.",
+      "<b>CSRankings</b>：用 <a href=\"https://github.com/emeryberger/CSrankings\" target=\"_blank\" rel=\"noopener\">CSRankings</a> 公开的数据和它自己的计算方法得出，范围是美国院校、全部方向、近 10 年（即 <a href=\"https://csrankings.org/#/index?all&amp;us\" target=\"_blank\" rel=\"noopener\">csrankings.org</a> 的默认视图），排名与网站完全一致，未作修改。CSRankings 采用 CC BY-NC-ND 4.0 许可，本站仅作非商业用途。",
+    ],
+    "about.src.map": [
+      "<b>Map state borders</b>: US Census Bureau boundary data, prepared by us-atlas; the map uses Leaflet.",
+      "<b>地图州界</b>：美国人口普查局（US Census Bureau）地图边界数据，经 us-atlas 整理；地图组件使用 Leaflet。",
+    ],
+    "about.src.ipeds": [
+      "<b>City, public/private, website, coordinates</b>: the U.S. Department of Education NCES IPEDS 2024 institution directory, matched to the rankings by IPEDS ID.",
+      "<b>城市、公立/私立、官网、坐标</b>：美国教育部 NCES 的 IPEDS 2024 机构目录，按 IPEDS 编号与排名数据对应。",
+    ],
+    "about.src.metro": [
+      "<b>Metro areas and city type</b>: each school's metro area (CBSA) from IPEDS, with 2024 population estimates from the U.S. Census Bureau. “Major metro” means a metro area of 1 million+ people with the campus in a city or large suburb; everything else counts as “college town / smaller city” (so UC Davis or UConn in Storrs count as college towns even though they sit inside larger metro areas).",
+      "<b>都会区与城市类型</b>：学校所在都会区（CBSA）来自 IPEDS，人口为美国人口普查局 2024 年估计值。“大都会区”指都会区人口 100 万以上、且校园位于城市或大型郊区；其余都算作“大学城·中小城市”（所以 UC Davis、位于 Storrs 的 UConn 虽然在较大都会区内，也算作大学城）。",
+    ],
+    "about.src.clusters": [
+      "<b>Industry clusters</b>: defined by this site as sets of metro areas (for example, Silicon Valley & SF Bay Area = the San Jose and San Francisco–Oakland metro areas). They are a rough guide to nearby employers, not an official classification.",
+      "<b>产业集群</b>：由本站按都会区划定（例如“硅谷·旧金山湾区”= San Jose 与 San Francisco–Oakland 两个都会区），只是对周边就业机会的粗略参考，不是官方分类。",
+    ],
+    "about.src.cost": [
+      "<b>Tuition and living costs</b>: the U.S. Department of Education IPEDS institutional charges file for 2023–24. Tuition is the school's average full-time graduate tuition plus required fees (in-state and out-of-state). Living costs are the school's estimate for living off campus (food, housing and other expenses) for one academic year; for schools that only report on-campus figures, those are used instead.",
+      "<b>学费与生活费</b>：美国教育部 IPEDS 2023–24 学年院校收费数据。学费为学校全日制研究生平均学费加必交杂费（分州内、州外）。生活费为学校估算的一个学年校外居住的食宿及其他开销；只报告了校内数字的学校，改用校内数字。中文界面中的金额按人民币显示，汇率可以在排名页调整（默认 1 美元 = 6.7 元）。",
+    ],
+    "about.notes": ["Notes", "说明"],
+    "about.n.ties": ["Tied schools share the same rank.", "排名并列的学校显示相同名次。"],
+    "about.n.unranked": [
+      "“Not ranked” means the school is outside this dataset for that year, not that U.S. News did not rank it at all.",
+      "\"未上榜\" 表示该校当年不在数据集收录的范围内，并不代表学校没有被 US News 排名。",
+    ],
+    "about.n.library": [
+      "My Schools is saved in the browser you are using now. It is lost if you switch devices or clear browser data.",
+      "\"选校库\" 保存在你当前使用的浏览器里，换设备或清除浏览器数据后会丢失。",
+    ],
+    "about.n.recent": [
+      "The Rankings page and school details show the last 10 years (2018–2027 editions) by default; you can choose to see earlier years.",
+      "排名页和学校详情默认只显示近十年（2018–2027 版）的排名，需要时可以选择查看更早年份。",
+    ],
+    "about.n.reference": [
+      "Rankings are only one input when choosing schools. Always confirm details on the school's and program's official websites.",
+      "排名只是选校参考之一，申请前请以学校和项目官网信息为准。",
+    ],
+    "about.n.language": [
+      "The site is in English by default. Use the 中文 button at the top to switch to Simplified Chinese.",
+      "网站默认显示英文，可以点击顶部的 EN 按钮切换回英文。",
+    ],
+  };
+
+  const idx = lang === "zh" ? 1 : 0;
+  function t(key, vars) {
+    const entry = STR[key];
+    let s = entry ? entry[idx] : key;
+    if (vars) s = s.replace(/\{(\w+)\}/g, (m, k) => (k in vars ? vars[k] : m));
+    return s;
+  }
+
+  function apply(root = document) {
+    root.querySelectorAll("[data-i18n]").forEach((el) => { el.innerHTML = t(el.dataset.i18n); });
+    for (const attr of ["placeholder", "title", "aria-label", "content"]) {
+      root.querySelectorAll(`[data-i18n-${attr}]`).forEach((el) => el.setAttribute(attr, t(el.getAttribute(`data-i18n-${attr}`))));
+    }
+  }
+
+  function setLang(next) {
+    try { localStorage.setItem(KEY, next); } catch {}
+    location.reload();
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    apply();
+    document.documentElement.classList.remove("i18n-pending");
+  });
+
+  window.I18N = { lang, t, apply, setLang };
+})();

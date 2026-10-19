@@ -1,0 +1,160 @@
+name,city,state,rank,tied,usnews_id
+Massachusetts Institute of Technology,Cambridge,MA,1,True,41091
+The Scripps Research Institute,La Jolla,CA,1,True,41234
+Harvard University,Boston,MA,3,True,41090
+Stanford University,Stanford,CA,3,True,41014
+University of California--Berkeley,Berkeley,CA,3,True,41015
+California Institute of Technology,Pasadena,CA,6,True,41011
+Cold Spring Harbor Laboratory,Cold Spring Harbor,NY,6,True,41280
+Cornell University,Ithaca,NY,6,True,41128
+Johns Hopkins University,Baltimore,MD,6,True,41081
+Princeton University,Princeton,NJ,6,True,41120
+University of California--San Francisco,San Francisco,CA,6,True,41021
+Rockefeller University,New York,NY,12,True,41135
+University of Illinois--Urbana-Champaign,Urbana,IL,12,True,41062
+University of Michigan--Ann Arbor,Ann Arbor,MI,12,True,41100
+Yale University,New Haven,CT,12,True,41031
+University of California--Los Angeles,Los Angeles,CA,16,True,41018
+University of California--San Diego,La Jolla,CA,16,True,41020
+University of Chicago,Chicago,IL,16,True,41060
+University of Texas Southwestern Medical Center--Dallas,Dallas,TX,16,True,41211
+University of Washington,Seattle,WA,16,True,41222
+Columbia University,New York,NY,21,True,41127
+Duke University,Durham,NC,21,True,41147
+"Memorial Sloan Kettering Cancer Center, Louis V. Gerstner Jr. Graduate School of Biomedical Sciences",New York,NY,21,True,41311
+University of California--Davis,Davis,CA,21,True,41016
+Washington University in St. Louis,St. Louis,MO,21,True,41111
+University of Colorado--Boulder,Boulder,CO,26,True,41027
+University of North Carolina--Chapel Hill,Chapel Hill,NC,26,True,41150
+University of Pennsylvania,Philadelphia,PA,26,True,41183
+Vanderbilt University,Nashville,TN,26,True,41197
+Baylor College of Medicine,Houston,TX,30,True,41198
+Carnegie Mellon University,Pittsburgh,PA,30,True,41174
+"Cornell University, Weill Graduate School of Medical Sciences",New York,NY,30,True,41129
+University of California--Irvine,Irvine,CA,30,True,41017
+University of Wisconsin--Madison,Madison,WI,30,True,41227
+Brown University,Providence,RI,35,True,41186
+Emory University,Atlanta,GA,35,True,41044
+Indiana University--Bloomington,Bloomington,IN,35,True,41065
+Ohio State University,Columbus,OH,35,True,41161
+University of Georgia,Athens,GA,35,True,41048
+University of Minnesota--Twin Cities,St. Paul,MN,35,True,41103
+Georgia Institute of Technology,Atlanta,GA,41,True,41046
+Mayo Clinic Graduate School of Biomedical Sciences,Rochester,MN,41,True,41102
+Northwestern University,Evanston,IL,41,True,41057
+Purdue University--West Lafayette,West Lafayette,IN,41,True,41066
+University of Arizona,Tucson,AZ,41,True,41008
+University of California--Santa Barbara,Santa Barbara,CA,41,True,41022
+University of California--Santa Cruz,Santa Cruz,CA,41,True,41023
+University of Texas--Austin,Austin,TX,41,True,41206
+University of Virginia,Charlottesville,VA,41,True,41219
+Brandeis University,Waltham,MA,50,True,41088
+Dartmouth College,Hanover,NH,50,True,41117
+Michigan State University,East Lansing,MI,50,True,41098
+University of Maryland--College Park,College Park,MD,50,True,41083
+UT Health/MD Anderson Cancer Center ,Houston,TX,50,True,41208
+Albert Einstein College of Medicine,Bronx,NY,55,True,41146
+Case Western Reserve University,Cleveland,OH,55,True,41156
+New York University,New York,NY,55,True,41133
+Oregon Health and Science University,Beaverton,OR,55,True,41169
+Pennsylvania State University--University Park,University Park ,PA,55,True,41179
+Rice University,Houston,TX,55,True,41199
+University of Colorado--Denver,Denver,CO,55,True,41247
+University of Massachusetts Medical Center--Worcester,Worcester,MA,55,True,41096
+University of Pittsburgh,Pittsburgh,PA,55,True,41184
+University of Utah,Salt Lake City,UT,55,True,41213
+Icahn School of Medicine at Mount Sinai,New York,NY,65,True,41263
+Rutgers University--New Brunswick,New Brunswick,NJ,65,True,41122
+University of Connecticut,Storrs,CT,65,True,41029
+University of Florida,Gainesville,FL,65,True,41040
+University of Massachusetts--Amherst,Amherst,MA,65,True,41094
+University of Oregon,Eugene,OR,65,True,41172
+University of Southern California,Los Angeles,CA,65,True,41025
+Arizona State University,Tempe,AZ,72,True,41006
+Boston University,Boston,MA,72,True,41087
+Colorado State University,Fort Collins,CO,72,True,41026
+Texas A&M University--College Station,College Station,TX,72,True,41201
+Tufts University,Medford,MA,72,True,41093
+Tulane University,New Orleans,LA,72,True,41079
+University of Alabama at Birmingham,Birmingham,AL,72,True,41003
+University of California--Riverside,Riverside,CA,72,True,41019
+University of Iowa,Iowa City,IA,72,True,41070
+University of Kansas,Lawrence,KS,72,True,41072
+University of Missouri,Columbia,MO,72,True,41109
+University of Rochester,Rochester,NY,72,True,41145
+Virginia Tech,Blacksburg,VA,72,True,41221
+Iowa State University,Ames,IA,85,True,41068
+Oregon State University,Corvallis,OR,85,True,41171
+Stony Brook University--SUNY,Stony Brook,NY,85,True,41140
+University of Notre Dame,Notre Dame,IN,85,True,41067
+University of Tennessee--Knoxville,Knoxville,TN,85,True,41195
+North Carolina State University,Raleigh,NC,90,True,41149
+University of Illinois--Chicago,Chicago,IL,90,True,41061
+Auburn University,Auburn University,AL,92,True,41001
+Baylor University,Waco,TX,92,True,41251
+Georgetown University,Washington,DC,92,True,41035
+Louisiana State University--Baton Rouge,Baton Rouge,LA,92,True,41075
+Northeastern University,Boston,MA,92,True,41092
+Rosalind Franklin University of Medicine and Science,North Chicago,IL,92,True,41052
+University of Kentucky,Lexington,KY,92,True,41073
+University of Miami,Coral Gables,FL,92,True,41041
+University of Nebraska--Lincoln,Lincoln,NE,92,True,41115
+University of New Mexico,Albuquerque,NM,92,True,41124
+Wake Forest University,Winston-Salem,NC,92,True,41152
+Washington State University,Pullman,WA,92,True,41223
+Boston College,Chestnut Hill,MA,104,True,41086
+Clemson University,Clemson,SC,104,True,41188
+Rochester Institute of Technology,Rochester,NY,104,True,41312
+Rutgers University--Newark,Newark,NJ,104,True,41121
+San Diego State University,,CA,104,True,41230
+Temple University,Philadelphia,PA,104,True,41181
+The University of Oklahoma,Norman,OK,104,True,41168
+Thomas Jefferson University,Philadelphia,PA,104,True,41182
+University at Buffalo--SUNY,Buffalo,NY,104,True,41139
+University of Houston,Houston,TX,104,True,41204
+Wayne State University,Detroit,MI,104,True,41101
+Binghamton University--SUNY,Binghamton,NY,115,True,41138
+Brigham Young University,Provo,UT,115,True,41212
+Florida State University,Tallahassee,FL,115,True,41039
+George Washington University,Washington,DC,115,True,41036
+Miami University,Oxford,OH,115,True,41160
+Montana State University,Bozeman,MT,115,True,41112
+Rutgers University--Camden,Camden,NJ,115,True,41308
+University of Alabama,Tuscaloosa,AL,115,True,41002
+University of Delaware,Newark,DE,115,True,41032
+University of Hawaii--Manoa,Honolulu,HI,115,True,41049
+University of Maryland--Baltimore,Baltimore,MD,115,True,41085
+University of South Carolina,Columbia,SC,115,True,41190
+William & Mary,Williamsburg,VA,115,True,41216
+Howard University,Washington,DC,128,True,41037
+Medical College of Wisconsin,Milwaukee,WI,128,True,41226
+Utah State University,Logan ,UT,128,True,41214
+Kansas State University,Manhattan,KS,131,True,41071
+Loyola University Chicago,Chicago,IL,131,True,41055
+Oklahoma State University,Stillwater,OK,131,True,41167
+Syracuse University,Syracuse,NY,131,True,41144
+Texas Tech University,Lubbock,TX,131,True,41202
+University of California--Merced,Merced,CA,131,True,41281
+University of Idaho,Moscow,ID,131,True,41051
+University of Maryland--Baltimore County,Baltimore,MD,131,True,41084
+University of Montana,Missoula,MT,131,True,41113
+University of South Florida,Tampa,FL,131,True,41042
+University of Vermont,Burlington,VT,131,True,41215
+Drexel University,Philadelphia,PA,142,True,41175
+Georgia State University,Atlanta,GA,142,True,41045
+Lehigh University,Bethlehem,PA,142,True,41177
+University of Arkansas--Fayetteville,Fayetteville,AR,142,True,41009
+University of New Hampshire,Durham,NH,142,True,41118
+University of Rhode Island,Kingston,RI,142,True,41187
+University of Texas--San Antonio,San Antonio,TX,142,True,41266
+Illinois Institute of Technology,Chicago,IL,149,True,41053
+University of Louisville,Louisville,KY,149,True,41074
+University of Wisconsin--Milwaukee,Milwaukee,WI,149,True,41228
+University of Mississippi,University,MS,152,False,41106
+Louisiana State University Health Sciences Center--Shreveport,,LA,153,True,41077
+New Mexico State University,Las Cruces,NM,153,True,41123
+Northern Arizona University,Flagstaff,AZ,153,True,41007
+University of Alaska--Fairbanks,Fairbanks,AK,153,True,41005
+University of Nevada--Reno,Reno,NV,153,True,41116
+Idaho State University,Pocatello,ID,158,True,41050
+Illinois State University,Normal,IL,158,True,41054

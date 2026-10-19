@@ -1,0 +1,98 @@
+[
+  {
+    "id": "bay-area",
+    "cbsa": ["41940", "41860"],
+    "en": { "name": "Silicon Valley & SF Bay Area", "industries": "Tech, semiconductors, venture capital" },
+    "zh": { "name": "硅谷·旧金山湾区", "industries": "科技、半导体、风险投资" }
+  },
+  {
+    "id": "boston",
+    "cbsa": ["14460"],
+    "en": { "name": "Boston biotech & life sciences", "industries": "Biotech, pharma, hospitals, tech" },
+    "zh": { "name": "波士顿生物医药圈", "industries": "生物科技、制药、医院、科技" }
+  },
+  {
+    "id": "nyc",
+    "cbsa": ["35620"],
+    "en": { "name": "New York finance (Wall Street)", "industries": "Finance, media, consulting" },
+    "zh": { "name": "纽约金融（华尔街）", "industries": "金融、传媒、咨询" }
+  },
+  {
+    "id": "seattle",
+    "cbsa": ["42660"],
+    "en": { "name": "Seattle tech", "industries": "Cloud, software, e-commerce, aerospace" },
+    "zh": { "name": "西雅图科技圈", "industries": "云计算、软件、电商、航空航天" }
+  },
+  {
+    "id": "san-diego",
+    "cbsa": ["41740"],
+    "en": { "name": "San Diego biotech", "industries": "Biotech, genomics, defense" },
+    "zh": { "name": "圣地亚哥生物科技", "industries": "生物科技、基因组学、国防" }
+  },
+  {
+    "id": "research-triangle",
+    "cbsa": ["39580", "20500"],
+    "en": { "name": "Research Triangle (NC)", "industries": "Pharma, biotech, tech" },
+    "zh": { "name": "北卡三角研究园", "industries": "制药、生物科技、科技" }
+  },
+  {
+    "id": "austin",
+    "cbsa": ["12420"],
+    "en": { "name": "Austin tech (Silicon Hills)", "industries": "Semiconductors, software" },
+    "zh": { "name": "奥斯汀科技圈", "industries": "半导体、软件" }
+  },
+  {
+    "id": "dc-baltimore",
+    "cbsa": ["47900", "12580"],
+    "en": { "name": "Washington–Baltimore", "industries": "Government, policy, defense, NIH" },
+    "zh": { "name": "华盛顿–巴尔的摩", "industries": "政府、政策、国防、NIH" }
+  },
+  {
+    "id": "los-angeles",
+    "cbsa": ["31080"],
+    "en": { "name": "Los Angeles", "industries": "Entertainment, aerospace" },
+    "zh": { "name": "洛杉矶", "industries": "娱乐、航空航天" }
+  },
+  {
+    "id": "houston",
+    "cbsa": ["26420"],
+    "en": { "name": "Houston", "industries": "Energy, Texas Medical Center" },
+    "zh": { "name": "休斯顿", "industries": "能源、德州医学中心" }
+  },
+  {
+    "id": "chicago",
+    "cbsa": ["16980"],
+    "en": { "name": "Chicago", "industries": "Finance, trading, consulting" },
+    "zh": { "name": "芝加哥", "industries": "金融、交易、咨询" }
+  },
+  {
+    "id": "detroit",
+    "cbsa": ["19820", "11460"],
+    "en": { "name": "Detroit–Ann Arbor", "industries": "Automotive, mobility" },
+    "zh": { "name": "底特律–安娜堡", "industries": "汽车、出行" }
+  },
+  {
+    "id": "pharma-corridor",
+    "cbsa": ["37980", "45940"],
+    "en": { "name": "Philadelphia–Princeton pharma corridor", "industries": "Pharma, cell & gene therapy" },
+    "zh": { "name": "费城–普林斯顿医药走廊", "industries": "制药、细胞与基因治疗" }
+  },
+  {
+    "id": "pittsburgh",
+    "cbsa": ["38300"],
+    "en": { "name": "Pittsburgh", "industries": "Robotics, AI" },
+    "zh": { "name": "匹兹堡", "industries": "机器人、人工智能" }
+  },
+  {
+    "id": "denver-boulder",
+    "cbsa": ["19740", "14500"],
+    "en": { "name": "Denver–Boulder", "industries": "Aerospace, energy" },
+    "zh": { "name": "丹佛–博尔德", "industries": "航空航天、能源" }
+  },
+  {
+    "id": "atlanta",
+    "cbsa": ["12060"],
+    "en": { "name": "Atlanta", "industries": "Logistics, fintech, public health (CDC)" },
+    "zh": { "name": "亚特兰大", "industries": "物流、金融科技、公共卫生（CDC）" }
+  }
+]

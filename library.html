@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="title.library">My Schools · Dog No Apply</title>
+  <meta name="description" data-i18n-content="meta.library" content="">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <script src="js/i18n.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="wide">
+  <header id="siteNav" class="site-nav"></header>
+  <script src="js/layout.js"></script>
+
+  <div class="page-head">
+    <div class="wrap">
+      <h1 data-i18n="lib.h1"></h1>
+      <p class="sub" data-i18n="lib.sub"></p>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <div class="lib-bar">
+      <div class="add-school">
+        <input id="addInput" type="search" autocomplete="off" data-i18n-placeholder="lib.addPh"
+               data-i18n-aria-label="lib.addLabel" aria-controls="addList" aria-expanded="false">
+        <ul id="addList" class="suggest" role="listbox" hidden></ul>
+      </div>
+      <div class="seg" id="view" role="radiogroup" data-i18n-aria-label="lib.view">
+        <button type="button" data-v="board" aria-pressed="true" data-i18n="lib.board"></button>
+        <button type="button" data-v="table" aria-pressed="false" data-i18n="lib.table"></button>
+      </div>
+    </div>
+
+    <p class="status-summary" id="summary"></p>
+
+    <div id="board" class="board"></div>
+
+    <div id="tableView" class="table-wrap" hidden>
+      <table>
+        <thead>
+          <tr>
+            <th data-sort="status" class="sortable" data-i18n="lib.th.status"></th>
+            <th data-sort="name" class="sortable" data-i18n="rk.th.school"></th>
+            <th data-sort="rank" class="sortable" data-i18n="subj.overall" data-i18n-title="lib.th.overallTitle"></th>
+            <th data-sort="cs" class="sortable" data-i18n="subj.cs" data-i18n-title="rk.th.csTitle"></th>
+            <th data-sort="csr" class="sortable" data-i18n="subj.csr" data-i18n-title="rk.th.csrTitle"></th>
+            <th data-sort="cost" class="sortable" data-i18n="cost.th"></th>
+            <th data-sort="state" class="sortable c-hide-sm" data-i18n="lib.th.location"></th>
+            <th data-sort="control" class="sortable c-hide-sm" data-i18n="rk.type"></th>
+            <th data-i18n-aria-label="lib.th.remove"></th>
+          </tr>
+        </thead>
+        <tbody id="tableRows"></tbody>
+      </table>
+    </div>
+
+    <div class="empty-state" id="empty" hidden>
+      <p data-i18n="lib.empty1"></p>
+      <p class="muted" data-i18n="lib.empty2"></p>
+      <a class="btn btn-primary" href="rankings.html" data-i18n="lib.goRankings"></a>
+    </div>
+  </main>
+
+  <script src="data/colleges.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/library.js"></script>
+</body>
+</html>
