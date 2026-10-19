@@ -1,6 +1,6 @@
 (() => {
   const App = window.App;
-  const { t, COLLEGES, YEARS, STATE_NAMES, HUBS, esc, tag, openDetail } = App;
+  const { t, COLLEGES, byId, YEARS, STATE_NAMES, HUBS, esc, tag, openDetail } = App;
   const year = YEARS[0];
   const ranked = COLLEGES.filter((c) => c.ranks[year] != null).sort((a, b) => a.ranks[year] - b.ranks[year]);
   const recent = YEARS.slice(0, App.RECENT_YEARS);
@@ -45,7 +45,7 @@
     </li>`).join("");
   const open = (e) => {
     const li = e.target.closest("li");
-    if (li) openDetail(COLLEGES.find((c) => c.ipeds === li.dataset.id));
+    if (li) openDetail(byId.get(li.dataset.id));
   };
   top.addEventListener("click", open);
   top.addEventListener("keydown", (e) => { if (e.key === "Enter") open(e); });

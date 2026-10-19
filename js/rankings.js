@@ -1,5 +1,5 @@
 (() => {
-  const { t, COST_YEAR, residency, costTotal, tuitionOf, money, moneyFull, local, useCny, fxRate, csrRank, csrLabel, csrOptions, COLLEGES, YEARS, RECENT_YEARS, STATE_NAMES, HUBS, esc, tag, subj, library, openDetail } = window.App;
+  const { t, COST_YEAR, residency, costTotal, tuitionOf, money, moneyFull, local, useCny, fxRate, csrRank, csrLabel, csrOptions, WORLD_EDITIONS, worldRank, worldNum, worldFmt, matchesQuery, debounce, climateFields, climateFilter, climateMatch, byId, COLLEGES, YEARS, RECENT_YEARS, STATE_NAMES, HUBS, esc, tag, subj, library, openDetail } = window.App;
 
   const $ = (id) => document.getElementById(id);
   const el = {
@@ -12,6 +12,8 @@
   };
 
   const state = { control: "", setting: "", sort: "rank", dir: 1 };
+  $("rkClimate").innerHTML = climateFields("rk");
+  const climate = climateFilter("rk");
   const prevYear = (y) => YEARS[YEARS.indexOf(y) + 1];
 
   // ---- controls ----
@@ -83,6 +85,8 @@
 
   // Costs: tuition rate (shared with other pages) and separate caps on tuition and living costs.
   el.costHead.title = t("cost.thTitle", { year: COST_YEAR });
+  $("qsHead").title = t("rk.th.worldTitle", { sys: "QS", year: WORLD_EDITIONS.qs[0] });
+  $("theHead").title = t("rk.th.worldTitle", { sys: "Times Higher Education (THE)", year: WORLD_EDITIONS.the[0] });
   const showRes = () => el.res.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.v === residency.get()));
   showRes();
   el.res.addEventListener("click", (e) => {
@@ -111,8 +115,10 @@
     render();
   }));
   el.state.addEventListener("change", fillCities); // before the generic render listener below
-  [el.q, el.rmin, el.rmax, el.maxTuition, el.maxLiving].forEach((i) => i.addEventListener("input", render));
-  [el.year, el.state, el.unranked, el.onlyFav, el.city, el.hub, el.csrDir].forEach((i) => i.addEventListener("change", render));
+  const renderSoon = debounce(() => render());
+  [el.q, el.rmin, el.rmax, el.maxTuition, el.maxLiving].forEach((i) => i.addEventListener("input", renderSoon));
+  [el.year, el.state, el.unranked, el.onlyFav, el.city, el.hub, el.csrDir, ...climate.selects]
+    .forEach((i) => i.addEventListener("change", render));
 
   document.querySelectorAll("th.sortable").forEach((th) => th.addEventListener("click", () => {
     const k = th.dataset.sort;
@@ -128,6 +134,7 @@
   if (["public", "private"].includes(params.get("control"))) setControl(params.get("control"));
   if (["metro", "town"].includes(params.get("setting"))) setSeg("setting", el.setting, params.get("setting"));
   if (HUBS.some((h) => h.id === params.get("hub"))) el.hub.value = params.get("hub");
+  climate.set({ type: params.get("climate") || "" });
   if ([...el.csrDir.options].some((o) => o.value && o.value === params.get("csr"))) {
     el.csrDir.value = params.get("csr");
     state.sort = "csr";
@@ -142,6 +149,7 @@
     const rmin = parseInt(el.rmin.value, 10) || 1;
     const rmax = parseInt(el.rmax.value, 10) || Infinity;
     const hasRange = el.rmin.value || el.rmax.value;
+    const clim = climate.get();
 
     return COLLEGES.map((c) => {
       const rank = c.ranks[year] ?? null;
@@ -156,17 +164,19 @@
       if (state.setting && c.setting !== state.setting) return false;
       if (el.hub.value && c.hub !== el.hub.value) return false;
       if (el.csrDir.value && csrRank(c, el.csrDir.value) == null) return false;
+      if (!climateMatch(c, clim)) return false;
       // Caps are typed in the display currency (CNY in Chinese, USD in English).
       if (el.maxTuition.value && !(local(tuitionOf(c)) <= +el.maxTuition.value)) return false;
       if (el.maxLiving.value && !(local(c.cost?.living) <= +el.maxLiving.value)) return false;
       if (el.onlyFav.checked && !library.has(c.ipeds)) return false;
-      if (q && !`${c.name} ${c.city} ${STATE_NAMES[c.state] || ""}`.toLowerCase().includes(q)) return false;
+      if (!matchesQuery(c, q)) return false;
       return true;
     }).sort((a, b) => {
       const k = state.sort;
       let va, vb;
-      if (k === "rank" || k === "change" || k === "cs" || k === "csr" || k === "cost") {
+      if (["rank", "change", "cs", "csr", "qs", "the", "cost"].includes(k)) {
         const get = (r) => (k === "cs" ? r.c.cs?.rank : k === "csr" ? csrRank(r.c, el.csrDir.value)
+          : k === "qs" || k === "the" ? worldNum(worldRank(r.c, k))
           : k === "cost" ? costTotal(r.c) : r[k]);
         va = get(a);
         vb = get(b);
@@ -244,6 +254,8 @@
         <td class="name">${esc(r.c.name)}</td>
         <td class="num c-sub">${subj(r.c.cs)}</td>
         <td class="num c-sub">${csrRank(r.c, el.csrDir.value) ? "#" + csrRank(r.c, el.csrDir.value) : "—"}</td>
+        <td class="num c-sub c-world">${worldFmt(worldRank(r.c, "qs"))}</td>
+        <td class="num c-sub c-world">${worldFmt(worldRank(r.c, "the"))}</td>
         <td class="cost" title="${r.c.cost ? t("cost.breakdown", { tuition: moneyFull(tuitionOf(r.c)), living: moneyFull(r.c.cost.living), books: moneyFull(r.c.cost.books) }) : ""}">${money(costTotal(r.c))}</td>
         <td class="c-hide-sm" title="${esc(r.c.metro)}">${esc(r.c.city)}<span class="city-setting">${t(`setting.${r.c.setting}Short`)}</span></td>
         <td class="c-hide-sm" title="${esc(STATE_NAMES[r.c.state] || "")}">${r.c.state}</td>
@@ -278,7 +290,7 @@
       render();
       return;
     }
-    openDetail(COLLEGES.find((c) => c.ipeds === tr.dataset.id), render);
+    openDetail(byId.get(tr.dataset.id), render);
   });
 
   render();

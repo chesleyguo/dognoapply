@@ -1,11 +1,12 @@
 (() => {
-  const { t, COST_YEAR, costTotal, money, COLLEGES, byId, YEARS, STATE_NAMES, esc, tag, subj, library, openDetail } = window.App;
+  const { t, COST_YEAR, costTotal, money, COLLEGES, byId, YEARS, STATE_NAMES, esc, tag, subj, worldRank, worldNum, worldFmt, matchesQuery, debounce, library, openDetail } = window.App;
   const { STATUSES, STATUS_LABEL } = library;
   const year = YEARS[0];
   const $ = (id) => document.getElementById(id);
   const el = {
     board: $("board"), table: $("tableView"), rows: $("tableRows"), empty: $("empty"), summary: $("summary"),
     view: $("view"), addInput: $("addInput"), addList: $("addList"),
+    exportMenu: $("exportMenu"), exportBtn: $("exportBtn"), exportList: $("exportList"),
   };
 
   // Board columns; the three outcomes share one "结果" column as stacked drop zones.
@@ -29,6 +30,7 @@
   function render() {
     const items = library.items();
     el.empty.hidden = items.length > 0;
+    el.exportMenu.hidden = !items.length;
     el.board.hidden = view !== "board" || !items.length;
     el.table.hidden = view !== "table" || !items.length;
     el.view.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.v === view));
@@ -55,7 +57,7 @@
         </div>
         <h3>${esc(c.name)}</h3>
         <p class="kc-meta">${esc(c.city)}, ${c.state} ${tag(c.control)}</p>
-        <p class="kc-subj"><span>${t("subj.cs")} ${subj(c.cs)}</span><span>${t("subj.csr")} ${c.csr ? "#" + c.csr.rank : "—"}</span></p>
+        <p class="kc-subj"><span>${t("subj.cs")} ${subj(c.cs)}</span><span>${t("subj.csr")} ${c.csr ? "#" + c.csr.rank : "—"}</span><span>QS ${worldFmt(worldRank(c, "qs"))}</span><span>THE ${worldFmt(worldRank(c, "the"))}</span></p>
         <p class="kc-cost">${t("cost.perYear", { amt: money(costTotal(c)) })}</p>
         <select class="kc-status" aria-label="${t("lib.statusOf", { name: esc(c.name) })}">${statusOptions(x.status)}</select>
       </article>`;
@@ -90,7 +92,8 @@
   function renderTable(items) {
     const order = Object.fromEntries(STATUSES.map((s, i) => [s.id, i]));
     const val = (x, c) => ({
-      status: order[x.status], name: c.name, rank: rankOf(c), cs: c.cs?.rank ?? null, csr: c.csr?.rank ?? null, cost: costTotal(c),
+      status: order[x.status], name: c.name, rank: rankOf(c), cs: c.cs?.rank ?? null, csr: c.csr?.rank ?? null,
+      qs: worldNum(worldRank(c, "qs")), the: worldNum(worldRank(c, "the")), cost: costTotal(c),
       state: c.state + c.city, control: c.control,
     })[tableSort.key];
     const rows = items.map((x) => ({ x, c: byId.get(x.id) })).sort((a, b) => {
@@ -106,6 +109,8 @@
         <td class="num">${rankOf(c) ? "#" + rankOf(c) : "—"}</td>
         <td class="num">${subj(c.cs)}</td>
         <td class="num">${c.csr ? "#" + c.csr.rank : "—"}</td>
+        <td class="num">${worldFmt(worldRank(c, "qs"))}</td>
+        <td class="num">${worldFmt(worldRank(c, "the"))}</td>
         <td class="cost">${money(costTotal(c))}</td>
         <td class="c-hide-sm">${esc(c.city)}, ${c.state}</td>
         <td class="c-hide-sm">${tag(c.control)}</td>
@@ -240,12 +245,29 @@
     render();
   }));
 
+  // ---- export menu ----
+  const setExportOpen = (open) => {
+    el.exportList.hidden = !open;
+    el.exportBtn.setAttribute("aria-expanded", open);
+  };
+  el.exportBtn.addEventListener("click", () => setExportOpen(el.exportList.hidden));
+  el.exportList.addEventListener("click", (e) => {
+    const b = e.target.closest("[data-fmt]");
+    if (!b) return;
+    setExportOpen(false);
+    window.Exporter.download(b.dataset.fmt);
+  });
+  document.addEventListener("click", (e) => { if (!el.exportMenu.contains(e.target)) setExportOpen(false); });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !el.exportList.hidden) { setExportOpen(false); el.exportBtn.focus(); }
+  });
+
   // ---- add school ----
   let matches = [];
   function suggest() {
     const q = el.addInput.value.trim().toLowerCase();
     matches = q
-      ? COLLEGES.filter((c) => !library.has(c.ipeds) && `${c.name} ${c.city} ${STATE_NAMES[c.state] || ""}`.toLowerCase().includes(q))
+      ? COLLEGES.filter((c) => !library.has(c.ipeds) && matchesQuery(c, q))
           .sort((a, b) => (rankOf(a) ?? 999) - (rankOf(b) ?? 999)).slice(0, 8)
       : [];
     el.addList.innerHTML = matches.map((c, i) => `
@@ -263,7 +285,7 @@
     suggest();
     render();
   }
-  el.addInput.addEventListener("input", suggest);
+  el.addInput.addEventListener("input", debounce(suggest, 80));
   el.addInput.addEventListener("keydown", (e) => {
     if (e.key === "Enter") { e.preventDefault(); addMatch(0); }
     if (e.key === "Escape") { el.addInput.value = ""; suggest(); }

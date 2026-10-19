@@ -27,9 +27,21 @@
                data-i18n-aria-label="lib.addLabel" aria-controls="addList" aria-expanded="false">
         <ul id="addList" class="suggest" role="listbox" hidden></ul>
       </div>
-      <div class="seg" id="view" role="radiogroup" data-i18n-aria-label="lib.view">
-        <button type="button" data-v="board" aria-pressed="true" data-i18n="lib.board"></button>
-        <button type="button" data-v="table" aria-pressed="false" data-i18n="lib.table"></button>
+      <div class="lib-actions">
+        <div class="export" id="exportMenu" hidden>
+          <button type="button" class="btn btn-ghost" id="exportBtn" aria-haspopup="menu" aria-expanded="false" aria-controls="exportList">
+            <span data-i18n="exp.button"></span> ▾
+          </button>
+          <div class="export-list" id="exportList" role="menu" hidden>
+            <button type="button" role="menuitem" data-fmt="xlsx"><b data-i18n="exp.xlsx"></b><small data-i18n="exp.xlsxSub"></small></button>
+            <button type="button" role="menuitem" data-fmt="csv"><b data-i18n="exp.csv"></b><small data-i18n="exp.csvSub"></small></button>
+            <button type="button" role="menuitem" data-fmt="docx"><b data-i18n="exp.docx"></b><small data-i18n="exp.docxSub"></small></button>
+          </div>
+        </div>
+        <div class="seg" id="view" role="radiogroup" data-i18n-aria-label="lib.view">
+          <button type="button" data-v="board" aria-pressed="true" data-i18n="lib.board"></button>
+          <button type="button" data-v="table" aria-pressed="false" data-i18n="lib.table"></button>
+        </div>
       </div>
     </div>
 
@@ -46,6 +58,8 @@
             <th data-sort="rank" class="sortable" data-i18n="subj.overall" data-i18n-title="lib.th.overallTitle"></th>
             <th data-sort="cs" class="sortable" data-i18n="subj.cs" data-i18n-title="rk.th.csTitle"></th>
             <th data-sort="csr" class="sortable" data-i18n="subj.csr" data-i18n-title="rk.th.csrTitle"></th>
+            <th data-sort="qs" class="sortable" data-i18n="subj.qs" data-i18n-title="lib.th.qsTitle"></th>
+            <th data-sort="the" class="sortable" data-i18n="subj.the" data-i18n-title="lib.th.theTitle"></th>
             <th data-sort="cost" class="sortable" data-i18n="cost.th"></th>
             <th data-sort="state" class="sortable c-hide-sm" data-i18n="lib.th.location"></th>
             <th data-sort="control" class="sortable c-hide-sm" data-i18n="rk.type"></th>
@@ -65,6 +79,7 @@
 
   <script src="data/colleges.js"></script>
   <script src="js/common.js"></script>
+  <script src="js/export.js"></script>
   <script src="js/library.js"></script>
 </body>
 </html>

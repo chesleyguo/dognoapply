@@ -14,6 +14,14 @@
     OR: "Oregon", PA: "Pennsylvania", RI: "Rhode Island", SC: "South Carolina", TN: "Tennessee",
     TX: "Texas", UT: "Utah", VA: "Virginia", VT: "Vermont", WA: "Washington", WI: "Wisconsin",
   };
+  // Lower-cased "name city state" per school, built once so filtering on every keystroke stays cheap.
+  const haystack = new Map(COLLEGES.map((c) => [c, `${c.name} ${c.city} ${STATE_NAMES[c.state] || ""}`.toLowerCase()]));
+  const matchesQuery = (c, q) => !q || haystack.get(c).includes(q);
+  // For typing: re-filter once the user pauses instead of on every keystroke.
+  const debounce = (fn, ms = 120) => {
+    let timer;
+    return () => { clearTimeout(timer); timer = setTimeout(fn, ms); };
+  };
   const CONTROL_LABEL = { public: t("control.public"), private: t("control.private") };
 
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -120,6 +128,138 @@
       <p class="muted">${t("csr.strong")}:</p>
       <div class="chips">${strong.map(([a, r]) => `<a class="chip" href="rankings.html?csr=area:${a}">${t(`csr.area.${a}`)} <span>#${r}</span></a>`).join("")}</div>
       <p class="d-credit">${t("csr.credit")}</p>
+    </div>`;
+  }
+
+  // ---- QS / THE world ranks (c.world = { qs: {year: rank}, the: {year: rank} }, see build_world_ranks.py) ----
+  // A rank is an exact place (number) or a published band ("601–650", "1401+"); bands sort by their top.
+  const WORLD_EDITIONS = window.WORLD_EDITIONS || { qs: [], the: [] };
+  const worldRank = (c, sys, year = WORLD_EDITIONS[sys][0]) => c.world?.[sys]?.[year] ?? null;
+  const worldNum = (r) => (r == null ? null : typeof r === "number" ? r : parseInt(r, 10));
+  const worldFmt = (r) => (r == null ? "—" : `#${r}`);
+
+  function worldSection(c) {
+    const years = [...new Set([...WORLD_EDITIONS.qs, ...WORLD_EDITIONS.the])].sort().reverse()
+      .filter((y) => worldRank(c, "qs", y) != null || worldRank(c, "the", y) != null);
+    if (!years.length) return `<div class="d-world"><h3>${t("world.title")}</h3><p class="muted">${t("world.none")}</p></div>`;
+    return `<div class="d-world">
+      <h3>${t("world.title")}</h3>
+      <table>
+        <thead><tr><th>${t("world.edition")}</th><th>${t("subj.qs")}</th><th>${t("subj.the")}</th></tr></thead>
+        <tbody>${years.map((y) => `<tr><th>${y}</th><td class="num">${worldFmt(worldRank(c, "qs", y))}</td><td class="num">${worldFmt(worldRank(c, "the", y))}</td></tr>`).join("")}</tbody>
+      </table>
+      <p class="d-credit">${t("world.note")}</p>
+    </div>`;
+  }
+
+  // ---- climate (c.climate = { koppen, hi[12], lo[12], prcp, wet, snow, station, km }, °F / inches; see
+  // scripts/build_climate.py). The Chinese UI shows metric units, the English UI U.S. units.
+  const CLIMATE_PERIOD = window.CLIMATE_PERIOD || "";
+  const metric = lang === "zh";
+  const fToC = (f) => ((f - 32) * 5) / 9;
+  const tempU = (f) => (metric ? fToC(f) : f); // °F -> display unit
+  const fmtTemp = (f) => `${Math.round(tempU(f))}°${metric ? "C" : "F"}`;
+  const fmtRain = (inch) => (metric ? `${Math.round(inch * 25.4).toLocaleString("en-US")} mm` : `${Math.round(inch)} in`);
+  const snowU = (inch) => (metric ? inch * 2.54 : inch); // inches -> display unit (cm or in)
+  const fmtSnow = (inch) => `${Math.round(snowU(inch))} ${metric ? "cm" : "in"}`;
+  const winterF = (c) => Math.min(...c.climate.hi.map((h, i) => (h + c.climate.lo[i]) / 2)); // coldest month mean
+  const summerF = (c) => Math.max(...c.climate.hi); // hottest month's average high
+
+  // Köppen types grouped into names people recognise; only groups that occur are offered as filters.
+  const CLIMATE_GROUPS = [
+    ["subtropical", /^C[fw]a/], ["continental", /^D.[ab]$/], ["mediterranean", /^Cs/], ["oceanic", /^C[fw][bc]/],
+    ["semiarid", /^BS/], ["desert", /^BW/], ["tropical", /^A/], ["subarctic", /^(D.[cd]|E)/],
+  ];
+  const climateGroup = (c) => (c.climate ? CLIMATE_GROUPS.find(([, re]) => re.test(c.climate.koppen))?.[0] : null);
+  // Thresholds are round numbers in whichever unit is on screen, so the labels stay honest.
+  const CLIMATE_LIMITS = {
+    winter: metric ? { mild: 7, thaw: 0, cold: -7 } : { mild: 45, thaw: 32, cold: 20 },
+    summer: metric ? { mild: 29, warm: 32 } : { mild: 85, warm: 90 },
+    snow: metric ? { none: 10, light: 50, moderate: 130 } : { none: 4, light: 20, moderate: 50 },
+  };
+  const unitT = metric ? "°C" : "°F", unitS = metric ? "cm" : "in";
+  // f = { type, winter, summer, snow } with "" meaning "any".
+  function climateMatch(c, f) {
+    if (!f.type && !f.winter && !f.summer && !f.snow) return true;
+    if (!c.climate) return false;
+    const L = CLIMATE_LIMITS;
+    if (f.type && climateGroup(c) !== f.type) return false;
+    if (f.winter && tempU(winterF(c)) < L.winter[f.winter]) return false;
+    if (f.summer && tempU(summerF(c)) > L.summer[f.summer]) return false;
+    if (f.snow && (c.climate.snow == null || snowU(c.climate.snow) >= L.snow[f.snow])) return false;
+    return true;
+  }
+  // The four climate <select>s, ids `${prefix}Type`, `${prefix}Winter`, ... Wrapped in .field labels.
+  function climateFields(prefix) {
+    const counts = {};
+    COLLEGES.forEach((c) => { const g = climateGroup(c); if (g) counts[g] = (counts[g] || 0) + 1; });
+    const opt = (v, label) => `<option value="${v}">${label}</option>`;
+    const field = (key, opts) => `<label class="field"><span>${t(`clim.${key}`)}</span>
+      <select id="${prefix}${key[0].toUpperCase()}${key.slice(1)}">${opt("", t("clim.any"))}${opts}</select></label>`;
+    const L = CLIMATE_LIMITS;
+    return field("type", CLIMATE_GROUPS.filter(([g]) => counts[g]).map(([g]) => opt(g, `${t(`clim.g.${g}`)} (${counts[g]})`)).join(""))
+      + field("winter", Object.entries(L.winter).map(([k, v]) => opt(k, t(`clim.winter.${k}`, { t: v + unitT }))).join(""))
+      + field("summer", Object.entries(L.summer).map(([k, v]) => opt(k, t(`clim.summer.${k}`, { t: v + unitT }))).join(""))
+      + field("snow", Object.entries(L.snow).map(([k, v]) => opt(k, t(`clim.snow.${k}`, { s: `${v} ${unitS}` }))).join(""));
+  }
+  // Wires up the selects made by climateFields: returns { get(), set(obj), selects }.
+  function climateFilter(prefix) {
+    const keys = ["type", "winter", "summer", "snow"];
+    const sel = Object.fromEntries(keys.map((k) => [k, document.getElementById(prefix + k[0].toUpperCase() + k.slice(1))]));
+    return {
+      selects: Object.values(sel),
+      get: () => Object.fromEntries(keys.map((k) => [k, sel[k].value])),
+      set(v) { keys.forEach((k) => { if (v[k] && [...sel[k].options].some((o) => o.value === v[k])) sel[k].value = v[k]; }); },
+    };
+  }
+
+  // Climate figures as plain numbers in the display units, for exports.
+  const climateValues = (c) => c.climate && {
+    winter: Math.round(tempU(winterF(c))),
+    summer: Math.round(tempU(summerF(c))),
+    prcp: Math.round(metric ? c.climate.prcp * 25.4 : c.climate.prcp),
+    snow: c.climate.snow == null ? null : Math.round(snowU(c.climate.snow)),
+  };
+  const CLIMATE_UNITS = { temp: unitT, rain: metric ? "mm" : "in", snow: unitS };
+
+  const MONTHS = t("clim.months").split(",");
+  function climateChart(c) {
+    const hi = c.climate.hi.map(tempU), lo = c.climate.lo.map(tempU);
+    const W = 600, H = 170, L = 36, R = 12, T = 14, B = 24;
+    const step = metric ? 10 : 20;
+    const min = Math.floor(Math.min(...lo) / step) * step, max = Math.ceil(Math.max(...hi) / step) * step;
+    const x = (i) => L + (i + 0.5) * ((W - L - R) / 12);
+    const y = (v) => T + ((max - v) / (max - min)) * (H - T - B);
+    const path = (vs) => vs.map((v, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join("");
+    const area = path(hi) + lo.map((v, i) => [i, v]).reverse().map(([i, v]) => `L${x(i).toFixed(1)},${y(v).toFixed(1)}`).join("") + "Z";
+    const ticks = [];
+    for (let v = min; v <= max; v += step) ticks.push(v);
+    return `<svg class="chart clim-chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${t("clim.chartAria", { name: esc(c.name) })}">
+      ${ticks.map((v) => `<line class="grid" x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}"/>
+        <text class="axis" x="${L - 6}" y="${y(v) + 4}" text-anchor="end">${v}°</text>`).join("")}
+      ${MONTHS.map((m, i) => `<text class="axis" x="${x(i)}" y="${H - 6}" text-anchor="middle">${m}</text>`).join("")}
+      <path class="clim-area" d="${area}"/>
+      <path class="clim-hi" d="${path(hi)}"/><path class="clim-lo" d="${path(lo)}"/>
+      ${hi.map((v, i) => `<circle class="clim-hi-dot" cx="${x(i)}" cy="${y(v)}" r="3"><title>${MONTHS[i]}: ${t("clim.hiLo", { hi: fmtTemp(c.climate.hi[i]), lo: fmtTemp(c.climate.lo[i]) })}</title></circle>
+        <circle class="clim-lo-dot" cx="${x(i)}" cy="${y(lo[i])}" r="3"><title>${MONTHS[i]}: ${t("clim.hiLo", { hi: fmtTemp(c.climate.hi[i]), lo: fmtTemp(c.climate.lo[i]) })}</title></circle>`).join("")}
+    </svg>
+    <p class="chart-cap"><span class="clim-key hi"></span>${t("clim.keyHi")} <span class="clim-key lo"></span>${t("clim.keyLo")}</p>`;
+  }
+
+  function climateSection(c) {
+    if (!c.climate) return "";
+    const k = c.climate;
+    const g = climateGroup(c);
+    return `<div class="d-climate">
+      <h3>${t("clim.title")} <small>${g ? t(`clim.g.${g}`) + " · " : ""}Köppen ${esc(k.koppen)}</small></h3>
+      <div class="d-stats">
+        <div class="d-stat"><b>${fmtTemp(winterF(c))}</b><span>${t("clim.winterStat")}</span></div>
+        <div class="d-stat"><b>${fmtTemp(summerF(c))}</b><span>${t("clim.summerStat")}</span></div>
+        <div class="d-stat"><b>${fmtRain(k.prcp)}</b><span>${k.wet != null ? t("clim.rainStat", { n: k.wet }) : t("clim.rainStatNoDays")}</span></div>
+        <div class="d-stat"><b>${k.snow != null ? fmtSnow(k.snow) : "—"}</b><span>${t("clim.snowStat")}</span></div>
+      </div>
+      ${climateChart(c)}
+      <p class="d-credit">${t("clim.credit", { period: CLIMATE_PERIOD.replace("-", "–"), station: esc(k.station), km: metric ? `${k.km} km` : `${(k.km / 1.609).toFixed(1)} mi` })}</p>
     </div>`;
   }
 
@@ -259,6 +399,8 @@
         <div class="d-stat"><b>${latest ? "#" + latest : "—"}</b><span>${t("d.overallRank", { year: YEARS[0] })}</span></div>
         <div class="d-stat"><b>${subj(c.cs)}</b><span>${t("d.csGrad")}</span></div>
         <div class="d-stat"><b>${c.csr ? "#" + c.csr.rank : "—"}</b><span>${t("d.csr")}</span></div>
+        <div class="d-stat"><b>${worldFmt(worldRank(c, "qs"))}</b><span>${t("d.world", { sys: "QS", year: WORLD_EDITIONS.qs[0] })}</span></div>
+        <div class="d-stat"><b>${worldFmt(worldRank(c, "the"))}</b><span>${t("d.world", { sys: "THE", year: WORLD_EDITIONS.the[0] })}</span></div>
       </div>
       <div class="d-geo">
         <p><span class="muted">${t("geo.metroArea")}:</span> ${esc(c.metro)} <span class="muted">· ${t("geo.pop", { pop: fmtPop(c.metroPop) })}</span> ${settingTag(c.setting)}</p>
@@ -266,7 +408,9 @@
           <a class="chip" href="rankings.html?hub=${c.hub}">${esc(hubById.get(c.hub).name)}</a></p>` : ""}
       </div>
       ${costSection(c)}
+      ${climateSection(c)}
       ${csrSection(c)}
+      ${worldSection(c)}
       <div id="dHistory">${history(c)}</div>
       <div class="d-actions" id="dLib">${libButton(c)}</div>`;
     dialog.querySelector("#dHistory").addEventListener("click", (e) => {
@@ -285,5 +429,5 @@
     dialog.showModal();
   }
 
-  window.App = { t, lang, COST_YEAR, residency, tuitionOf, costTotal, money, moneyFull, local, useCny, fxRate, CSR_META, CSR_CATS, csrRank, csrLabel, csrOptions, HUBS, hubById, fmtPop, settingTag, COLLEGES, byId, YEARS, RECENT_YEARS, STATE_NAMES, CONTROL_LABEL, esc, tag, subj, library, openDetail };
+  window.App = { t, lang, COST_YEAR, residency, tuitionOf, costTotal, money, moneyFull, local, useCny, fxRate, CSR_META, CSR_CATS, csrRank, csrLabel, csrOptions, WORLD_EDITIONS, worldRank, worldNum, worldFmt, matchesQuery, debounce, climateGroup, climateMatch, climateFields, climateValues, CLIMATE_UNITS, climateFilter, winterF, summerF, fmtTemp, fmtRain, fmtSnow, CLIMATE_PERIOD, HUBS, hubById, fmtPop, settingTag, COLLEGES, byId, YEARS, RECENT_YEARS, STATE_NAMES, CONTROL_LABEL, esc, tag, subj, library, openDetail };
 })();

@@ -1,5 +1,5 @@
 (() => {
-  const { t, costTotal, money, HUBS, COLLEGES, byId, YEARS, STATE_NAMES, esc, tag, subj, library, openDetail } = window.App;
+  const { t, costTotal, money, HUBS, COLLEGES, byId, YEARS, STATE_NAMES, esc, tag, subj, worldRank, worldFmt, matchesQuery, debounce, climateFields, climateFilter, climateMatch, library, openDetail } = window.App;
   const year = YEARS[0];
   const $ = (id) => document.getElementById(id);
   const el = {
@@ -9,6 +9,8 @@
   const rankOf = (c) => c.ranks[year] ?? null;
   let control = "";
   let setting = "";
+  $("mapClimate").innerHTML = climateFields("map");
+  const climate = climateFilter("map");
 
   el.hub.innerHTML = `<option value="">${t("geo.anyHub")}</option>` +
     HUBS.map((h) => `<option value="${h.id}">${esc(h.name)}</option>`).join("");
@@ -21,8 +23,32 @@
   const color = (v) => css.getPropertyValue(v).trim();
   const COLORS = { public: color("--public"), private: color("--private"), lib: color("--gold") };
 
+  // data/us-states.js ships TopoJSON-style shared, delta-encoded arcs (half the size of GeoJSON);
+  // rebuild plain GeoJSON polygons for Leaflet here.
+  function topoToGeo(topo) {
+    const [sx, sy] = topo.transform.scale, [tx, ty] = topo.transform.translate;
+    const arcs = topo.arcs.map((arc) => {
+      let x = 0, y = 0;
+      return arc.map(([dx, dy]) => [(x += dx) * sx + tx, (y += dy) * sy + ty]);
+    });
+    // Consecutive arcs share an endpoint; a negative index means the arc runs backwards.
+    const ring = (idx) => idx.reduce((out, i) => {
+      const pts = i >= 0 ? arcs[i] : arcs[~i].slice().reverse();
+      return out.concat(out.length ? pts.slice(1) : pts);
+    }, []);
+    return {
+      type: "FeatureCollection",
+      features: topo.states.map((s) => ({
+        type: "Feature",
+        properties: { name: s.name },
+        geometry: { type: "MultiPolygon", coordinates: s.arcs.map((poly) => poly.map(ring)) },
+      })),
+    };
+  }
+
   // Base map is drawn from bundled state outlines (data/us-states.js): no tile service or API key needed.
-  const map = L.map("map", { zoomSnap: 0.25, minZoom: 3, maxZoom: 11, attributionControl: true });
+  // Canvas instead of one SVG element per shape: much faster to pan, zoom and redraw markers.
+  const map = L.map("map", { preferCanvas: true, zoomSnap: 0.25, minZoom: 3, maxZoom: 11, attributionControl: true });
   map.attributionControl.setPrefix(false).addAttribution(t("map.attrib"));
   const US_BOUNDS = [[24.5, -125], [49.5, -66.9]];
   map.fitBounds(US_BOUNDS);
@@ -30,7 +56,7 @@
   const NAME_TO_ABBR = Object.fromEntries(Object.entries(STATE_NAMES).map(([k, v]) => [v, k]));
   NAME_TO_ABBR["District of Columbia"] = "DC";
   const stateStyle = { color: color("--map-border"), weight: 1, fillColor: color("--map-land"), fillOpacity: 1 };
-  const states = L.geoJSON(window.US_STATES, {
+  const states = L.geoJSON(topoToGeo(window.US_TOPO), {
     style: stateStyle,
     onEachFeature(f, lyr) {
       lyr.bindTooltip(() => {
@@ -57,7 +83,7 @@
         <b>${esc(c.name)}</b>
         <div class="muted">${esc(c.city)}, ${esc(STATE_NAMES[c.state] || c.state)} ${tag(c.control)}</div>
         <div class="map-pop-ranks">
-          <span>${t("subj.overall")} ${r ? "#" + r : "—"}</span><span>${t("subj.cs")} ${subj(c.cs)}</span><span>${t("subj.csr")} ${c.csr ? "#" + c.csr.rank : "—"}</span>
+          <span>${t("subj.overall")} ${r ? "#" + r : "—"}</span><span>${t("subj.cs")} ${subj(c.cs)}</span><span>${t("subj.csr")} ${c.csr ? "#" + c.csr.rank : "—"}</span><span>QS ${worldFmt(worldRank(c, "qs"))}</span><span>THE ${worldFmt(worldRank(c, "the"))}</span>
         </div>
         <div class="map-pop-cost">${t("cost.th")}: <b>${money(costTotal(c))}</b></div>
         <div class="map-pop-actions">
@@ -85,6 +111,7 @@
   function filtered() {
     const q = el.q.value.trim().toLowerCase();
     const rf = el.rank.value;
+    const clim = climate.get();
     return COLLEGES.filter((c) => {
       const r = rankOf(c);
       if (rf !== "all" && r == null) return false;
@@ -94,7 +121,8 @@
       if (el.hub.value && c.hub !== el.hub.value) return false;
       if (el.subj.value && !c[el.subj.value]) return false;
       if (el.lib.checked && !library.has(c.ipeds)) return false;
-      if (q && !`${c.name} ${c.city} ${STATE_NAMES[c.state] || ""}`.toLowerCase().includes(q)) return false;
+      if (!climateMatch(c, clim)) return false;
+      if (!matchesQuery(c, q)) return false;
       return true;
     }).sort((a, b) => (rankOf(a) ?? 999) - (rankOf(b) ?? 999) || a.name.localeCompare(b.name));
   }
@@ -151,8 +179,8 @@
     if (el.hub.value && pts.length) map.flyToBounds(L.latLngBounds(pts), { padding: [60, 60], maxZoom: 10, duration: 0.8 });
     else map.flyToBounds(US_BOUNDS, { duration: 0.8 });
   });
-  el.q.addEventListener("input", render);
-  [el.rank, el.subj, el.lib].forEach((i) => i.addEventListener("change", render));
+  el.q.addEventListener("input", debounce(render));
+  [el.rank, el.subj, el.lib, ...climate.selects].forEach((i) => i.addEventListener("change", render));
 
   const pick = (e) => {
     const li = e.target.closest("li[data-id]");

@@ -7,6 +7,10 @@ Usage:
 HD2024.csv comes from https://nces.ed.gov/ipeds/datacenter/data/HD2024.zip and supplies
 city, public/private, website and coordinates, joined on the IPEDS UNITID.
 
+QS and THE world university ranks are read from data/sources/world_ranks.json (built by
+scripts/build_world_ranks.py) and joined on IPEDS UNITID. Climate normals are read the same way from
+data/sources/climate.json (built by scripts/build_climate.py).
+
 Graduate subject rankings (US News Best Graduate Schools) are read from data/sources/grad_cs.csv
 and data/sources/grad_bio.csv and joined on normalized school name + state.
 
@@ -187,6 +191,8 @@ def main(xlsx_path, hd_path, cbsa_path, ic_path):
     costs = read_costs(ic_path)
     csr_data, csr_by_name, csr_by_domain = read_csrankings()
     hubs = json.loads((ROOT / "data" / "sources" / "hubs.json").read_text(encoding="utf-8"))
+    world = json.loads((ROOT / "data" / "sources" / "world_ranks.json").read_text(encoding="utf-8"))
+    climate = json.loads((ROOT / "data" / "sources" / "climate.json").read_text(encoding="utf-8"))
     hub_of = {code: hub["id"] for hub in hubs for code in hub["cbsa"]}
 
     colleges = []
@@ -218,6 +224,10 @@ def main(xlsx_path, hd_path, cbsa_path, ic_path):
             "setting": "metro" if metro_pop >= MAJOR_METRO_POP and h["LOCALE"] in METRO_LOCALES else "town",
             "hub": hub_of.get(h["CBSA"]),
         })
+        if rec["IPEDS"] in world["schools"]:
+            colleges[-1]["world"] = world["schools"][rec["IPEDS"]]
+        if rec["IPEDS"] in climate["schools"]:
+            colleges[-1]["climate"] = climate["schools"][rec["IPEDS"]]
         if rec["IPEDS"] in costs:
             colleges[-1]["cost"] = costs[rec["IPEDS"]]
         name = rec["University Name"]
@@ -239,6 +249,9 @@ def main(xlsx_path, hd_path, cbsa_path, ic_path):
     print(f"costs: {sum('cost' in c for c in colleges)} schools, "
           f"living on-campus fallback: {[c['name'] for c in colleges if c.get('cost', {}).get('livingBasis') == 'on']}",
           file=sys.stderr)
+    for system in world["editions"]:
+        print(f"{system}: {sum(system in c.get('world', {}) for c in colleges)} schools", file=sys.stderr)
+    print(f"climate: {sum('climate' in c for c in colleges)} schools", file=sys.stderr)
     print(f"csrankings: matched {sum('csr' in c for c in colleges)} schools", file=sys.stderr)
     print(f"no metro: {[c['name'] for c in colleges if not c['metro']]}", file=sys.stderr)
     print(f"major metro: {sum(c['setting'] == 'metro' for c in colleges)}, "
@@ -252,8 +265,11 @@ def main(xlsx_path, hd_path, cbsa_path, ic_path):
         f"window.RANK_YEARS = {json.dumps(years)};\n"
         f"window.HUBS = {json.dumps(hubs_out, ensure_ascii=False)};\n"
         f"window.COST_YEAR = {json.dumps(COST_YEAR)};\n"
+        f"window.WORLD_EDITIONS = {json.dumps(world['editions'])};\n"
+        f"window.CLIMATE_PERIOD = {json.dumps(climate['period'])};\n"
         f"window.CSR_META = {json.dumps({k: csr_data[k] for k in ('source', 'license', 'years', 'generated')})};\n"
-        f"window.COLLEGES = {json.dumps(colleges, ensure_ascii=False, indent=1)};\n",
+        # Compact: this file is loaded on every page, so whitespace is wasted bytes.
+        f"window.COLLEGES = {json.dumps(colleges, ensure_ascii=False, separators=(',', ':'))};\n",
         encoding="utf-8",
     )
     print(f"wrote {len(colleges)} colleges to {out}", file=sys.stderr)
