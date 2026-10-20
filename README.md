@@ -6,7 +6,7 @@ The name is a joke from Chinese internet slang meaning "not even a dog would app
 
 ## Features
 
-- **Rankings**: U.S. News national university rankings (1984–2027 editions, last 10 years shown by default), QS (2017–2026) and THE (2016–2026) world ranks, U.S. News graduate Computer Science ranks, and CSRankings by research area (overall, 4 categories, 27 areas).
+- **Rankings**: switch between U.S. News national university rankings (1984–2027 editions, last 10 years shown by default), QS (2017–2026) and THE (2016–2026) world rankings, with U.S. News graduate Computer Science ranks, and CSRankings by research area (overall, 4 categories, 27 areas).
 - **Filters**: state, city, popular city area, major metro vs. college town, public/private, rank range, CSRankings area, climate (type, winters, summers, snow), tuition cap, and living-cost cap.
 - **Climate**: each school's climate type (Köppen), winter and summer temperatures, rain and snowfall, and a monthly temperature chart, from NOAA 1991–2020 climate normals.
 - **Costs**: graduate tuition and fees (in-state or out-of-state/international), living costs, and books for one academic year. The Chinese UI shows CNY at an adjustable exchange rate (default 6.7).

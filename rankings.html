@@ -26,6 +26,14 @@
         <span data-i18n="rk.search"></span>
         <input id="q" type="search" data-i18n-placeholder="rk.searchPh">
       </label>
+      <div class="field">
+        <span data-i18n="rk.system"></span>
+        <div class="seg" id="sys" role="radiogroup" data-i18n-aria-label="rk.system">
+          <button type="button" data-v="usnews" aria-pressed="true" data-i18n="rk.sys.usnews" data-i18n-title="rk.sys.usnewsTitle"></button>
+          <button type="button" data-v="qs" aria-pressed="false" data-i18n="rk.sys.qs" data-i18n-title="rk.sys.qsTitle"></button>
+          <button type="button" data-v="the" aria-pressed="false" data-i18n="rk.sys.the" data-i18n-title="rk.sys.theTitle"></button>
+        </div>
+      </div>
       <label class="field">
         <span data-i18n="rk.year"></span>
         <select id="year"></select>
@@ -112,13 +120,13 @@
           <tr>
             <th class="c-sel"><input type="checkbox" id="selAll" data-i18n-aria-label="sel.all" data-i18n-title="sel.all"></th>
             <th class="c-fav" data-i18n-aria-label="nav.library"></th>
-            <th data-sort="rank" class="c-rank sortable" data-i18n="rk.th.rank"></th>
+            <th data-sort="rank" class="c-rank sortable" id="rankHead"></th>
             <th data-sort="name" class="sortable" data-i18n="rk.th.school"></th>
             <th data-sort="cs" class="sortable c-sub" data-i18n="subj.cs" data-i18n-title="rk.th.csTitle"></th>
             <th data-sort="csr" class="sortable c-sub" id="csrHead" data-i18n-title="rk.th.csrTitle"></th>
-            <th data-sort="qs" class="sortable c-sub" id="qsHead" data-i18n="subj.qs"></th>
-            <th data-sort="the" class="sortable c-sub" id="theHead" data-i18n="subj.the"></th>
-            <th data-sort="cost" class="sortable" id="costHead" data-i18n="cost.th"></th>
+            <th data-sort="qs" class="sortable c-sub c-qs" id="qsHead" data-i18n="subj.qs"></th>
+            <th data-sort="the" class="sortable c-sub c-the" id="theHead" data-i18n="subj.the"></th>
+            <th data-sort="living" class="sortable" id="costHead" data-i18n="rk.th.living"></th>
             <th data-sort="city" class="sortable c-hide-sm" data-i18n="rk.th.city"></th>
             <th data-sort="state" class="sortable c-hide-sm" data-i18n="rk.state"></th>
             <th data-sort="control" class="sortable" data-i18n="rk.type"></th>

@@ -1,5 +1,5 @@
 (() => {
-  const { t, COST_YEAR, residency, costTotal, tuitionOf, money, moneyFull, local, useCny, fxRate, csrRank, csrLabel, csrOptions, WORLD_EDITIONS, worldRank, worldNum, worldFmt, matchesQuery, debounce, climateFields, climateFilter, climateMatch, byId, COLLEGES, YEARS, RECENT_YEARS, STATE_NAMES, HUBS, esc, tag, subj, library, openDetail } = window.App;
+  const { t, COST_YEAR, residency, tuitionOf, money, moneyFull, local, useCny, fxRate, csrRank, csrLabel, csrOptions, WORLD_EDITIONS, worldRank, worldNum, worldFmt, matchesQuery, debounce, climateFields, climateFilter, climateMatch, byId, COLLEGES, YEARS, RECENT_YEARS, STATE_NAMES, HUBS, esc, tag, subj, library, openDetail } = window.App;
 
   const $ = (id) => document.getElementById(id);
   const el = {
@@ -8,34 +8,60 @@
     rows: $("rows"), empty: $("empty"), city: $("city"), setting: $("setting"), hub: $("hub"),
     csrDir: $("csrDir"), csrHead: $("csrHead"), res: $("res"), costHead: $("costHead"),
     maxTuition: $("maxTuition"), maxLiving: $("maxLiving"), fx: $("fx"), fxField: $("fxField"),
-    selAll: $("selAll"), selBar: $("selBar"), selCount: $("selCount"), toast: $("toast"),
+    sys: $("sys"), selAll: $("selAll"), selBar: $("selBar"), selCount: $("selCount"), toast: $("toast"),
   };
 
   const state = { control: "", setting: "", sort: "rank", dir: 1 };
   $("rkClimate").innerHTML = climateFields("rk");
   const climate = climateFilter("rk");
-  const prevYear = (y) => YEARS[YEARS.indexOf(y) + 1];
+
+  // ---- ranking system: U.S. News national, or QS / THE world rankings ----
+  // QS and THE ranks below the top few hundred are bands ("601–650"); they filter and sort by their top end.
+  const SYSTEMS = { usnews: YEARS, qs: WORLD_EDITIONS.qs, the: WORLD_EDITIONS.the };
+  let sys = "usnews";
+  const years = () => SYSTEMS[sys];
+  const sysName = () => t(`rk.sys.${sys}`);
+  const rankIn = (c, y) => (y == null ? null : sys === "usnews" ? c.ranks[y] ?? null : worldRank(c, sys, y));
+  const prevYear = (y) => years()[years().indexOf(y) + 1];
 
   // ---- controls ----
   // Only the most recent editions are listed until the user asks for older ones.
   let allYears = false;
   let currentYear = YEARS[0];
   function fillYears() {
-    const list = allYears ? YEARS : YEARS.slice(0, RECENT_YEARS);
-    const oldest = YEARS[YEARS.length - 1], cut = YEARS[RECENT_YEARS];
+    const ys = years();
+    const short = ys.length > RECENT_YEARS + 1; // QS / THE have few enough editions to list them all
+    const list = allYears || !short ? ys : ys.slice(0, RECENT_YEARS);
     el.year.innerHTML = list.map((y) => `<option value="${y}">${t("rk.yearOpt", { year: y })}</option>`).join("") +
-      (allYears
+      (!short ? "" : allYears
         ? `<option value="less">${t("rk.less")}</option>`
-        : `<option value="more">${t("rk.more", { from: oldest, to: cut })}</option>`);
+        : `<option value="more">${t("rk.more", { from: ys[ys.length - 1], to: ys[RECENT_YEARS] })}</option>`);
     el.year.value = currentYear;
   }
-  fillYears();
+  function setSys(v) {
+    sys = SYSTEMS[v] ? v : "usnews";
+    el.sys.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.v === sys));
+    allYears = false;
+    currentYear = years()[0];
+    fillYears();
+    $("rankHead").textContent = t("rk.th.rankSys", { sys: sysName() });
+    // The active world ranking already fills the Rank column, so hide its own column.
+    $("table").classList.toggle("sys-qs", sys === "qs");
+    $("table").classList.toggle("sys-the", sys === "the");
+  }
+  setSys(new URLSearchParams(location.search).get("sys"));
+  el.sys.addEventListener("click", (e) => {
+    const b = e.target.closest("button");
+    if (!b || b.dataset.v === sys) return;
+    setSys(b.dataset.v);
+    render();
+  });
   // Registered before the generic change → render listener below, so the value is settled first.
   el.year.addEventListener("change", () => {
     const v = el.year.value;
     if (v === "more" || v === "less") {
       allYears = v === "more";
-      if (!allYears && !YEARS.slice(0, RECENT_YEARS).includes(currentYear)) currentYear = YEARS[0];
+      if (!allYears && !years().slice(0, RECENT_YEARS).includes(currentYear)) currentYear = years()[0];
       fillYears();
       if (allYears) try { el.year.showPicker(); } catch {}
     } else {
@@ -84,7 +110,7 @@
   });
 
   // Costs: tuition rate (shared with other pages) and separate caps on tuition and living costs.
-  el.costHead.title = t("cost.thTitle", { year: COST_YEAR });
+  el.costHead.title = t("rk.th.livingTitle", { year: COST_YEAR });
   $("qsHead").title = t("rk.th.worldTitle", { sys: "QS", year: WORLD_EDITIONS.qs[0] });
   $("theHead").title = t("rk.th.worldTitle", { sys: "Times Higher Education (THE)", year: WORLD_EDITIONS.the[0] });
   const showRes = () => el.res.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.v === residency.get()));
@@ -152,12 +178,14 @@
     const clim = climate.get();
 
     return COLLEGES.map((c) => {
-      const rank = c.ranks[year] ?? null;
-      const prev = c.ranks[prevYear(year)] ?? null;
-      return { c, rank, prev, change: rank != null && prev != null ? prev - rank : null };
-    }).filter(({ c, rank }) => {
+      const rank = rankIn(c, year), prev = rankIn(c, prevYear(year));
+      const rankN = worldNum(rank), prevN = worldNum(prev);
+      // A band can't give an exact move; it still sorts and shows as up/down by the band's top end.
+      const exact = typeof rank === "number" && typeof prev === "number";
+      return { c, rank, rankN, prev, exact, change: rank != null && prev != null ? prevN - rankN : null };
+    }).filter(({ c, rank, rankN }) => {
       if (rank == null && !el.unranked.checked) return false;
-      if (hasRange && (rank == null || rank < rmin || rank > rmax)) return false;
+      if (hasRange && (rank == null || rankN < rmin || rankN > rmax)) return false;
       if (el.state.value && c.state !== el.state.value) return false;
       if (state.control && c.control !== state.control) return false;
       if (el.city.value && `${c.city}|${c.state}` !== el.city.value) return false;
@@ -174,10 +202,10 @@
     }).sort((a, b) => {
       const k = state.sort;
       let va, vb;
-      if (["rank", "change", "cs", "csr", "qs", "the", "cost"].includes(k)) {
+      if (["rank", "change", "cs", "csr", "qs", "the", "living"].includes(k)) {
         const get = (r) => (k === "cs" ? r.c.cs?.rank : k === "csr" ? csrRank(r.c, el.csrDir.value)
           : k === "qs" || k === "the" ? worldNum(worldRank(r.c, k))
-          : k === "cost" ? costTotal(r.c) : r[k]);
+          : k === "living" ? r.c.cost?.living : k === "rank" ? r.rankN : r[k]);
         va = get(a);
         vb = get(b);
         // Missing values always sink to the bottom regardless of direction.
@@ -188,17 +216,19 @@
         va = a.c[k]; vb = b.c[k];
       }
       const r = typeof va === "number" ? va - vb : String(va).localeCompare(String(vb));
-      return r * state.dir || (a.rank ?? 999) - (b.rank ?? 999);
+      return r * state.dir || (a.rankN ?? 1e9) - (b.rankN ?? 1e9);
     });
   }
 
   function changeCell(r) {
     if (r.rank == null) return "";
     if (r.prev == null) return `<span class="chg new">${t("rk.new")}</span>`;
-    if (r.change === 0) return `<span class="chg flat">—</span>`;
+    if (r.rank === r.prev || (r.exact && r.change === 0)) return `<span class="chg flat">—</span>`;
+    const n = r.exact ? ` ${Math.abs(r.change)}` : "";
+    const title = r.exact ? "" : ` title="${esc(t("rk.bandMove", { from: r.prev, to: r.rank }))}"`;
     return r.change > 0
-      ? `<span class="chg up">▲ ${r.change}</span>`
-      : `<span class="chg down">▼ ${-r.change}</span>`;
+      ? `<span class="chg up"${title}>▲${n}</span>`
+      : `<span class="chg down"${title}>▼${n}</span>`;
   }
 
   // ---- bulk selection: tick rows (or the header box for everything shown), then act on them ----
@@ -254,9 +284,9 @@
         <td class="name">${esc(r.c.name)}</td>
         <td class="num c-sub">${subj(r.c.cs)}</td>
         <td class="num c-sub">${csrRank(r.c, el.csrDir.value) ? "#" + csrRank(r.c, el.csrDir.value) : "—"}</td>
-        <td class="num c-sub c-world">${worldFmt(worldRank(r.c, "qs"))}</td>
-        <td class="num c-sub c-world">${worldFmt(worldRank(r.c, "the"))}</td>
-        <td class="cost" title="${r.c.cost ? t("cost.breakdown", { tuition: moneyFull(tuitionOf(r.c)), living: moneyFull(r.c.cost.living), books: moneyFull(r.c.cost.books) }) : ""}">${money(costTotal(r.c))}</td>
+        <td class="num c-sub c-qs">${worldFmt(worldRank(r.c, "qs"))}</td>
+        <td class="num c-sub c-the">${worldFmt(worldRank(r.c, "the"))}</td>
+        <td class="cost" title="${r.c.cost?.living != null ? `${t(r.c.cost.livingBasis === "on" ? "cost.livingOn" : "cost.living")}: ${moneyFull(r.c.cost.living)}` : ""}">${money(r.c.cost?.living)}</td>
         <td class="c-hide-sm" title="${esc(r.c.metro)}">${esc(r.c.city)}<span class="city-setting">${t(`setting.${r.c.setting}Short`)}</span></td>
         <td class="c-hide-sm" title="${esc(STATE_NAMES[r.c.state] || "")}">${r.c.state}</td>
         <td>${tag(r.c.control)}</td>
@@ -265,7 +295,7 @@
     el.empty.hidden = list.length > 0;
 
     const pub = list.filter((r) => r.c.control === "public").length;
-    el.summary.textContent = t("rk.summary", { n: list.length, pub, priv: list.length - pub, year: el.year.value });
+    el.summary.textContent = t("rk.summary", { n: list.length, pub, priv: list.length - pub, year: el.year.value, sys: sysName() });
     el.favCount.textContent = library.size;
     renderSelection();
 
